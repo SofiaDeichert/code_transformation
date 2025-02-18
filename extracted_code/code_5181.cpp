@@ -1,0 +1,1 @@
+int main ( ) { int t , i , j , n , sum = 0 ; scanf ( "%d" , & t ) ; while ( t -- ) { scanf ( "%d" , & n ) ; n = ( n * ( n + 1 ) ) / 2 ; for ( i = 0 ; i < n ; i ++ ) { scanf ( "%d" , & j ) ; sum = sum + j ; } printf ( "%d\n" , sum ) ; sum = 0 ; } return 0 ; }

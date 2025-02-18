@@ -1,0 +1,1 @@
+main ( ) { int a , b , c , d , e , f , g , x , y ; scanf ( "%d" , & y ) ; for ( x = 1 ; x <= y ; x ++ ) { scanf ( "%d%d" , & a , & b ) ; if ( a > b ) { c = a ; d = b ; } else { c = b ; d = a ; } e = c % d ; while ( e != 0 ) { c = d ; d = e ; e = c % d ; } f = d ; g = a * b / f ; printf ( "%d %d\n" , f , g ) ; } }

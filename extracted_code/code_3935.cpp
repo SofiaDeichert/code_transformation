@@ -1,0 +1,1 @@
+int main ( ) { long long int T , i , N , M ; scanf ( "%u\n" , & T ) ; while ( T -- ) { scanf ( "%lli\n" , & N ) ; long long int a [ N ] ; for ( i = 0 ; i < N ; i ++ ) scanf ( "%lli" , & a [ i ] ) ; M = N ; for ( i = 0 ; i < N - 1 ; i ++ ) { if ( a [ i ] < a [ i + 1 ] ) M = M + 1 ; } printf ( "%lli\n" , M ) ; } return 0 ; }

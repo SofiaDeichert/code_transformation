@@ -1,0 +1,1 @@
+int main ( ) { long int div , divs , rem , nl ; scanf ( "%ld" , & nl ) ; long int prod ; while ( nl ) { scanf ( "%ld%ld" , & div , & divs ) ; prod = div * divs ; rem = div % divs ; while ( rem ) { div = divs ; divs = rem ; rem = div % divs ; } printf ( "%ld %ld\n" , divs , prod / divs ) ; nl -- ; } return 0 ; }

@@ -1,0 +1,1 @@
+int main ( ) { int n , size , i , min , min_cost = 0 ; scanf ( "%d" , & n ) ; for ( i = 0 ; i < n ; i ++ ) { scanf ( "%d" , & size ) ; int a [ size ] ; for ( i = 0 ; i < size ; i ++ ) scanf ( "%d " , & a [ i ] ) ; min = 1000000 ; for ( i = 0 ; i < size ; i ++ ) { if ( a [ i ] < min ) min = a [ i ] ; } min_cost = min * ( size - 1 ) ; printf ( "%d\n" , min_cost ) ; } return 0 ; }

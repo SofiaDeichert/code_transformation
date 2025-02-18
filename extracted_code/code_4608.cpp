@@ -1,0 +1,1 @@
+int main ( ) { int T , t , a , b ; scanf ( "%d" , & T ) ; t = T ; int a1 [ T ] , a2 [ T ] ; while ( T -- ) { scanf ( "%d %d" , & a , & b ) ; int gc ; if ( a > b ) gc = b ; else gc = a ; while ( 1 ) { if ( a % gc == 0 && b % gc == 0 ) break ; else gc -- ; } a1 [ T ] = gc ; a2 [ T ] = a * b / gc ; } while ( t -- ) { printf ( "%d %d\n" , a1 [ t ] , a2 [ t ] ) ; } return 0 ; }

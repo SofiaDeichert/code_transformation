@@ -1,0 +1,1 @@
+int main ( ) { int t , i , max1 ; long long n , k ; scanf ( "%d" , & t ) ; while ( t -- ) { scanf ( "%lld %lld" , & n , & k ) ; if ( k > n ) printf ( "%d\n" , n ) ; else { long long a [ k ] ; for ( i = 1 ; i <= k ; i ++ ) { a [ i ] = n % i ; } max1 = a [ 1 ] ; for ( i = 2 ; i <= k ; i ++ ) { if ( a [ i ] > max1 ) { max1 = a [ i ] ; } } printf ( "%d\n" , max1 ) ; } } return 0 ; }

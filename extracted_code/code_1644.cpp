@@ -1,0 +1,1 @@
+int main ( ) { int t ; long long int min , numb , lc , cost ; scanf ( "%d" , & t ) ; min = 100000 ; while ( t -- ) { scanf ( "%lld" , & lc ) ; cost = lc ; while ( lc -- ) { scanf ( "%lld" , & numb ) ; if ( numb < min ) { min = numb ; } } printf ( "%lld\n" , min * ( cost - 1 ) ) ; } }

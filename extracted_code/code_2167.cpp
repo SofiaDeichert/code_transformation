@@ -1,0 +1,1 @@
+int main ( ) { long long int i , j , min = 0 , y , o , x , n ; scanf ( "%lld" , & n ) ; for ( i = 0 ; i < n ; i ++ ) { scanf ( "%lld" , & x ) ; scanf ( "%lld" , & y ) ; min = y ; for ( j = 0 ; j < x - 1 ; j ++ ) { scanf ( "%lld" , & y ) ; if ( min > y ) min = y ; } printf ( "%lld\n" , min ) ; o = min * ( x - 1 ) ; printf ( "%lld\n" , o ) ; } return 0 ; }

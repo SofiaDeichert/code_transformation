@@ -1,0 +1,1 @@
+void main ( ) { int a , b , G , L , r , n , d ; printf ( "entertwonum\n" ) ; scanf ( "%d%d" , & a , & b ) ; if ( a > b ) { n = a ; d = b ; } else { n = b ; d = a ; } r = n % d ; while ( ( r != 0 ) ) { n = d ; d = r ; r = n % d ; } G = d ; L = a * b / G ; printf ( "GCDis=%d\n" , G ) ; printf ( "LCMis=%d\n" , L ) ; }

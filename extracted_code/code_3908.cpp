@@ -1,0 +1,1 @@
+main ( ) { long long int a [ 10000 ] , i , j , n , m , t , s ; scanf ( "%lld" , & n ) ; for ( i = 1 ; i <= n ; i ++ ) { scanf ( "%lld" , & m ) ; for ( j = 1 ; j <= m ; j ++ ) { scanf ( "%lld" , & a [ j ] ) ; } t = a [ 1 ] ; for ( j = 1 ; j <= m - 1 ; j ++ ) { if ( a [ j + 1 ] < t ) { t = a [ j + 1 ] ; } } s = t * ( m - 1 ) ; printf ( "%lld" , s ) ; } }

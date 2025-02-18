@@ -1,0 +1,1 @@
+int hcf ( int a , int b ) { if ( b == 0 ) return a ; else return hcf ( b , a % b ) ; } int main ( ) { int n ; int a [ 2 ] ; scanf ( "%d" , & n ) ; int gcd ; for ( int i = 0 ; i < n ; i ++ ) { for ( int j = 0 ; j < 2 ; j ++ ) { scanf ( "%d" , & a [ j ] ) ; } gcd = hcf ( a [ 0 ] , a [ 1 ] ) ; printf ( "%d %d\n" , gcd , a [ 0 ] * a [ 1 ] / gcd ) ; } }

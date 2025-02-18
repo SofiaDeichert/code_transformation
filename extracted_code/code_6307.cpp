@@ -1,0 +1,1 @@
+int main ( ) { int t ; scanf ( "%d" , & t ) ; while ( t -- ) { int n , i , total ; long long int j ; scanf ( "%d" , & n ) ; for ( i = 0 ; i < n ; i ++ ) { scanf ( "%d" , & j ) ; if ( i == 0 || j < total ) total = j ; } printf ( "%d\n" , total * ( n - 1 ) ) ; } return ( 0 ) ; }

@@ -1,0 +1,1 @@
+int main ( ) { int t ; long long int a , b , pro , tmp ; scanf ( "%d" , & t ) ; while ( t -- ) { scanf ( "%lld %lld" , & a , & b ) ; pro = a * b ; if ( b < a ) { tmp = a ; a = b ; b = tmp ; } while ( ( b % a ) != 0 ) { tmp = ( b % a ) ; b = a ; a = tmp ; } printf ( "%lld %lld\n" , a , ( pro / a ) ) ; } return 0 ; }

@@ -1,0 +1,1 @@
+int main ( ) { int tests ; long temp , minval , i , n ; long long ans ; scanf ( "%d" , & tests ) ; while ( tests -- ) { scanf ( "%li" , & n ) ; minval = 200000 ; for ( i = 0 ; i < n ; i ++ ) { scanf ( "%li" , & temp ) ; if ( temp < minval ) { minval = temp ; } } ans = ( n - 1 ) * minval ; printf ( "%lli\n" , ans ) ; } return 0 ; }

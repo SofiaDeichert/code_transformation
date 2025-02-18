@@ -1,0 +1,1 @@
+int main ( ) { long long lcm , hcf , a , b , i , j , m , t , cn ; scanf ( "%lld" , & t ) ; for ( cn = 1 ; cn <= t ; cn ++ ) { scanf ( "%lld %lld" , & a , & b ) ; if ( a < b ) m = a ; else m = b ; for ( i = m ; i >= 1 ; i -- ) { if ( a % i == 0 && b % i == 0 ) { hcf = i ; break ; } } lcm = ( a * b ) / hcf ; printf ( "%lld\t%lld\n" , hcf , lcm ) ; } return 0 ; }

@@ -1,0 +1,1 @@
+int main ( ) { int T , N , a , b , i , j , c = 0 ; int A [ 100000 ] ; scanf ( "%d" , & T ) ; if ( T >= 1 && T <= 5 ) { for ( a = 0 ; a < T ; a ++ ) { scanf ( "%d" , & N ) ; if ( N >= 1 && N <= 100000 ) { for ( b = 0 ; b < N ; b ++ ) { scanf ( "%d" , & A [ b ] ) ; } for ( i = 1 ; i < N ; i ++ ) { if ( A [ i ] >= A [ i - 1 ] ) c ++ ; } } } printf ( "%d" , c + N ) ; } return 0 ; }

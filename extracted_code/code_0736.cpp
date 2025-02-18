@@ -1,0 +1,1 @@
+int main ( ) { int t ; scanf ( "%d" , & t ) ; while ( t -- ) { int num1 , num2 , max , lcm , hcf ; scanf ( "%d%d" , & num1 , & num2 ) ; max = ( num1 > num2 ) ? num1 : num2 ; while ( 1 ) { if ( max % num1 == 0 && max % num2 == 0 ) { lcm = max ; hcf = ( num1 * num2 ) / lcm ; break ; } ++ max ; } printf ( "%d %d\n" , hcf , lcm ) ; } return 0 ; }

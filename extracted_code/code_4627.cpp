@@ -1,0 +1,1 @@
+int main ( ) { long long int n , x , a ; int i , t ; scanf ( "%d" , & t ) ; while ( t -- ) { scanf ( "%d" , & n ) ; scanf ( "11%d" , & x ) ; for ( i = 1 ; i < n ; i ++ ) { scanf ( "11%d" , & a ) ; if ( a < x ) a = x ; } printf ( "d\n" , a * ( n - 1 ) ) ; } return 0 ; }

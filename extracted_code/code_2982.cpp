@@ -1,0 +1,1 @@
+int main ( ) { int i , j , t , n , max = 0 , a [ 10 ] [ 10 ] ; scanf ( "%d" , & t ) ; while ( t -- ) { max = 0 ; scanf ( "%d" , & n ) ; for ( i = 0 ; i < n ; i ++ ) { for ( j = 0 ; j <= i ; j ++ ) scanf ( "%d" , & a [ i ] [ j ] ) ; } max = a [ n - 2 ] [ 0 ] + a [ n - 1 ] [ 0 ] + a [ n - 1 ] [ 1 ] ; printf ( "%d\n" , max ) ; } return 0 ; }

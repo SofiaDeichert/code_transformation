@@ -1,0 +1,1 @@
+int main ( ) { unsigned long long int n , i ; scanf ( "%llu" , & n ) ; for ( i = 0 ; i < n ; i ++ ) { unsigned long long int a , l = 100000 , c , j ; scanf ( "%llu" , & a ) ; unsigned long long int arr [ a ] ; for ( j = 0 ; j < a ; j ++ ) { scanf ( "%llu" , & arr [ j ] ) ; if ( arr [ j ] < l ) { l = arr [ j ] ; } } c = l * ( a - 1 ) ; printf ( "%llu\n" , c ) ; } return 0 ; }

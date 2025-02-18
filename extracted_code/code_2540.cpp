@@ -1,0 +1,1 @@
+int main ( ) { int a , b , z , i , lcm , hcf ; scanf ( "%d %d" , & a , & b ) ; z = a < b ? a : b ; for ( i = 1 ; i <= z ; i ++ ) if ( a % i == 0 && b % i == 0 ) hcf = i ; lcm = a * b / hcf ; printf ( "%d %d" , hcf , lcm ) ; return 0 ; }

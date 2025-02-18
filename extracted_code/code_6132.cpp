@@ -1,0 +1,1 @@
+int main ( ) { int a , b , t , i , c , d ; scanf ( "%d" , & t ) ; for ( i = 0 ; i < t ; i ++ ) { scanf ( "%d %d" , & a , & b ) ; if ( a > b ) c = func ( a , b ) ; else c = func ( b , a ) ; d = ( a * b ) / c ; printf ( "%d %d\n" , c , d ) ; } return 0 ; } int func ( int x , int y ) { if ( y % x == 0 ) return x ; else return func ( y % x , x ) ; }

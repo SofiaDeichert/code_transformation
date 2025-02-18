@@ -1,0 +1,1 @@
+int main ( void ) { int t ; long i , n , x , temp ; long long sum ; scanf ( "%d" , & t ) ; while ( t -- ) { scanf ( "%ld" , & n ) ; sum = 0 ; x = 1000001 ; for ( i = 0 ; i < n ; i ++ ) { scanf ( "%ld" , & temp ) ; if ( temp < x ) x = temp ; } sum = ( long long int ) ( n - 1 ) * ( long long int ) x ; printf ( "%lld\n" , sum ) ; } return 0 ; }

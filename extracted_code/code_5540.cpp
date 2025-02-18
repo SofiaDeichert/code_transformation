@@ -1,0 +1,1 @@
+int main ( ) { int T , A , B , i , j , gcd ; scanf ( "%d" , & T ) ; if ( T >= 1 && T <= 1000 ) { for ( i = 1 ; i <= T ; i ++ ) { scanf ( "%d %d" , & A , & B ) ; for ( j = 1 ; j <= A ; j ++ ) if ( A % j == 0 && B % j == 0 ) gcd = j ; printf ( "%d %d\n" , gcd , ( A * B ) / gcd ) ; } } return 0 ; }

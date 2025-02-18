@@ -1,0 +1,4394 @@
+{
+  "type": "translation_unit",
+  "start_byte": 0,
+  "end_byte": 1049,
+  "text": "static int sum1 = 0 ; static int sum = 0 ; void fun ( int * * , int , int , int ) ; void down ( int * * ptr , int x , int y , int n ) { if ( x < n - 1 ) { x ++ ; sum1 += ptr [ x ] [ y ] ; if ( sum1 > sum ) sum = sum1 ; fun ( ptr , x , y , n ) ; sum1 -= ptr [ x ] [ y ] ; } } void diag ( int * * ptr , int x , int y , int n ) { if ( x < n - 1 ) { x ++ ; y ++ ; sum1 += ptr [ x ] [ y ] ; if ( sum1 > sum ) sum = sum1 ; fun ( ptr , x , y , n ) ; sum1 -= ptr [ x ] [ y ] ; } } void fun ( int * * ptr , int x , int y , int n ) { down ( ptr , x , y , n ) ; diag ( ptr , x , y , n ) ; } int main ( void ) { int * * ptr , i , j , n , k , l ; scanf ( \"%d\" , & k ) ; for ( l = 0 ; l < k ; l ++ ) { scanf ( \"%d\" , & n ) ; ptr = ( int * * ) malloc ( sizeof ( int * ) * n ) ; for ( i = 0 ; i < n ; i ++ ) ptr [ i ] = ( int * ) malloc ( sizeof ( int ) * ( n + 1 ) ) ; for ( i = 0 ; i < n ; i ++ ) { for ( j = 0 ; j <= i ; j ++ ) scanf ( \"%d\" , & ptr [ i ] [ j ] ) ; } sum = sum1 = ptr [ 0 ] [ 0 ] ; fun ( ptr , 0 , 0 , n ) ; printf ( \"%d\" , sum ) ; } return 0 ; }",
+  "children": [
+    {
+      "type": "declaration",
+      "start_byte": 0,
+      "end_byte": 21,
+      "text": "static int sum1 = 0 ;",
+      "children": [
+        {
+          "type": "storage_class_specifier",
+          "start_byte": 0,
+          "end_byte": 6,
+          "text": "static",
+          "children": [
+            {
+              "type": "static",
+              "start_byte": 0,
+              "end_byte": 6,
+              "text": "static",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "primitive_type",
+          "start_byte": 7,
+          "end_byte": 10,
+          "text": "int",
+          "children": []
+        },
+        {
+          "type": "init_declarator",
+          "start_byte": 11,
+          "end_byte": 19,
+          "text": "sum1 = 0",
+          "children": [
+            {
+              "type": "identifier",
+              "start_byte": 11,
+              "end_byte": 15,
+              "text": "sum1",
+              "children": []
+            },
+            {
+              "type": "=",
+              "start_byte": 16,
+              "end_byte": 17,
+              "text": "=",
+              "children": []
+            },
+            {
+              "type": "number_literal",
+              "start_byte": 18,
+              "end_byte": 19,
+              "text": "0",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": ";",
+          "start_byte": 20,
+          "end_byte": 21,
+          "text": ";",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "declaration",
+      "start_byte": 22,
+      "end_byte": 42,
+      "text": "static int sum = 0 ;",
+      "children": [
+        {
+          "type": "storage_class_specifier",
+          "start_byte": 22,
+          "end_byte": 28,
+          "text": "static",
+          "children": [
+            {
+              "type": "static",
+              "start_byte": 22,
+              "end_byte": 28,
+              "text": "static",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "primitive_type",
+          "start_byte": 29,
+          "end_byte": 32,
+          "text": "int",
+          "children": []
+        },
+        {
+          "type": "init_declarator",
+          "start_byte": 33,
+          "end_byte": 40,
+          "text": "sum = 0",
+          "children": [
+            {
+              "type": "identifier",
+              "start_byte": 33,
+              "end_byte": 36,
+              "text": "sum",
+              "children": []
+            },
+            {
+              "type": "=",
+              "start_byte": 37,
+              "end_byte": 38,
+              "text": "=",
+              "children": []
+            },
+            {
+              "type": "number_literal",
+              "start_byte": 39,
+              "end_byte": 40,
+              "text": "0",
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": ";",
+          "start_byte": 41,
+          "end_byte": 42,
+          "text": ";",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "declaration",
+      "start_byte": 43,
+      "end_byte": 83,
+      "text": "void fun ( int * * , int , int , int ) ;",
+      "children": [
+        {
+          "type": "primitive_type",
+          "start_byte": 43,
+          "end_byte": 47,
+          "text": "void",
+          "children": []
+        },
+        {
+          "type": "function_declarator",
+          "start_byte": 48,
+          "end_byte": 81,
+          "text": "fun ( int * * , int , int , int )",
+          "children": [
+            {
+              "type": "identifier",
+              "start_byte": 48,
+              "end_byte": 51,
+              "text": "fun",
+              "children": []
+            },
+            {
+              "type": "parameter_list",
+              "start_byte": 52,
+              "end_byte": 81,
+              "text": "( int * * , int , int , int )",
+              "children": [
+                {
+                  "type": "(",
+                  "start_byte": 52,
+                  "end_byte": 53,
+                  "text": "(",
+                  "children": []
+                },
+                {
+                  "type": "parameter_declaration",
+                  "start_byte": 54,
+                  "end_byte": 61,
+                  "text": "int * *",
+                  "children": [
+                    {
+                      "type": "primitive_type",
+                      "start_byte": 54,
+                      "end_byte": 57,
+                      "text": "int",
+                      "children": []
+                    },
+                    {
+                      "type": "abstract_pointer_declarator",
+                      "start_byte": 58,
+                      "end_byte": 61,
+                      "text": "* *",
+                      "children": [
+                        {
+                          "type": "*",
+                          "start_byte": 58,
+                          "end_byte": 59,
+                          "text": "*",
+                          "children": []
+                        },
+                        {
+                          "type": "abstract_pointer_declarator",
+                          "start_byte": 60,
+                          "end_byte": 61,
+                          "text": "*",
+                          "children": [
+                            {
+                              "type": "*",
+                              "start_byte": 60,
+                              "end_byte": 61,
+                              "text": "*",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": ",",
+                  "start_byte": 62,
+                  "end_byte": 63,
+                  "text": ",",
+                  "children": []
+                },
+                {
+                  "type": "parameter_declaration",
+                  "start_byte": 64,
+                  "end_byte": 67,
+                  "text": "int",
+                  "children": [
+                    {
+                      "type": "primitive_type",
+                      "start_byte": 64,
+                      "end_byte": 67,
+                      "text": "int",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": ",",
+                  "start_byte": 68,
+                  "end_byte": 69,
+                  "text": ",",
+                  "children": []
+                },
+                {
+                  "type": "parameter_declaration",
+                  "start_byte": 70,
+                  "end_byte": 73,
+                  "text": "int",
+                  "children": [
+                    {
+                      "type": "primitive_type",
+                      "start_byte": 70,
+                      "end_byte": 73,
+                      "text": "int",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": ",",
+                  "start_byte": 74,
+                  "end_byte": 75,
+                  "text": ",",
+                  "children": []
+                },
+                {
+                  "type": "parameter_declaration",
+                  "start_byte": 76,
+                  "end_byte": 79,
+                  "text": "int",
+                  "children": [
+                    {
+                      "type": "primitive_type",
+                      "start_byte": 76,
+                      "end_byte": 79,
+                      "text": "int",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": ")",
+                  "start_byte": 80,
+                  "end_byte": 81,
+                  "text": ")",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": ";",
+          "start_byte": 82,
+          "end_byte": 83,
+          "text": ";",
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "function_definition",
+      "start_byte": 84,
+      "end_byte": 274,
+      "text": "void down ( int * * ptr , int x , int y , int n ) { if ( x < n - 1 ) { x ++ ; sum1 += ptr [ x ] [ y ] ; if ( sum1 > sum ) sum = sum1 ; fun ( ptr , x , y , n ) ; sum1 -= ptr [ x ] [ y ] ; } }",
+      "children": [
+        {
+          "type": "primitive_type",
+          "start_byte": 84,
+          "end_byte": 88,
+          "text": "void",
+          "children": []
+        },
+        {
+          "type": "function_declarator",
+          "start_byte": 89,
+          "end_byte": 133,
+          "text": "down ( int * * ptr , int x , int y , int n )",
+          "children": [
+            {
+              "type": "identifier",
+              "start_byte": 89,
+              "end_byte": 93,
+              "text": "down",
+              "children": []
+            },
+            {
+              "type": "parameter_list",
+              "start_byte": 94,
+              "end_byte": 133,
+              "text": "( int * * ptr , int x , int y , int n )",
+              "children": [
+                {
+                  "type": "(",
+                  "start_byte": 94,
+                  "end_byte": 95,
+                  "text": "(",
+                  "children": []
+                },
+                {
+                  "type": "parameter_declaration",
+                  "start_byte": 96,
+                  "end_byte": 107,
+                  "text": "int * * ptr",
+                  "children": [
+                    {
+                      "type": "primitive_type",
+                      "start_byte": 96,
+                      "end_byte": 99,
+                      "text": "int",
+                      "children": []
+                    },
+                    {
+                      "type": "pointer_declarator",
+                      "start_byte": 100,
+                      "end_byte": 107,
+                      "text": "* * ptr",
+                      "children": [
+                        {
+                          "type": "*",
+                          "start_byte": 100,
+                          "end_byte": 101,
+                          "text": "*",
+                          "children": []
+                        },
+                        {
+                          "type": "pointer_declarator",
+                          "start_byte": 102,
+                          "end_byte": 107,
+                          "text": "* ptr",
+                          "children": [
+                            {
+                              "type": "*",
+                              "start_byte": 102,
+                              "end_byte": 103,
+                              "text": "*",
+                              "children": []
+                            },
+                            {
+                              "type": "identifier",
+                              "start_byte": 104,
+                              "end_byte": 107,
+                              "text": "ptr",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": ",",
+                  "start_byte": 108,
+                  "end_byte": 109,
+                  "text": ",",
+                  "children": []
+                },
+                {
+                  "type": "parameter_declaration",
+                  "start_byte": 110,
+                  "end_byte": 115,
+                  "text": "int x",
+                  "children": [
+                    {
+                      "type": "primitive_type",
+                      "start_byte": 110,
+                      "end_byte": 113,
+                      "text": "int",
+                      "children": []
+                    },
+                    {
+                      "type": "identifier",
+                      "start_byte": 114,
+                      "end_byte": 115,
+                      "text": "x",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": ",",
+                  "start_byte": 116,
+                  "end_byte": 117,
+                  "text": ",",
+                  "children": []
+                },
+                {
+                  "type": "parameter_declaration",
+                  "start_byte": 118,
+                  "end_byte": 123,
+                  "text": "int y",
+                  "children": [
+                    {
+                      "type": "primitive_type",
+                      "start_byte": 118,
+                      "end_byte": 121,
+                      "text": "int",
+                      "children": []
+                    },
+                    {
+                      "type": "identifier",
+                      "start_byte": 122,
+                      "end_byte": 123,
+                      "text": "y",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": ",",
+                  "start_byte": 124,
+                  "end_byte": 125,
+                  "text": ",",
+                  "children": []
+                },
+                {
+                  "type": "parameter_declaration",
+                  "start_byte": 126,
+                  "end_byte": 131,
+                  "text": "int n",
+                  "children": [
+                    {
+                      "type": "primitive_type",
+                      "start_byte": 126,
+                      "end_byte": 129,
+                      "text": "int",
+                      "children": []
+                    },
+                    {
+                      "type": "identifier",
+                      "start_byte": 130,
+                      "end_byte": 131,
+                      "text": "n",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": ")",
+                  "start_byte": 132,
+                  "end_byte": 133,
+                  "text": ")",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "compound_statement",
+          "start_byte": 134,
+          "end_byte": 274,
+          "text": "{ if ( x < n - 1 ) { x ++ ; sum1 += ptr [ x ] [ y ] ; if ( sum1 > sum ) sum = sum1 ; fun ( ptr , x , y , n ) ; sum1 -= ptr [ x ] [ y ] ; } }",
+          "children": [
+            {
+              "type": "{",
+              "start_byte": 134,
+              "end_byte": 135,
+              "text": "{",
+              "children": []
+            },
+            {
+              "type": "if_statement",
+              "start_byte": 136,
+              "end_byte": 272,
+              "text": "if ( x < n - 1 ) { x ++ ; sum1 += ptr [ x ] [ y ] ; if ( sum1 > sum ) sum = sum1 ; fun ( ptr , x , y , n ) ; sum1 -= ptr [ x ] [ y ] ; }",
+              "children": [
+                {
+                  "type": "if",
+                  "start_byte": 136,
+                  "end_byte": 138,
+                  "text": "if",
+                  "children": []
+                },
+                {
+                  "type": "condition_clause",
+                  "start_byte": 139,
+                  "end_byte": 152,
+                  "text": "( x < n - 1 )",
+                  "children": [
+                    {
+                      "type": "(",
+                      "start_byte": 139,
+                      "end_byte": 140,
+                      "text": "(",
+                      "children": []
+                    },
+                    {
+                      "type": "binary_expression",
+                      "start_byte": 141,
+                      "end_byte": 150,
+                      "text": "x < n - 1",
+                      "children": [
+                        {
+                          "type": "identifier",
+                          "start_byte": 141,
+                          "end_byte": 142,
+                          "text": "x",
+                          "children": []
+                        },
+                        {
+                          "type": "<",
+                          "start_byte": 143,
+                          "end_byte": 144,
+                          "text": "<",
+                          "children": []
+                        },
+                        {
+                          "type": "binary_expression",
+                          "start_byte": 145,
+                          "end_byte": 150,
+                          "text": "n - 1",
+                          "children": [
+                            {
+                              "type": "identifier",
+                              "start_byte": 145,
+                              "end_byte": 146,
+                              "text": "n",
+                              "children": []
+                            },
+                            {
+                              "type": "-",
+                              "start_byte": 147,
+                              "end_byte": 148,
+                              "text": "-",
+                              "children": []
+                            },
+                            {
+                              "type": "number_literal",
+                              "start_byte": 149,
+                              "end_byte": 150,
+                              "text": "1",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": ")",
+                      "start_byte": 151,
+                      "end_byte": 152,
+                      "text": ")",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "compound_statement",
+                  "start_byte": 153,
+                  "end_byte": 272,
+                  "text": "{ x ++ ; sum1 += ptr [ x ] [ y ] ; if ( sum1 > sum ) sum = sum1 ; fun ( ptr , x , y , n ) ; sum1 -= ptr [ x ] [ y ] ; }",
+                  "children": [
+                    {
+                      "type": "{",
+                      "start_byte": 153,
+                      "end_byte": 154,
+                      "text": "{",
+                      "children": []
+                    },
+                    {
+                      "type": "expression_statement",
+                      "start_byte": 155,
+                      "end_byte": 161,
+                      "text": "x ++ ;",
+                      "children": [
+                        {
+                          "type": "update_expression",
+                          "start_byte": 155,
+                          "end_byte": 159,
+                          "text": "x ++",
+                          "children": [
+                            {
+                              "type": "identifier",
+                              "start_byte": 155,
+                              "end_byte": 156,
+                              "text": "x",
+                              "children": []
+                            },
+                            {
+                              "type": "++",
+                              "start_byte": 157,
+                              "end_byte": 159,
+                              "text": "++",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": ";",
+                          "start_byte": 160,
+                          "end_byte": 161,
+                          "text": ";",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "expression_statement",
+                      "start_byte": 162,
+                      "end_byte": 187,
+                      "text": "sum1 += ptr [ x ] [ y ] ;",
+                      "children": [
+                        {
+                          "type": "assignment_expression",
+                          "start_byte": 162,
+                          "end_byte": 185,
+                          "text": "sum1 += ptr [ x ] [ y ]",
+                          "children": [
+                            {
+                              "type": "identifier",
+                              "start_byte": 162,
+                              "end_byte": 166,
+                              "text": "sum1",
+                              "children": []
+                            },
+                            {
+                              "type": "+=",
+                              "start_byte": 167,
+                              "end_byte": 169,
+                              "text": "+=",
+                              "children": []
+                            },
+                            {
+                              "type": "subscript_expression",
+                              "start_byte": 170,
+                              "end_byte": 185,
+                              "text": "ptr [ x ] [ y ]",
+                              "children": [
+                                {
+                                  "type": "subscript_expression",
+                                  "start_byte": 170,
+                                  "end_byte": 179,
+                                  "text": "ptr [ x ]",
+                                  "children": [
+                                    {
+                                      "type": "identifier",
+                                      "start_byte": 170,
+                                      "end_byte": 173,
+                                      "text": "ptr",
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "subscript_argument_list",
+                                      "start_byte": 174,
+                                      "end_byte": 179,
+                                      "text": "[ x ]",
+                                      "children": [
+                                        {
+                                          "type": "[",
+                                          "start_byte": 174,
+                                          "end_byte": 175,
+                                          "text": "[",
+                                          "children": []
+                                        },
+                                        {
+                                          "type": "identifier",
+                                          "start_byte": 176,
+                                          "end_byte": 177,
+                                          "text": "x",
+                                          "children": []
+                                        },
+                                        {
+                                          "type": "]",
+                                          "start_byte": 178,
+                                          "end_byte": 179,
+                                          "text": "]",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "subscript_argument_list",
+                                  "start_byte": 180,
+                                  "end_byte": 185,
+                                  "text": "[ y ]",
+                                  "children": [
+                                    {
+                                      "type": "[",
+                                      "start_byte": 180,
+                                      "end_byte": 181,
+                                      "text": "[",
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "identifier",
+                                      "start_byte": 182,
+                                      "end_byte": 183,
+                                      "text": "y",
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "]",
+                                      "start_byte": 184,
+                                      "end_byte": 185,
+                                      "text": "]",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": ";",
+                          "start_byte": 186,
+                          "end_byte": 187,
+                          "text": ";",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "if_statement",
+                      "start_byte": 188,
+                      "end_byte": 218,
+                      "text": "if ( sum1 > sum ) sum = sum1 ;",
+                      "children": [
+                        {
+                          "type": "if",
+                          "start_byte": 188,
+                          "end_byte": 190,
+                          "text": "if",
+                          "children": []
+                        },
+                        {
+                          "type": "condition_clause",
+                          "start_byte": 191,
+                          "end_byte": 205,
+                          "text": "( sum1 > sum )",
+                          "children": [
+                            {
+                              "type": "(",
+                              "start_byte": 191,
+                              "end_byte": 192,
+                              "text": "(",
+                              "children": []
+                            },
+                            {
+                              "type": "binary_expression",
+                              "start_byte": 193,
+                              "end_byte": 203,
+                              "text": "sum1 > sum",
+                              "children": [
+                                {
+                                  "type": "identifier",
+                                  "start_byte": 193,
+                                  "end_byte": 197,
+                                  "text": "sum1",
+                                  "children": []
+                                },
+                                {
+                                  "type": ">",
+                                  "start_byte": 198,
+                                  "end_byte": 199,
+                                  "text": ">",
+                                  "children": []
+                                },
+                                {
+                                  "type": "identifier",
+                                  "start_byte": 200,
+                                  "end_byte": 203,
+                                  "text": "sum",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "type": ")",
+                              "start_byte": 204,
+                              "end_byte": 205,
+                              "text": ")",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": "expression_statement",
+                          "start_byte": 206,
+                          "end_byte": 218,
+                          "text": "sum = sum1 ;",
+                          "children": [
+                            {
+                              "type": "assignment_expression",
+                              "start_byte": 206,
+                              "end_byte": 216,
+                              "text": "sum = sum1",
+                              "children": [
+                                {
+                                  "type": "identifier",
+                                  "start_byte": 206,
+                                  "end_byte": 209,
+                                  "text": "sum",
+                                  "children": []
+                                },
+                                {
+                                  "type": "=",
+                                  "start_byte": 210,
+                                  "end_byte": 211,
+                                  "text": "=",
+                                  "children": []
+                                },
+                                {
+                                  "type": "identifier",
+                                  "start_byte": 212,
+                                  "end_byte": 216,
+                                  "text": "sum1",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "type": ";",
+                              "start_byte": 217,
+                              "end_byte": 218,
+                              "text": ";",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "expression_statement",
+                      "start_byte": 219,
+                      "end_byte": 244,
+                      "text": "fun ( ptr , x , y , n ) ;",
+                      "children": [
+                        {
+                          "type": "call_expression",
+                          "start_byte": 219,
+                          "end_byte": 242,
+                          "text": "fun ( ptr , x , y , n )",
+                          "children": [
+                            {
+                              "type": "identifier",
+                              "start_byte": 219,
+                              "end_byte": 222,
+                              "text": "fun",
+                              "children": []
+                            },
+                            {
+                              "type": "argument_list",
+                              "start_byte": 223,
+                              "end_byte": 242,
+                              "text": "( ptr , x , y , n )",
+                              "children": [
+                                {
+                                  "type": "(",
+                                  "start_byte": 223,
+                                  "end_byte": 224,
+                                  "text": "(",
+                                  "children": []
+                                },
+                                {
+                                  "type": "identifier",
+                                  "start_byte": 225,
+                                  "end_byte": 228,
+                                  "text": "ptr",
+                                  "children": []
+                                },
+                                {
+                                  "type": ",",
+                                  "start_byte": 229,
+                                  "end_byte": 230,
+                                  "text": ",",
+                                  "children": []
+                                },
+                                {
+                                  "type": "identifier",
+                                  "start_byte": 231,
+                                  "end_byte": 232,
+                                  "text": "x",
+                                  "children": []
+                                },
+                                {
+                                  "type": ",",
+                                  "start_byte": 233,
+                                  "end_byte": 234,
+                                  "text": ",",
+                                  "children": []
+                                },
+                                {
+                                  "type": "identifier",
+                                  "start_byte": 235,
+                                  "end_byte": 236,
+                                  "text": "y",
+                                  "children": []
+                                },
+                                {
+                                  "type": ",",
+                                  "start_byte": 237,
+                                  "end_byte": 238,
+                                  "text": ",",
+                                  "children": []
+                                },
+                                {
+                                  "type": "identifier",
+                                  "start_byte": 239,
+                                  "end_byte": 240,
+                                  "text": "n",
+                                  "children": []
+                                },
+                                {
+                                  "type": ")",
+                                  "start_byte": 241,
+                                  "end_byte": 242,
+                                  "text": ")",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": ";",
+                          "start_byte": 243,
+                          "end_byte": 244,
+                          "text": ";",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "expression_statement",
+                      "start_byte": 245,
+                      "end_byte": 270,
+                      "text": "sum1 -= ptr [ x ] [ y ] ;",
+                      "children": [
+                        {
+                          "type": "assignment_expression",
+                          "start_byte": 245,
+                          "end_byte": 268,
+                          "text": "sum1 -= ptr [ x ] [ y ]",
+                          "children": [
+                            {
+                              "type": "identifier",
+                              "start_byte": 245,
+                              "end_byte": 249,
+                              "text": "sum1",
+                              "children": []
+                            },
+                            {
+                              "type": "-=",
+                              "start_byte": 250,
+                              "end_byte": 252,
+                              "text": "-=",
+                              "children": []
+                            },
+                            {
+                              "type": "subscript_expression",
+                              "start_byte": 253,
+                              "end_byte": 268,
+                              "text": "ptr [ x ] [ y ]",
+                              "children": [
+                                {
+                                  "type": "subscript_expression",
+                                  "start_byte": 253,
+                                  "end_byte": 262,
+                                  "text": "ptr [ x ]",
+                                  "children": [
+                                    {
+                                      "type": "identifier",
+                                      "start_byte": 253,
+                                      "end_byte": 256,
+                                      "text": "ptr",
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "subscript_argument_list",
+                                      "start_byte": 257,
+                                      "end_byte": 262,
+                                      "text": "[ x ]",
+                                      "children": [
+                                        {
+                                          "type": "[",
+                                          "start_byte": 257,
+                                          "end_byte": 258,
+                                          "text": "[",
+                                          "children": []
+                                        },
+                                        {
+                                          "type": "identifier",
+                                          "start_byte": 259,
+                                          "end_byte": 260,
+                                          "text": "x",
+                                          "children": []
+                                        },
+                                        {
+                                          "type": "]",
+                                          "start_byte": 261,
+                                          "end_byte": 262,
+                                          "text": "]",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "subscript_argument_list",
+                                  "start_byte": 263,
+                                  "end_byte": 268,
+                                  "text": "[ y ]",
+                                  "children": [
+                                    {
+                                      "type": "[",
+                                      "start_byte": 263,
+                                      "end_byte": 264,
+                                      "text": "[",
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "identifier",
+                                      "start_byte": 265,
+                                      "end_byte": 266,
+                                      "text": "y",
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "]",
+                                      "start_byte": 267,
+                                      "end_byte": 268,
+                                      "text": "]",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": ";",
+                          "start_byte": 269,
+                          "end_byte": 270,
+                          "text": ";",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "}",
+                      "start_byte": 271,
+                      "end_byte": 272,
+                      "text": "}",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "}",
+              "start_byte": 273,
+              "end_byte": 274,
+              "text": "}",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "function_definition",
+      "start_byte": 275,
+      "end_byte": 472,
+      "text": "void diag ( int * * ptr , int x , int y , int n ) { if ( x < n - 1 ) { x ++ ; y ++ ; sum1 += ptr [ x ] [ y ] ; if ( sum1 > sum ) sum = sum1 ; fun ( ptr , x , y , n ) ; sum1 -= ptr [ x ] [ y ] ; } }",
+      "children": [
+        {
+          "type": "primitive_type",
+          "start_byte": 275,
+          "end_byte": 279,
+          "text": "void",
+          "children": []
+        },
+        {
+          "type": "function_declarator",
+          "start_byte": 280,
+          "end_byte": 324,
+          "text": "diag ( int * * ptr , int x , int y , int n )",
+          "children": [
+            {
+              "type": "identifier",
+              "start_byte": 280,
+              "end_byte": 284,
+              "text": "diag",
+              "children": []
+            },
+            {
+              "type": "parameter_list",
+              "start_byte": 285,
+              "end_byte": 324,
+              "text": "( int * * ptr , int x , int y , int n )",
+              "children": [
+                {
+                  "type": "(",
+                  "start_byte": 285,
+                  "end_byte": 286,
+                  "text": "(",
+                  "children": []
+                },
+                {
+                  "type": "parameter_declaration",
+                  "start_byte": 287,
+                  "end_byte": 298,
+                  "text": "int * * ptr",
+                  "children": [
+                    {
+                      "type": "primitive_type",
+                      "start_byte": 287,
+                      "end_byte": 290,
+                      "text": "int",
+                      "children": []
+                    },
+                    {
+                      "type": "pointer_declarator",
+                      "start_byte": 291,
+                      "end_byte": 298,
+                      "text": "* * ptr",
+                      "children": [
+                        {
+                          "type": "*",
+                          "start_byte": 291,
+                          "end_byte": 292,
+                          "text": "*",
+                          "children": []
+                        },
+                        {
+                          "type": "pointer_declarator",
+                          "start_byte": 293,
+                          "end_byte": 298,
+                          "text": "* ptr",
+                          "children": [
+                            {
+                              "type": "*",
+                              "start_byte": 293,
+                              "end_byte": 294,
+                              "text": "*",
+                              "children": []
+                            },
+                            {
+                              "type": "identifier",
+                              "start_byte": 295,
+                              "end_byte": 298,
+                              "text": "ptr",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": ",",
+                  "start_byte": 299,
+                  "end_byte": 300,
+                  "text": ",",
+                  "children": []
+                },
+                {
+                  "type": "parameter_declaration",
+                  "start_byte": 301,
+                  "end_byte": 306,
+                  "text": "int x",
+                  "children": [
+                    {
+                      "type": "primitive_type",
+                      "start_byte": 301,
+                      "end_byte": 304,
+                      "text": "int",
+                      "children": []
+                    },
+                    {
+                      "type": "identifier",
+                      "start_byte": 305,
+                      "end_byte": 306,
+                      "text": "x",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": ",",
+                  "start_byte": 307,
+                  "end_byte": 308,
+                  "text": ",",
+                  "children": []
+                },
+                {
+                  "type": "parameter_declaration",
+                  "start_byte": 309,
+                  "end_byte": 314,
+                  "text": "int y",
+                  "children": [
+                    {
+                      "type": "primitive_type",
+                      "start_byte": 309,
+                      "end_byte": 312,
+                      "text": "int",
+                      "children": []
+                    },
+                    {
+                      "type": "identifier",
+                      "start_byte": 313,
+                      "end_byte": 314,
+                      "text": "y",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": ",",
+                  "start_byte": 315,
+                  "end_byte": 316,
+                  "text": ",",
+                  "children": []
+                },
+                {
+                  "type": "parameter_declaration",
+                  "start_byte": 317,
+                  "end_byte": 322,
+                  "text": "int n",
+                  "children": [
+                    {
+                      "type": "primitive_type",
+                      "start_byte": 317,
+                      "end_byte": 320,
+                      "text": "int",
+                      "children": []
+                    },
+                    {
+                      "type": "identifier",
+                      "start_byte": 321,
+                      "end_byte": 322,
+                      "text": "n",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": ")",
+                  "start_byte": 323,
+                  "end_byte": 324,
+                  "text": ")",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "compound_statement",
+          "start_byte": 325,
+          "end_byte": 472,
+          "text": "{ if ( x < n - 1 ) { x ++ ; y ++ ; sum1 += ptr [ x ] [ y ] ; if ( sum1 > sum ) sum = sum1 ; fun ( ptr , x , y , n ) ; sum1 -= ptr [ x ] [ y ] ; } }",
+          "children": [
+            {
+              "type": "{",
+              "start_byte": 325,
+              "end_byte": 326,
+              "text": "{",
+              "children": []
+            },
+            {
+              "type": "if_statement",
+              "start_byte": 327,
+              "end_byte": 470,
+              "text": "if ( x < n - 1 ) { x ++ ; y ++ ; sum1 += ptr [ x ] [ y ] ; if ( sum1 > sum ) sum = sum1 ; fun ( ptr , x , y , n ) ; sum1 -= ptr [ x ] [ y ] ; }",
+              "children": [
+                {
+                  "type": "if",
+                  "start_byte": 327,
+                  "end_byte": 329,
+                  "text": "if",
+                  "children": []
+                },
+                {
+                  "type": "condition_clause",
+                  "start_byte": 330,
+                  "end_byte": 343,
+                  "text": "( x < n - 1 )",
+                  "children": [
+                    {
+                      "type": "(",
+                      "start_byte": 330,
+                      "end_byte": 331,
+                      "text": "(",
+                      "children": []
+                    },
+                    {
+                      "type": "binary_expression",
+                      "start_byte": 332,
+                      "end_byte": 341,
+                      "text": "x < n - 1",
+                      "children": [
+                        {
+                          "type": "identifier",
+                          "start_byte": 332,
+                          "end_byte": 333,
+                          "text": "x",
+                          "children": []
+                        },
+                        {
+                          "type": "<",
+                          "start_byte": 334,
+                          "end_byte": 335,
+                          "text": "<",
+                          "children": []
+                        },
+                        {
+                          "type": "binary_expression",
+                          "start_byte": 336,
+                          "end_byte": 341,
+                          "text": "n - 1",
+                          "children": [
+                            {
+                              "type": "identifier",
+                              "start_byte": 336,
+                              "end_byte": 337,
+                              "text": "n",
+                              "children": []
+                            },
+                            {
+                              "type": "-",
+                              "start_byte": 338,
+                              "end_byte": 339,
+                              "text": "-",
+                              "children": []
+                            },
+                            {
+                              "type": "number_literal",
+                              "start_byte": 340,
+                              "end_byte": 341,
+                              "text": "1",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": ")",
+                      "start_byte": 342,
+                      "end_byte": 343,
+                      "text": ")",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "compound_statement",
+                  "start_byte": 344,
+                  "end_byte": 470,
+                  "text": "{ x ++ ; y ++ ; sum1 += ptr [ x ] [ y ] ; if ( sum1 > sum ) sum = sum1 ; fun ( ptr , x , y , n ) ; sum1 -= ptr [ x ] [ y ] ; }",
+                  "children": [
+                    {
+                      "type": "{",
+                      "start_byte": 344,
+                      "end_byte": 345,
+                      "text": "{",
+                      "children": []
+                    },
+                    {
+                      "type": "expression_statement",
+                      "start_byte": 346,
+                      "end_byte": 352,
+                      "text": "x ++ ;",
+                      "children": [
+                        {
+                          "type": "update_expression",
+                          "start_byte": 346,
+                          "end_byte": 350,
+                          "text": "x ++",
+                          "children": [
+                            {
+                              "type": "identifier",
+                              "start_byte": 346,
+                              "end_byte": 347,
+                              "text": "x",
+                              "children": []
+                            },
+                            {
+                              "type": "++",
+                              "start_byte": 348,
+                              "end_byte": 350,
+                              "text": "++",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": ";",
+                          "start_byte": 351,
+                          "end_byte": 352,
+                          "text": ";",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "expression_statement",
+                      "start_byte": 353,
+                      "end_byte": 359,
+                      "text": "y ++ ;",
+                      "children": [
+                        {
+                          "type": "update_expression",
+                          "start_byte": 353,
+                          "end_byte": 357,
+                          "text": "y ++",
+                          "children": [
+                            {
+                              "type": "identifier",
+                              "start_byte": 353,
+                              "end_byte": 354,
+                              "text": "y",
+                              "children": []
+                            },
+                            {
+                              "type": "++",
+                              "start_byte": 355,
+                              "end_byte": 357,
+                              "text": "++",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": ";",
+                          "start_byte": 358,
+                          "end_byte": 359,
+                          "text": ";",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "expression_statement",
+                      "start_byte": 360,
+                      "end_byte": 385,
+                      "text": "sum1 += ptr [ x ] [ y ] ;",
+                      "children": [
+                        {
+                          "type": "assignment_expression",
+                          "start_byte": 360,
+                          "end_byte": 383,
+                          "text": "sum1 += ptr [ x ] [ y ]",
+                          "children": [
+                            {
+                              "type": "identifier",
+                              "start_byte": 360,
+                              "end_byte": 364,
+                              "text": "sum1",
+                              "children": []
+                            },
+                            {
+                              "type": "+=",
+                              "start_byte": 365,
+                              "end_byte": 367,
+                              "text": "+=",
+                              "children": []
+                            },
+                            {
+                              "type": "subscript_expression",
+                              "start_byte": 368,
+                              "end_byte": 383,
+                              "text": "ptr [ x ] [ y ]",
+                              "children": [
+                                {
+                                  "type": "subscript_expression",
+                                  "start_byte": 368,
+                                  "end_byte": 377,
+                                  "text": "ptr [ x ]",
+                                  "children": [
+                                    {
+                                      "type": "identifier",
+                                      "start_byte": 368,
+                                      "end_byte": 371,
+                                      "text": "ptr",
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "subscript_argument_list",
+                                      "start_byte": 372,
+                                      "end_byte": 377,
+                                      "text": "[ x ]",
+                                      "children": [
+                                        {
+                                          "type": "[",
+                                          "start_byte": 372,
+                                          "end_byte": 373,
+                                          "text": "[",
+                                          "children": []
+                                        },
+                                        {
+                                          "type": "identifier",
+                                          "start_byte": 374,
+                                          "end_byte": 375,
+                                          "text": "x",
+                                          "children": []
+                                        },
+                                        {
+                                          "type": "]",
+                                          "start_byte": 376,
+                                          "end_byte": 377,
+                                          "text": "]",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "subscript_argument_list",
+                                  "start_byte": 378,
+                                  "end_byte": 383,
+                                  "text": "[ y ]",
+                                  "children": [
+                                    {
+                                      "type": "[",
+                                      "start_byte": 378,
+                                      "end_byte": 379,
+                                      "text": "[",
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "identifier",
+                                      "start_byte": 380,
+                                      "end_byte": 381,
+                                      "text": "y",
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "]",
+                                      "start_byte": 382,
+                                      "end_byte": 383,
+                                      "text": "]",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": ";",
+                          "start_byte": 384,
+                          "end_byte": 385,
+                          "text": ";",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "if_statement",
+                      "start_byte": 386,
+                      "end_byte": 416,
+                      "text": "if ( sum1 > sum ) sum = sum1 ;",
+                      "children": [
+                        {
+                          "type": "if",
+                          "start_byte": 386,
+                          "end_byte": 388,
+                          "text": "if",
+                          "children": []
+                        },
+                        {
+                          "type": "condition_clause",
+                          "start_byte": 389,
+                          "end_byte": 403,
+                          "text": "( sum1 > sum )",
+                          "children": [
+                            {
+                              "type": "(",
+                              "start_byte": 389,
+                              "end_byte": 390,
+                              "text": "(",
+                              "children": []
+                            },
+                            {
+                              "type": "binary_expression",
+                              "start_byte": 391,
+                              "end_byte": 401,
+                              "text": "sum1 > sum",
+                              "children": [
+                                {
+                                  "type": "identifier",
+                                  "start_byte": 391,
+                                  "end_byte": 395,
+                                  "text": "sum1",
+                                  "children": []
+                                },
+                                {
+                                  "type": ">",
+                                  "start_byte": 396,
+                                  "end_byte": 397,
+                                  "text": ">",
+                                  "children": []
+                                },
+                                {
+                                  "type": "identifier",
+                                  "start_byte": 398,
+                                  "end_byte": 401,
+                                  "text": "sum",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "type": ")",
+                              "start_byte": 402,
+                              "end_byte": 403,
+                              "text": ")",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": "expression_statement",
+                          "start_byte": 404,
+                          "end_byte": 416,
+                          "text": "sum = sum1 ;",
+                          "children": [
+                            {
+                              "type": "assignment_expression",
+                              "start_byte": 404,
+                              "end_byte": 414,
+                              "text": "sum = sum1",
+                              "children": [
+                                {
+                                  "type": "identifier",
+                                  "start_byte": 404,
+                                  "end_byte": 407,
+                                  "text": "sum",
+                                  "children": []
+                                },
+                                {
+                                  "type": "=",
+                                  "start_byte": 408,
+                                  "end_byte": 409,
+                                  "text": "=",
+                                  "children": []
+                                },
+                                {
+                                  "type": "identifier",
+                                  "start_byte": 410,
+                                  "end_byte": 414,
+                                  "text": "sum1",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "type": ";",
+                              "start_byte": 415,
+                              "end_byte": 416,
+                              "text": ";",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "expression_statement",
+                      "start_byte": 417,
+                      "end_byte": 442,
+                      "text": "fun ( ptr , x , y , n ) ;",
+                      "children": [
+                        {
+                          "type": "call_expression",
+                          "start_byte": 417,
+                          "end_byte": 440,
+                          "text": "fun ( ptr , x , y , n )",
+                          "children": [
+                            {
+                              "type": "identifier",
+                              "start_byte": 417,
+                              "end_byte": 420,
+                              "text": "fun",
+                              "children": []
+                            },
+                            {
+                              "type": "argument_list",
+                              "start_byte": 421,
+                              "end_byte": 440,
+                              "text": "( ptr , x , y , n )",
+                              "children": [
+                                {
+                                  "type": "(",
+                                  "start_byte": 421,
+                                  "end_byte": 422,
+                                  "text": "(",
+                                  "children": []
+                                },
+                                {
+                                  "type": "identifier",
+                                  "start_byte": 423,
+                                  "end_byte": 426,
+                                  "text": "ptr",
+                                  "children": []
+                                },
+                                {
+                                  "type": ",",
+                                  "start_byte": 427,
+                                  "end_byte": 428,
+                                  "text": ",",
+                                  "children": []
+                                },
+                                {
+                                  "type": "identifier",
+                                  "start_byte": 429,
+                                  "end_byte": 430,
+                                  "text": "x",
+                                  "children": []
+                                },
+                                {
+                                  "type": ",",
+                                  "start_byte": 431,
+                                  "end_byte": 432,
+                                  "text": ",",
+                                  "children": []
+                                },
+                                {
+                                  "type": "identifier",
+                                  "start_byte": 433,
+                                  "end_byte": 434,
+                                  "text": "y",
+                                  "children": []
+                                },
+                                {
+                                  "type": ",",
+                                  "start_byte": 435,
+                                  "end_byte": 436,
+                                  "text": ",",
+                                  "children": []
+                                },
+                                {
+                                  "type": "identifier",
+                                  "start_byte": 437,
+                                  "end_byte": 438,
+                                  "text": "n",
+                                  "children": []
+                                },
+                                {
+                                  "type": ")",
+                                  "start_byte": 439,
+                                  "end_byte": 440,
+                                  "text": ")",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": ";",
+                          "start_byte": 441,
+                          "end_byte": 442,
+                          "text": ";",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "expression_statement",
+                      "start_byte": 443,
+                      "end_byte": 468,
+                      "text": "sum1 -= ptr [ x ] [ y ] ;",
+                      "children": [
+                        {
+                          "type": "assignment_expression",
+                          "start_byte": 443,
+                          "end_byte": 466,
+                          "text": "sum1 -= ptr [ x ] [ y ]",
+                          "children": [
+                            {
+                              "type": "identifier",
+                              "start_byte": 443,
+                              "end_byte": 447,
+                              "text": "sum1",
+                              "children": []
+                            },
+                            {
+                              "type": "-=",
+                              "start_byte": 448,
+                              "end_byte": 450,
+                              "text": "-=",
+                              "children": []
+                            },
+                            {
+                              "type": "subscript_expression",
+                              "start_byte": 451,
+                              "end_byte": 466,
+                              "text": "ptr [ x ] [ y ]",
+                              "children": [
+                                {
+                                  "type": "subscript_expression",
+                                  "start_byte": 451,
+                                  "end_byte": 460,
+                                  "text": "ptr [ x ]",
+                                  "children": [
+                                    {
+                                      "type": "identifier",
+                                      "start_byte": 451,
+                                      "end_byte": 454,
+                                      "text": "ptr",
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "subscript_argument_list",
+                                      "start_byte": 455,
+                                      "end_byte": 460,
+                                      "text": "[ x ]",
+                                      "children": [
+                                        {
+                                          "type": "[",
+                                          "start_byte": 455,
+                                          "end_byte": 456,
+                                          "text": "[",
+                                          "children": []
+                                        },
+                                        {
+                                          "type": "identifier",
+                                          "start_byte": 457,
+                                          "end_byte": 458,
+                                          "text": "x",
+                                          "children": []
+                                        },
+                                        {
+                                          "type": "]",
+                                          "start_byte": 459,
+                                          "end_byte": 460,
+                                          "text": "]",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "subscript_argument_list",
+                                  "start_byte": 461,
+                                  "end_byte": 466,
+                                  "text": "[ y ]",
+                                  "children": [
+                                    {
+                                      "type": "[",
+                                      "start_byte": 461,
+                                      "end_byte": 462,
+                                      "text": "[",
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "identifier",
+                                      "start_byte": 463,
+                                      "end_byte": 464,
+                                      "text": "y",
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "]",
+                                      "start_byte": 465,
+                                      "end_byte": 466,
+                                      "text": "]",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": ";",
+                          "start_byte": 467,
+                          "end_byte": 468,
+                          "text": ";",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "}",
+                      "start_byte": 469,
+                      "end_byte": 470,
+                      "text": "}",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "}",
+              "start_byte": 471,
+              "end_byte": 472,
+              "text": "}",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "function_definition",
+      "start_byte": 473,
+      "end_byte": 579,
+      "text": "void fun ( int * * ptr , int x , int y , int n ) { down ( ptr , x , y , n ) ; diag ( ptr , x , y , n ) ; }",
+      "children": [
+        {
+          "type": "primitive_type",
+          "start_byte": 473,
+          "end_byte": 477,
+          "text": "void",
+          "children": []
+        },
+        {
+          "type": "function_declarator",
+          "start_byte": 478,
+          "end_byte": 521,
+          "text": "fun ( int * * ptr , int x , int y , int n )",
+          "children": [
+            {
+              "type": "identifier",
+              "start_byte": 478,
+              "end_byte": 481,
+              "text": "fun",
+              "children": []
+            },
+            {
+              "type": "parameter_list",
+              "start_byte": 482,
+              "end_byte": 521,
+              "text": "( int * * ptr , int x , int y , int n )",
+              "children": [
+                {
+                  "type": "(",
+                  "start_byte": 482,
+                  "end_byte": 483,
+                  "text": "(",
+                  "children": []
+                },
+                {
+                  "type": "parameter_declaration",
+                  "start_byte": 484,
+                  "end_byte": 495,
+                  "text": "int * * ptr",
+                  "children": [
+                    {
+                      "type": "primitive_type",
+                      "start_byte": 484,
+                      "end_byte": 487,
+                      "text": "int",
+                      "children": []
+                    },
+                    {
+                      "type": "pointer_declarator",
+                      "start_byte": 488,
+                      "end_byte": 495,
+                      "text": "* * ptr",
+                      "children": [
+                        {
+                          "type": "*",
+                          "start_byte": 488,
+                          "end_byte": 489,
+                          "text": "*",
+                          "children": []
+                        },
+                        {
+                          "type": "pointer_declarator",
+                          "start_byte": 490,
+                          "end_byte": 495,
+                          "text": "* ptr",
+                          "children": [
+                            {
+                              "type": "*",
+                              "start_byte": 490,
+                              "end_byte": 491,
+                              "text": "*",
+                              "children": []
+                            },
+                            {
+                              "type": "identifier",
+                              "start_byte": 492,
+                              "end_byte": 495,
+                              "text": "ptr",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": ",",
+                  "start_byte": 496,
+                  "end_byte": 497,
+                  "text": ",",
+                  "children": []
+                },
+                {
+                  "type": "parameter_declaration",
+                  "start_byte": 498,
+                  "end_byte": 503,
+                  "text": "int x",
+                  "children": [
+                    {
+                      "type": "primitive_type",
+                      "start_byte": 498,
+                      "end_byte": 501,
+                      "text": "int",
+                      "children": []
+                    },
+                    {
+                      "type": "identifier",
+                      "start_byte": 502,
+                      "end_byte": 503,
+                      "text": "x",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": ",",
+                  "start_byte": 504,
+                  "end_byte": 505,
+                  "text": ",",
+                  "children": []
+                },
+                {
+                  "type": "parameter_declaration",
+                  "start_byte": 506,
+                  "end_byte": 511,
+                  "text": "int y",
+                  "children": [
+                    {
+                      "type": "primitive_type",
+                      "start_byte": 506,
+                      "end_byte": 509,
+                      "text": "int",
+                      "children": []
+                    },
+                    {
+                      "type": "identifier",
+                      "start_byte": 510,
+                      "end_byte": 511,
+                      "text": "y",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": ",",
+                  "start_byte": 512,
+                  "end_byte": 513,
+                  "text": ",",
+                  "children": []
+                },
+                {
+                  "type": "parameter_declaration",
+                  "start_byte": 514,
+                  "end_byte": 519,
+                  "text": "int n",
+                  "children": [
+                    {
+                      "type": "primitive_type",
+                      "start_byte": 514,
+                      "end_byte": 517,
+                      "text": "int",
+                      "children": []
+                    },
+                    {
+                      "type": "identifier",
+                      "start_byte": 518,
+                      "end_byte": 519,
+                      "text": "n",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": ")",
+                  "start_byte": 520,
+                  "end_byte": 521,
+                  "text": ")",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "compound_statement",
+          "start_byte": 522,
+          "end_byte": 579,
+          "text": "{ down ( ptr , x , y , n ) ; diag ( ptr , x , y , n ) ; }",
+          "children": [
+            {
+              "type": "{",
+              "start_byte": 522,
+              "end_byte": 523,
+              "text": "{",
+              "children": []
+            },
+            {
+              "type": "expression_statement",
+              "start_byte": 524,
+              "end_byte": 550,
+              "text": "down ( ptr , x , y , n ) ;",
+              "children": [
+                {
+                  "type": "call_expression",
+                  "start_byte": 524,
+                  "end_byte": 548,
+                  "text": "down ( ptr , x , y , n )",
+                  "children": [
+                    {
+                      "type": "identifier",
+                      "start_byte": 524,
+                      "end_byte": 528,
+                      "text": "down",
+                      "children": []
+                    },
+                    {
+                      "type": "argument_list",
+                      "start_byte": 529,
+                      "end_byte": 548,
+                      "text": "( ptr , x , y , n )",
+                      "children": [
+                        {
+                          "type": "(",
+                          "start_byte": 529,
+                          "end_byte": 530,
+                          "text": "(",
+                          "children": []
+                        },
+                        {
+                          "type": "identifier",
+                          "start_byte": 531,
+                          "end_byte": 534,
+                          "text": "ptr",
+                          "children": []
+                        },
+                        {
+                          "type": ",",
+                          "start_byte": 535,
+                          "end_byte": 536,
+                          "text": ",",
+                          "children": []
+                        },
+                        {
+                          "type": "identifier",
+                          "start_byte": 537,
+                          "end_byte": 538,
+                          "text": "x",
+                          "children": []
+                        },
+                        {
+                          "type": ",",
+                          "start_byte": 539,
+                          "end_byte": 540,
+                          "text": ",",
+                          "children": []
+                        },
+                        {
+                          "type": "identifier",
+                          "start_byte": 541,
+                          "end_byte": 542,
+                          "text": "y",
+                          "children": []
+                        },
+                        {
+                          "type": ",",
+                          "start_byte": 543,
+                          "end_byte": 544,
+                          "text": ",",
+                          "children": []
+                        },
+                        {
+                          "type": "identifier",
+                          "start_byte": 545,
+                          "end_byte": 546,
+                          "text": "n",
+                          "children": []
+                        },
+                        {
+                          "type": ")",
+                          "start_byte": 547,
+                          "end_byte": 548,
+                          "text": ")",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": ";",
+                  "start_byte": 549,
+                  "end_byte": 550,
+                  "text": ";",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "expression_statement",
+              "start_byte": 551,
+              "end_byte": 577,
+              "text": "diag ( ptr , x , y , n ) ;",
+              "children": [
+                {
+                  "type": "call_expression",
+                  "start_byte": 551,
+                  "end_byte": 575,
+                  "text": "diag ( ptr , x , y , n )",
+                  "children": [
+                    {
+                      "type": "identifier",
+                      "start_byte": 551,
+                      "end_byte": 555,
+                      "text": "diag",
+                      "children": []
+                    },
+                    {
+                      "type": "argument_list",
+                      "start_byte": 556,
+                      "end_byte": 575,
+                      "text": "( ptr , x , y , n )",
+                      "children": [
+                        {
+                          "type": "(",
+                          "start_byte": 556,
+                          "end_byte": 557,
+                          "text": "(",
+                          "children": []
+                        },
+                        {
+                          "type": "identifier",
+                          "start_byte": 558,
+                          "end_byte": 561,
+                          "text": "ptr",
+                          "children": []
+                        },
+                        {
+                          "type": ",",
+                          "start_byte": 562,
+                          "end_byte": 563,
+                          "text": ",",
+                          "children": []
+                        },
+                        {
+                          "type": "identifier",
+                          "start_byte": 564,
+                          "end_byte": 565,
+                          "text": "x",
+                          "children": []
+                        },
+                        {
+                          "type": ",",
+                          "start_byte": 566,
+                          "end_byte": 567,
+                          "text": ",",
+                          "children": []
+                        },
+                        {
+                          "type": "identifier",
+                          "start_byte": 568,
+                          "end_byte": 569,
+                          "text": "y",
+                          "children": []
+                        },
+                        {
+                          "type": ",",
+                          "start_byte": 570,
+                          "end_byte": 571,
+                          "text": ",",
+                          "children": []
+                        },
+                        {
+                          "type": "identifier",
+                          "start_byte": 572,
+                          "end_byte": 573,
+                          "text": "n",
+                          "children": []
+                        },
+                        {
+                          "type": ")",
+                          "start_byte": 574,
+                          "end_byte": 575,
+                          "text": ")",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": ";",
+                  "start_byte": 576,
+                  "end_byte": 577,
+                  "text": ";",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "}",
+              "start_byte": 578,
+              "end_byte": 579,
+              "text": "}",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "function_definition",
+      "start_byte": 580,
+      "end_byte": 1049,
+      "text": "int main ( void ) { int * * ptr , i , j , n , k , l ; scanf ( \"%d\" , & k ) ; for ( l = 0 ; l < k ; l ++ ) { scanf ( \"%d\" , & n ) ; ptr = ( int * * ) malloc ( sizeof ( int * ) * n ) ; for ( i = 0 ; i < n ; i ++ ) ptr [ i ] = ( int * ) malloc ( sizeof ( int ) * ( n + 1 ) ) ; for ( i = 0 ; i < n ; i ++ ) { for ( j = 0 ; j <= i ; j ++ ) scanf ( \"%d\" , & ptr [ i ] [ j ] ) ; } sum = sum1 = ptr [ 0 ] [ 0 ] ; fun ( ptr , 0 , 0 , n ) ; printf ( \"%d\" , sum ) ; } return 0 ; }",
+      "children": [
+        {
+          "type": "primitive_type",
+          "start_byte": 580,
+          "end_byte": 583,
+          "text": "int",
+          "children": []
+        },
+        {
+          "type": "function_declarator",
+          "start_byte": 584,
+          "end_byte": 597,
+          "text": "main ( void )",
+          "children": [
+            {
+              "type": "identifier",
+              "start_byte": 584,
+              "end_byte": 588,
+              "text": "main",
+              "children": []
+            },
+            {
+              "type": "parameter_list",
+              "start_byte": 589,
+              "end_byte": 597,
+              "text": "( void )",
+              "children": [
+                {
+                  "type": "(",
+                  "start_byte": 589,
+                  "end_byte": 590,
+                  "text": "(",
+                  "children": []
+                },
+                {
+                  "type": "parameter_declaration",
+                  "start_byte": 591,
+                  "end_byte": 595,
+                  "text": "void",
+                  "children": [
+                    {
+                      "type": "primitive_type",
+                      "start_byte": 591,
+                      "end_byte": 595,
+                      "text": "void",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": ")",
+                  "start_byte": 596,
+                  "end_byte": 597,
+                  "text": ")",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "compound_statement",
+          "start_byte": 598,
+          "end_byte": 1049,
+          "text": "{ int * * ptr , i , j , n , k , l ; scanf ( \"%d\" , & k ) ; for ( l = 0 ; l < k ; l ++ ) { scanf ( \"%d\" , & n ) ; ptr = ( int * * ) malloc ( sizeof ( int * ) * n ) ; for ( i = 0 ; i < n ; i ++ ) ptr [ i ] = ( int * ) malloc ( sizeof ( int ) * ( n + 1 ) ) ; for ( i = 0 ; i < n ; i ++ ) { for ( j = 0 ; j <= i ; j ++ ) scanf ( \"%d\" , & ptr [ i ] [ j ] ) ; } sum = sum1 = ptr [ 0 ] [ 0 ] ; fun ( ptr , 0 , 0 , n ) ; printf ( \"%d\" , sum ) ; } return 0 ; }",
+          "children": [
+            {
+              "type": "{",
+              "start_byte": 598,
+              "end_byte": 599,
+              "text": "{",
+              "children": []
+            },
+            {
+              "type": "declaration",
+              "start_byte": 600,
+              "end_byte": 633,
+              "text": "int * * ptr , i , j , n , k , l ;",
+              "children": [
+                {
+                  "type": "primitive_type",
+                  "start_byte": 600,
+                  "end_byte": 603,
+                  "text": "int",
+                  "children": []
+                },
+                {
+                  "type": "pointer_declarator",
+                  "start_byte": 604,
+                  "end_byte": 611,
+                  "text": "* * ptr",
+                  "children": [
+                    {
+                      "type": "*",
+                      "start_byte": 604,
+                      "end_byte": 605,
+                      "text": "*",
+                      "children": []
+                    },
+                    {
+                      "type": "pointer_declarator",
+                      "start_byte": 606,
+                      "end_byte": 611,
+                      "text": "* ptr",
+                      "children": [
+                        {
+                          "type": "*",
+                          "start_byte": 606,
+                          "end_byte": 607,
+                          "text": "*",
+                          "children": []
+                        },
+                        {
+                          "type": "identifier",
+                          "start_byte": 608,
+                          "end_byte": 611,
+                          "text": "ptr",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": ",",
+                  "start_byte": 612,
+                  "end_byte": 613,
+                  "text": ",",
+                  "children": []
+                },
+                {
+                  "type": "identifier",
+                  "start_byte": 614,
+                  "end_byte": 615,
+                  "text": "i",
+                  "children": []
+                },
+                {
+                  "type": ",",
+                  "start_byte": 616,
+                  "end_byte": 617,
+                  "text": ",",
+                  "children": []
+                },
+                {
+                  "type": "identifier",
+                  "start_byte": 618,
+                  "end_byte": 619,
+                  "text": "j",
+                  "children": []
+                },
+                {
+                  "type": ",",
+                  "start_byte": 620,
+                  "end_byte": 621,
+                  "text": ",",
+                  "children": []
+                },
+                {
+                  "type": "identifier",
+                  "start_byte": 622,
+                  "end_byte": 623,
+                  "text": "n",
+                  "children": []
+                },
+                {
+                  "type": ",",
+                  "start_byte": 624,
+                  "end_byte": 625,
+                  "text": ",",
+                  "children": []
+                },
+                {
+                  "type": "identifier",
+                  "start_byte": 626,
+                  "end_byte": 627,
+                  "text": "k",
+                  "children": []
+                },
+                {
+                  "type": ",",
+                  "start_byte": 628,
+                  "end_byte": 629,
+                  "text": ",",
+                  "children": []
+                },
+                {
+                  "type": "identifier",
+                  "start_byte": 630,
+                  "end_byte": 631,
+                  "text": "l",
+                  "children": []
+                },
+                {
+                  "type": ";",
+                  "start_byte": 632,
+                  "end_byte": 633,
+                  "text": ";",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "expression_statement",
+              "start_byte": 634,
+              "end_byte": 656,
+              "text": "scanf ( \"%d\" , & k ) ;",
+              "children": [
+                {
+                  "type": "call_expression",
+                  "start_byte": 634,
+                  "end_byte": 654,
+                  "text": "scanf ( \"%d\" , & k )",
+                  "children": [
+                    {
+                      "type": "identifier",
+                      "start_byte": 634,
+                      "end_byte": 639,
+                      "text": "scanf",
+                      "children": []
+                    },
+                    {
+                      "type": "argument_list",
+                      "start_byte": 640,
+                      "end_byte": 654,
+                      "text": "( \"%d\" , & k )",
+                      "children": [
+                        {
+                          "type": "(",
+                          "start_byte": 640,
+                          "end_byte": 641,
+                          "text": "(",
+                          "children": []
+                        },
+                        {
+                          "type": "string_literal",
+                          "start_byte": 642,
+                          "end_byte": 646,
+                          "text": "\"%d\"",
+                          "children": [
+                            {
+                              "type": "\"",
+                              "start_byte": 642,
+                              "end_byte": 643,
+                              "text": "\"",
+                              "children": []
+                            },
+                            {
+                              "type": "string_content",
+                              "start_byte": 643,
+                              "end_byte": 645,
+                              "text": "%d",
+                              "children": []
+                            },
+                            {
+                              "type": "\"",
+                              "start_byte": 645,
+                              "end_byte": 646,
+                              "text": "\"",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": ",",
+                          "start_byte": 647,
+                          "end_byte": 648,
+                          "text": ",",
+                          "children": []
+                        },
+                        {
+                          "type": "pointer_expression",
+                          "start_byte": 649,
+                          "end_byte": 652,
+                          "text": "& k",
+                          "children": [
+                            {
+                              "type": "&",
+                              "start_byte": 649,
+                              "end_byte": 650,
+                              "text": "&",
+                              "children": []
+                            },
+                            {
+                              "type": "identifier",
+                              "start_byte": 651,
+                              "end_byte": 652,
+                              "text": "k",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": ")",
+                          "start_byte": 653,
+                          "end_byte": 654,
+                          "text": ")",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": ";",
+                  "start_byte": 655,
+                  "end_byte": 656,
+                  "text": ";",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "for_statement",
+              "start_byte": 657,
+              "end_byte": 1036,
+              "text": "for ( l = 0 ; l < k ; l ++ ) { scanf ( \"%d\" , & n ) ; ptr = ( int * * ) malloc ( sizeof ( int * ) * n ) ; for ( i = 0 ; i < n ; i ++ ) ptr [ i ] = ( int * ) malloc ( sizeof ( int ) * ( n + 1 ) ) ; for ( i = 0 ; i < n ; i ++ ) { for ( j = 0 ; j <= i ; j ++ ) scanf ( \"%d\" , & ptr [ i ] [ j ] ) ; } sum = sum1 = ptr [ 0 ] [ 0 ] ; fun ( ptr , 0 , 0 , n ) ; printf ( \"%d\" , sum ) ; }",
+              "children": [
+                {
+                  "type": "for",
+                  "start_byte": 657,
+                  "end_byte": 660,
+                  "text": "for",
+                  "children": []
+                },
+                {
+                  "type": "(",
+                  "start_byte": 661,
+                  "end_byte": 662,
+                  "text": "(",
+                  "children": []
+                },
+                {
+                  "type": "assignment_expression",
+                  "start_byte": 663,
+                  "end_byte": 668,
+                  "text": "l = 0",
+                  "children": [
+                    {
+                      "type": "identifier",
+                      "start_byte": 663,
+                      "end_byte": 664,
+                      "text": "l",
+                      "children": []
+                    },
+                    {
+                      "type": "=",
+                      "start_byte": 665,
+                      "end_byte": 666,
+                      "text": "=",
+                      "children": []
+                    },
+                    {
+                      "type": "number_literal",
+                      "start_byte": 667,
+                      "end_byte": 668,
+                      "text": "0",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": ";",
+                  "start_byte": 669,
+                  "end_byte": 670,
+                  "text": ";",
+                  "children": []
+                },
+                {
+                  "type": "binary_expression",
+                  "start_byte": 671,
+                  "end_byte": 676,
+                  "text": "l < k",
+                  "children": [
+                    {
+                      "type": "identifier",
+                      "start_byte": 671,
+                      "end_byte": 672,
+                      "text": "l",
+                      "children": []
+                    },
+                    {
+                      "type": "<",
+                      "start_byte": 673,
+                      "end_byte": 674,
+                      "text": "<",
+                      "children": []
+                    },
+                    {
+                      "type": "identifier",
+                      "start_byte": 675,
+                      "end_byte": 676,
+                      "text": "k",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": ";",
+                  "start_byte": 677,
+                  "end_byte": 678,
+                  "text": ";",
+                  "children": []
+                },
+                {
+                  "type": "update_expression",
+                  "start_byte": 679,
+                  "end_byte": 683,
+                  "text": "l ++",
+                  "children": [
+                    {
+                      "type": "identifier",
+                      "start_byte": 679,
+                      "end_byte": 680,
+                      "text": "l",
+                      "children": []
+                    },
+                    {
+                      "type": "++",
+                      "start_byte": 681,
+                      "end_byte": 683,
+                      "text": "++",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": ")",
+                  "start_byte": 684,
+                  "end_byte": 685,
+                  "text": ")",
+                  "children": []
+                },
+                {
+                  "type": "compound_statement",
+                  "start_byte": 686,
+                  "end_byte": 1036,
+                  "text": "{ scanf ( \"%d\" , & n ) ; ptr = ( int * * ) malloc ( sizeof ( int * ) * n ) ; for ( i = 0 ; i < n ; i ++ ) ptr [ i ] = ( int * ) malloc ( sizeof ( int ) * ( n + 1 ) ) ; for ( i = 0 ; i < n ; i ++ ) { for ( j = 0 ; j <= i ; j ++ ) scanf ( \"%d\" , & ptr [ i ] [ j ] ) ; } sum = sum1 = ptr [ 0 ] [ 0 ] ; fun ( ptr , 0 , 0 , n ) ; printf ( \"%d\" , sum ) ; }",
+                  "children": [
+                    {
+                      "type": "{",
+                      "start_byte": 686,
+                      "end_byte": 687,
+                      "text": "{",
+                      "children": []
+                    },
+                    {
+                      "type": "expression_statement",
+                      "start_byte": 688,
+                      "end_byte": 710,
+                      "text": "scanf ( \"%d\" , & n ) ;",
+                      "children": [
+                        {
+                          "type": "call_expression",
+                          "start_byte": 688,
+                          "end_byte": 708,
+                          "text": "scanf ( \"%d\" , & n )",
+                          "children": [
+                            {
+                              "type": "identifier",
+                              "start_byte": 688,
+                              "end_byte": 693,
+                              "text": "scanf",
+                              "children": []
+                            },
+                            {
+                              "type": "argument_list",
+                              "start_byte": 694,
+                              "end_byte": 708,
+                              "text": "( \"%d\" , & n )",
+                              "children": [
+                                {
+                                  "type": "(",
+                                  "start_byte": 694,
+                                  "end_byte": 695,
+                                  "text": "(",
+                                  "children": []
+                                },
+                                {
+                                  "type": "string_literal",
+                                  "start_byte": 696,
+                                  "end_byte": 700,
+                                  "text": "\"%d\"",
+                                  "children": [
+                                    {
+                                      "type": "\"",
+                                      "start_byte": 696,
+                                      "end_byte": 697,
+                                      "text": "\"",
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "string_content",
+                                      "start_byte": 697,
+                                      "end_byte": 699,
+                                      "text": "%d",
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "\"",
+                                      "start_byte": 699,
+                                      "end_byte": 700,
+                                      "text": "\"",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": ",",
+                                  "start_byte": 701,
+                                  "end_byte": 702,
+                                  "text": ",",
+                                  "children": []
+                                },
+                                {
+                                  "type": "pointer_expression",
+                                  "start_byte": 703,
+                                  "end_byte": 706,
+                                  "text": "& n",
+                                  "children": [
+                                    {
+                                      "type": "&",
+                                      "start_byte": 703,
+                                      "end_byte": 704,
+                                      "text": "&",
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "identifier",
+                                      "start_byte": 705,
+                                      "end_byte": 706,
+                                      "text": "n",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": ")",
+                                  "start_byte": 707,
+                                  "end_byte": 708,
+                                  "text": ")",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": ";",
+                          "start_byte": 709,
+                          "end_byte": 710,
+                          "text": ";",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "expression_statement",
+                      "start_byte": 711,
+                      "end_byte": 762,
+                      "text": "ptr = ( int * * ) malloc ( sizeof ( int * ) * n ) ;",
+                      "children": [
+                        {
+                          "type": "assignment_expression",
+                          "start_byte": 711,
+                          "end_byte": 760,
+                          "text": "ptr = ( int * * ) malloc ( sizeof ( int * ) * n )",
+                          "children": [
+                            {
+                              "type": "identifier",
+                              "start_byte": 711,
+                              "end_byte": 714,
+                              "text": "ptr",
+                              "children": []
+                            },
+                            {
+                              "type": "=",
+                              "start_byte": 715,
+                              "end_byte": 716,
+                              "text": "=",
+                              "children": []
+                            },
+                            {
+                              "type": "cast_expression",
+                              "start_byte": 717,
+                              "end_byte": 760,
+                              "text": "( int * * ) malloc ( sizeof ( int * ) * n )",
+                              "children": [
+                                {
+                                  "type": "(",
+                                  "start_byte": 717,
+                                  "end_byte": 718,
+                                  "text": "(",
+                                  "children": []
+                                },
+                                {
+                                  "type": "type_descriptor",
+                                  "start_byte": 719,
+                                  "end_byte": 726,
+                                  "text": "int * *",
+                                  "children": [
+                                    {
+                                      "type": "primitive_type",
+                                      "start_byte": 719,
+                                      "end_byte": 722,
+                                      "text": "int",
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "abstract_pointer_declarator",
+                                      "start_byte": 723,
+                                      "end_byte": 726,
+                                      "text": "* *",
+                                      "children": [
+                                        {
+                                          "type": "*",
+                                          "start_byte": 723,
+                                          "end_byte": 724,
+                                          "text": "*",
+                                          "children": []
+                                        },
+                                        {
+                                          "type": "abstract_pointer_declarator",
+                                          "start_byte": 725,
+                                          "end_byte": 726,
+                                          "text": "*",
+                                          "children": [
+                                            {
+                                              "type": "*",
+                                              "start_byte": 725,
+                                              "end_byte": 726,
+                                              "text": "*",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": ")",
+                                  "start_byte": 727,
+                                  "end_byte": 728,
+                                  "text": ")",
+                                  "children": []
+                                },
+                                {
+                                  "type": "call_expression",
+                                  "start_byte": 729,
+                                  "end_byte": 760,
+                                  "text": "malloc ( sizeof ( int * ) * n )",
+                                  "children": [
+                                    {
+                                      "type": "identifier",
+                                      "start_byte": 729,
+                                      "end_byte": 735,
+                                      "text": "malloc",
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "argument_list",
+                                      "start_byte": 736,
+                                      "end_byte": 760,
+                                      "text": "( sizeof ( int * ) * n )",
+                                      "children": [
+                                        {
+                                          "type": "(",
+                                          "start_byte": 736,
+                                          "end_byte": 737,
+                                          "text": "(",
+                                          "children": []
+                                        },
+                                        {
+                                          "type": "binary_expression",
+                                          "start_byte": 738,
+                                          "end_byte": 758,
+                                          "text": "sizeof ( int * ) * n",
+                                          "children": [
+                                            {
+                                              "type": "sizeof_expression",
+                                              "start_byte": 738,
+                                              "end_byte": 754,
+                                              "text": "sizeof ( int * )",
+                                              "children": [
+                                                {
+                                                  "type": "sizeof",
+                                                  "start_byte": 738,
+                                                  "end_byte": 744,
+                                                  "text": "sizeof",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "type": "(",
+                                                  "start_byte": 745,
+                                                  "end_byte": 746,
+                                                  "text": "(",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "type": "type_descriptor",
+                                                  "start_byte": 747,
+                                                  "end_byte": 752,
+                                                  "text": "int *",
+                                                  "children": [
+                                                    {
+                                                      "type": "primitive_type",
+                                                      "start_byte": 747,
+                                                      "end_byte": 750,
+                                                      "text": "int",
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "abstract_pointer_declarator",
+                                                      "start_byte": 751,
+                                                      "end_byte": 752,
+                                                      "text": "*",
+                                                      "children": [
+                                                        {
+                                                          "type": "*",
+                                                          "start_byte": 751,
+                                                          "end_byte": 752,
+                                                          "text": "*",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": ")",
+                                                  "start_byte": 753,
+                                                  "end_byte": 754,
+                                                  "text": ")",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "*",
+                                              "start_byte": 755,
+                                              "end_byte": 756,
+                                              "text": "*",
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "identifier",
+                                              "start_byte": 757,
+                                              "end_byte": 758,
+                                              "text": "n",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": ")",
+                                          "start_byte": 759,
+                                          "end_byte": 760,
+                                          "text": ")",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": ";",
+                          "start_byte": 761,
+                          "end_byte": 762,
+                          "text": ";",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "for_statement",
+                      "start_byte": 763,
+                      "end_byte": 853,
+                      "text": "for ( i = 0 ; i < n ; i ++ ) ptr [ i ] = ( int * ) malloc ( sizeof ( int ) * ( n + 1 ) ) ;",
+                      "children": [
+                        {
+                          "type": "for",
+                          "start_byte": 763,
+                          "end_byte": 766,
+                          "text": "for",
+                          "children": []
+                        },
+                        {
+                          "type": "(",
+                          "start_byte": 767,
+                          "end_byte": 768,
+                          "text": "(",
+                          "children": []
+                        },
+                        {
+                          "type": "assignment_expression",
+                          "start_byte": 769,
+                          "end_byte": 774,
+                          "text": "i = 0",
+                          "children": [
+                            {
+                              "type": "identifier",
+                              "start_byte": 769,
+                              "end_byte": 770,
+                              "text": "i",
+                              "children": []
+                            },
+                            {
+                              "type": "=",
+                              "start_byte": 771,
+                              "end_byte": 772,
+                              "text": "=",
+                              "children": []
+                            },
+                            {
+                              "type": "number_literal",
+                              "start_byte": 773,
+                              "end_byte": 774,
+                              "text": "0",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": ";",
+                          "start_byte": 775,
+                          "end_byte": 776,
+                          "text": ";",
+                          "children": []
+                        },
+                        {
+                          "type": "binary_expression",
+                          "start_byte": 777,
+                          "end_byte": 782,
+                          "text": "i < n",
+                          "children": [
+                            {
+                              "type": "identifier",
+                              "start_byte": 777,
+                              "end_byte": 778,
+                              "text": "i",
+                              "children": []
+                            },
+                            {
+                              "type": "<",
+                              "start_byte": 779,
+                              "end_byte": 780,
+                              "text": "<",
+                              "children": []
+                            },
+                            {
+                              "type": "identifier",
+                              "start_byte": 781,
+                              "end_byte": 782,
+                              "text": "n",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": ";",
+                          "start_byte": 783,
+                          "end_byte": 784,
+                          "text": ";",
+                          "children": []
+                        },
+                        {
+                          "type": "update_expression",
+                          "start_byte": 785,
+                          "end_byte": 789,
+                          "text": "i ++",
+                          "children": [
+                            {
+                              "type": "identifier",
+                              "start_byte": 785,
+                              "end_byte": 786,
+                              "text": "i",
+                              "children": []
+                            },
+                            {
+                              "type": "++",
+                              "start_byte": 787,
+                              "end_byte": 789,
+                              "text": "++",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": ")",
+                          "start_byte": 790,
+                          "end_byte": 791,
+                          "text": ")",
+                          "children": []
+                        },
+                        {
+                          "type": "expression_statement",
+                          "start_byte": 792,
+                          "end_byte": 853,
+                          "text": "ptr [ i ] = ( int * ) malloc ( sizeof ( int ) * ( n + 1 ) ) ;",
+                          "children": [
+                            {
+                              "type": "assignment_expression",
+                              "start_byte": 792,
+                              "end_byte": 851,
+                              "text": "ptr [ i ] = ( int * ) malloc ( sizeof ( int ) * ( n + 1 ) )",
+                              "children": [
+                                {
+                                  "type": "subscript_expression",
+                                  "start_byte": 792,
+                                  "end_byte": 801,
+                                  "text": "ptr [ i ]",
+                                  "children": [
+                                    {
+                                      "type": "identifier",
+                                      "start_byte": 792,
+                                      "end_byte": 795,
+                                      "text": "ptr",
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "subscript_argument_list",
+                                      "start_byte": 796,
+                                      "end_byte": 801,
+                                      "text": "[ i ]",
+                                      "children": [
+                                        {
+                                          "type": "[",
+                                          "start_byte": 796,
+                                          "end_byte": 797,
+                                          "text": "[",
+                                          "children": []
+                                        },
+                                        {
+                                          "type": "identifier",
+                                          "start_byte": 798,
+                                          "end_byte": 799,
+                                          "text": "i",
+                                          "children": []
+                                        },
+                                        {
+                                          "type": "]",
+                                          "start_byte": 800,
+                                          "end_byte": 801,
+                                          "text": "]",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "=",
+                                  "start_byte": 802,
+                                  "end_byte": 803,
+                                  "text": "=",
+                                  "children": []
+                                },
+                                {
+                                  "type": "cast_expression",
+                                  "start_byte": 804,
+                                  "end_byte": 851,
+                                  "text": "( int * ) malloc ( sizeof ( int ) * ( n + 1 ) )",
+                                  "children": [
+                                    {
+                                      "type": "(",
+                                      "start_byte": 804,
+                                      "end_byte": 805,
+                                      "text": "(",
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "type_descriptor",
+                                      "start_byte": 806,
+                                      "end_byte": 811,
+                                      "text": "int *",
+                                      "children": [
+                                        {
+                                          "type": "primitive_type",
+                                          "start_byte": 806,
+                                          "end_byte": 809,
+                                          "text": "int",
+                                          "children": []
+                                        },
+                                        {
+                                          "type": "abstract_pointer_declarator",
+                                          "start_byte": 810,
+                                          "end_byte": 811,
+                                          "text": "*",
+                                          "children": [
+                                            {
+                                              "type": "*",
+                                              "start_byte": 810,
+                                              "end_byte": 811,
+                                              "text": "*",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": ")",
+                                      "start_byte": 812,
+                                      "end_byte": 813,
+                                      "text": ")",
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "call_expression",
+                                      "start_byte": 814,
+                                      "end_byte": 851,
+                                      "text": "malloc ( sizeof ( int ) * ( n + 1 ) )",
+                                      "children": [
+                                        {
+                                          "type": "identifier",
+                                          "start_byte": 814,
+                                          "end_byte": 820,
+                                          "text": "malloc",
+                                          "children": []
+                                        },
+                                        {
+                                          "type": "argument_list",
+                                          "start_byte": 821,
+                                          "end_byte": 851,
+                                          "text": "( sizeof ( int ) * ( n + 1 ) )",
+                                          "children": [
+                                            {
+                                              "type": "(",
+                                              "start_byte": 821,
+                                              "end_byte": 822,
+                                              "text": "(",
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "binary_expression",
+                                              "start_byte": 823,
+                                              "end_byte": 849,
+                                              "text": "sizeof ( int ) * ( n + 1 )",
+                                              "children": [
+                                                {
+                                                  "type": "sizeof_expression",
+                                                  "start_byte": 823,
+                                                  "end_byte": 837,
+                                                  "text": "sizeof ( int )",
+                                                  "children": [
+                                                    {
+                                                      "type": "sizeof",
+                                                      "start_byte": 823,
+                                                      "end_byte": 829,
+                                                      "text": "sizeof",
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "(",
+                                                      "start_byte": 830,
+                                                      "end_byte": 831,
+                                                      "text": "(",
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "type_descriptor",
+                                                      "start_byte": 832,
+                                                      "end_byte": 835,
+                                                      "text": "int",
+                                                      "children": [
+                                                        {
+                                                          "type": "primitive_type",
+                                                          "start_byte": 832,
+                                                          "end_byte": 835,
+                                                          "text": "int",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": ")",
+                                                      "start_byte": 836,
+                                                      "end_byte": 837,
+                                                      "text": ")",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "*",
+                                                  "start_byte": 838,
+                                                  "end_byte": 839,
+                                                  "text": "*",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "type": "parenthesized_expression",
+                                                  "start_byte": 840,
+                                                  "end_byte": 849,
+                                                  "text": "( n + 1 )",
+                                                  "children": [
+                                                    {
+                                                      "type": "(",
+                                                      "start_byte": 840,
+                                                      "end_byte": 841,
+                                                      "text": "(",
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "binary_expression",
+                                                      "start_byte": 842,
+                                                      "end_byte": 847,
+                                                      "text": "n + 1",
+                                                      "children": [
+                                                        {
+                                                          "type": "identifier",
+                                                          "start_byte": 842,
+                                                          "end_byte": 843,
+                                                          "text": "n",
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "type": "+",
+                                                          "start_byte": 844,
+                                                          "end_byte": 845,
+                                                          "text": "+",
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "type": "number_literal",
+                                                          "start_byte": 846,
+                                                          "end_byte": 847,
+                                                          "text": "1",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": ")",
+                                                      "start_byte": 848,
+                                                      "end_byte": 849,
+                                                      "text": ")",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": ")",
+                                              "start_byte": 850,
+                                              "end_byte": 851,
+                                              "text": ")",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": ";",
+                              "start_byte": 852,
+                              "end_byte": 853,
+                              "text": ";",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "for_statement",
+                      "start_byte": 854,
+                      "end_byte": 953,
+                      "text": "for ( i = 0 ; i < n ; i ++ ) { for ( j = 0 ; j <= i ; j ++ ) scanf ( \"%d\" , & ptr [ i ] [ j ] ) ; }",
+                      "children": [
+                        {
+                          "type": "for",
+                          "start_byte": 854,
+                          "end_byte": 857,
+                          "text": "for",
+                          "children": []
+                        },
+                        {
+                          "type": "(",
+                          "start_byte": 858,
+                          "end_byte": 859,
+                          "text": "(",
+                          "children": []
+                        },
+                        {
+                          "type": "assignment_expression",
+                          "start_byte": 860,
+                          "end_byte": 865,
+                          "text": "i = 0",
+                          "children": [
+                            {
+                              "type": "identifier",
+                              "start_byte": 860,
+                              "end_byte": 861,
+                              "text": "i",
+                              "children": []
+                            },
+                            {
+                              "type": "=",
+                              "start_byte": 862,
+                              "end_byte": 863,
+                              "text": "=",
+                              "children": []
+                            },
+                            {
+                              "type": "number_literal",
+                              "start_byte": 864,
+                              "end_byte": 865,
+                              "text": "0",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": ";",
+                          "start_byte": 866,
+                          "end_byte": 867,
+                          "text": ";",
+                          "children": []
+                        },
+                        {
+                          "type": "binary_expression",
+                          "start_byte": 868,
+                          "end_byte": 873,
+                          "text": "i < n",
+                          "children": [
+                            {
+                              "type": "identifier",
+                              "start_byte": 868,
+                              "end_byte": 869,
+                              "text": "i",
+                              "children": []
+                            },
+                            {
+                              "type": "<",
+                              "start_byte": 870,
+                              "end_byte": 871,
+                              "text": "<",
+                              "children": []
+                            },
+                            {
+                              "type": "identifier",
+                              "start_byte": 872,
+                              "end_byte": 873,
+                              "text": "n",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": ";",
+                          "start_byte": 874,
+                          "end_byte": 875,
+                          "text": ";",
+                          "children": []
+                        },
+                        {
+                          "type": "update_expression",
+                          "start_byte": 876,
+                          "end_byte": 880,
+                          "text": "i ++",
+                          "children": [
+                            {
+                              "type": "identifier",
+                              "start_byte": 876,
+                              "end_byte": 877,
+                              "text": "i",
+                              "children": []
+                            },
+                            {
+                              "type": "++",
+                              "start_byte": 878,
+                              "end_byte": 880,
+                              "text": "++",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": ")",
+                          "start_byte": 881,
+                          "end_byte": 882,
+                          "text": ")",
+                          "children": []
+                        },
+                        {
+                          "type": "compound_statement",
+                          "start_byte": 883,
+                          "end_byte": 953,
+                          "text": "{ for ( j = 0 ; j <= i ; j ++ ) scanf ( \"%d\" , & ptr [ i ] [ j ] ) ; }",
+                          "children": [
+                            {
+                              "type": "{",
+                              "start_byte": 883,
+                              "end_byte": 884,
+                              "text": "{",
+                              "children": []
+                            },
+                            {
+                              "type": "for_statement",
+                              "start_byte": 885,
+                              "end_byte": 951,
+                              "text": "for ( j = 0 ; j <= i ; j ++ ) scanf ( \"%d\" , & ptr [ i ] [ j ] ) ;",
+                              "children": [
+                                {
+                                  "type": "for",
+                                  "start_byte": 885,
+                                  "end_byte": 888,
+                                  "text": "for",
+                                  "children": []
+                                },
+                                {
+                                  "type": "(",
+                                  "start_byte": 889,
+                                  "end_byte": 890,
+                                  "text": "(",
+                                  "children": []
+                                },
+                                {
+                                  "type": "assignment_expression",
+                                  "start_byte": 891,
+                                  "end_byte": 896,
+                                  "text": "j = 0",
+                                  "children": [
+                                    {
+                                      "type": "identifier",
+                                      "start_byte": 891,
+                                      "end_byte": 892,
+                                      "text": "j",
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "=",
+                                      "start_byte": 893,
+                                      "end_byte": 894,
+                                      "text": "=",
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "number_literal",
+                                      "start_byte": 895,
+                                      "end_byte": 896,
+                                      "text": "0",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": ";",
+                                  "start_byte": 897,
+                                  "end_byte": 898,
+                                  "text": ";",
+                                  "children": []
+                                },
+                                {
+                                  "type": "binary_expression",
+                                  "start_byte": 899,
+                                  "end_byte": 905,
+                                  "text": "j <= i",
+                                  "children": [
+                                    {
+                                      "type": "identifier",
+                                      "start_byte": 899,
+                                      "end_byte": 900,
+                                      "text": "j",
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "<=",
+                                      "start_byte": 901,
+                                      "end_byte": 903,
+                                      "text": "<=",
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "identifier",
+                                      "start_byte": 904,
+                                      "end_byte": 905,
+                                      "text": "i",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": ";",
+                                  "start_byte": 906,
+                                  "end_byte": 907,
+                                  "text": ";",
+                                  "children": []
+                                },
+                                {
+                                  "type": "update_expression",
+                                  "start_byte": 908,
+                                  "end_byte": 912,
+                                  "text": "j ++",
+                                  "children": [
+                                    {
+                                      "type": "identifier",
+                                      "start_byte": 908,
+                                      "end_byte": 909,
+                                      "text": "j",
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "++",
+                                      "start_byte": 910,
+                                      "end_byte": 912,
+                                      "text": "++",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": ")",
+                                  "start_byte": 913,
+                                  "end_byte": 914,
+                                  "text": ")",
+                                  "children": []
+                                },
+                                {
+                                  "type": "expression_statement",
+                                  "start_byte": 915,
+                                  "end_byte": 951,
+                                  "text": "scanf ( \"%d\" , & ptr [ i ] [ j ] ) ;",
+                                  "children": [
+                                    {
+                                      "type": "call_expression",
+                                      "start_byte": 915,
+                                      "end_byte": 949,
+                                      "text": "scanf ( \"%d\" , & ptr [ i ] [ j ] )",
+                                      "children": [
+                                        {
+                                          "type": "identifier",
+                                          "start_byte": 915,
+                                          "end_byte": 920,
+                                          "text": "scanf",
+                                          "children": []
+                                        },
+                                        {
+                                          "type": "argument_list",
+                                          "start_byte": 921,
+                                          "end_byte": 949,
+                                          "text": "( \"%d\" , & ptr [ i ] [ j ] )",
+                                          "children": [
+                                            {
+                                              "type": "(",
+                                              "start_byte": 921,
+                                              "end_byte": 922,
+                                              "text": "(",
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "string_literal",
+                                              "start_byte": 923,
+                                              "end_byte": 927,
+                                              "text": "\"%d\"",
+                                              "children": [
+                                                {
+                                                  "type": "\"",
+                                                  "start_byte": 923,
+                                                  "end_byte": 924,
+                                                  "text": "\"",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "type": "string_content",
+                                                  "start_byte": 924,
+                                                  "end_byte": 926,
+                                                  "text": "%d",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "type": "\"",
+                                                  "start_byte": 926,
+                                                  "end_byte": 927,
+                                                  "text": "\"",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": ",",
+                                              "start_byte": 928,
+                                              "end_byte": 929,
+                                              "text": ",",
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "pointer_expression",
+                                              "start_byte": 930,
+                                              "end_byte": 947,
+                                              "text": "& ptr [ i ] [ j ]",
+                                              "children": [
+                                                {
+                                                  "type": "&",
+                                                  "start_byte": 930,
+                                                  "end_byte": 931,
+                                                  "text": "&",
+                                                  "children": []
+                                                },
+                                                {
+                                                  "type": "subscript_expression",
+                                                  "start_byte": 932,
+                                                  "end_byte": 947,
+                                                  "text": "ptr [ i ] [ j ]",
+                                                  "children": [
+                                                    {
+                                                      "type": "subscript_expression",
+                                                      "start_byte": 932,
+                                                      "end_byte": 941,
+                                                      "text": "ptr [ i ]",
+                                                      "children": [
+                                                        {
+                                                          "type": "identifier",
+                                                          "start_byte": 932,
+                                                          "end_byte": 935,
+                                                          "text": "ptr",
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "type": "subscript_argument_list",
+                                                          "start_byte": 936,
+                                                          "end_byte": 941,
+                                                          "text": "[ i ]",
+                                                          "children": [
+                                                            {
+                                                              "type": "[",
+                                                              "start_byte": 936,
+                                                              "end_byte": 937,
+                                                              "text": "[",
+                                                              "children": []
+                                                            },
+                                                            {
+                                                              "type": "identifier",
+                                                              "start_byte": 938,
+                                                              "end_byte": 939,
+                                                              "text": "i",
+                                                              "children": []
+                                                            },
+                                                            {
+                                                              "type": "]",
+                                                              "start_byte": 940,
+                                                              "end_byte": 941,
+                                                              "text": "]",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "subscript_argument_list",
+                                                      "start_byte": 942,
+                                                      "end_byte": 947,
+                                                      "text": "[ j ]",
+                                                      "children": [
+                                                        {
+                                                          "type": "[",
+                                                          "start_byte": 942,
+                                                          "end_byte": 943,
+                                                          "text": "[",
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "type": "identifier",
+                                                          "start_byte": 944,
+                                                          "end_byte": 945,
+                                                          "text": "j",
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "type": "]",
+                                                          "start_byte": 946,
+                                                          "end_byte": 947,
+                                                          "text": "]",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": ")",
+                                              "start_byte": 948,
+                                              "end_byte": 949,
+                                              "text": ")",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": ";",
+                                      "start_byte": 950,
+                                      "end_byte": 951,
+                                      "text": ";",
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "}",
+                              "start_byte": 952,
+                              "end_byte": 953,
+                              "text": "}",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "expression_statement",
+                      "start_byte": 954,
+                      "end_byte": 984,
+                      "text": "sum = sum1 = ptr [ 0 ] [ 0 ] ;",
+                      "children": [
+                        {
+                          "type": "assignment_expression",
+                          "start_byte": 954,
+                          "end_byte": 982,
+                          "text": "sum = sum1 = ptr [ 0 ] [ 0 ]",
+                          "children": [
+                            {
+                              "type": "identifier",
+                              "start_byte": 954,
+                              "end_byte": 957,
+                              "text": "sum",
+                              "children": []
+                            },
+                            {
+                              "type": "=",
+                              "start_byte": 958,
+                              "end_byte": 959,
+                              "text": "=",
+                              "children": []
+                            },
+                            {
+                              "type": "assignment_expression",
+                              "start_byte": 960,
+                              "end_byte": 982,
+                              "text": "sum1 = ptr [ 0 ] [ 0 ]",
+                              "children": [
+                                {
+                                  "type": "identifier",
+                                  "start_byte": 960,
+                                  "end_byte": 964,
+                                  "text": "sum1",
+                                  "children": []
+                                },
+                                {
+                                  "type": "=",
+                                  "start_byte": 965,
+                                  "end_byte": 966,
+                                  "text": "=",
+                                  "children": []
+                                },
+                                {
+                                  "type": "subscript_expression",
+                                  "start_byte": 967,
+                                  "end_byte": 982,
+                                  "text": "ptr [ 0 ] [ 0 ]",
+                                  "children": [
+                                    {
+                                      "type": "subscript_expression",
+                                      "start_byte": 967,
+                                      "end_byte": 976,
+                                      "text": "ptr [ 0 ]",
+                                      "children": [
+                                        {
+                                          "type": "identifier",
+                                          "start_byte": 967,
+                                          "end_byte": 970,
+                                          "text": "ptr",
+                                          "children": []
+                                        },
+                                        {
+                                          "type": "subscript_argument_list",
+                                          "start_byte": 971,
+                                          "end_byte": 976,
+                                          "text": "[ 0 ]",
+                                          "children": [
+                                            {
+                                              "type": "[",
+                                              "start_byte": 971,
+                                              "end_byte": 972,
+                                              "text": "[",
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "number_literal",
+                                              "start_byte": 973,
+                                              "end_byte": 974,
+                                              "text": "0",
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "]",
+                                              "start_byte": 975,
+                                              "end_byte": 976,
+                                              "text": "]",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "subscript_argument_list",
+                                      "start_byte": 977,
+                                      "end_byte": 982,
+                                      "text": "[ 0 ]",
+                                      "children": [
+                                        {
+                                          "type": "[",
+                                          "start_byte": 977,
+                                          "end_byte": 978,
+                                          "text": "[",
+                                          "children": []
+                                        },
+                                        {
+                                          "type": "number_literal",
+                                          "start_byte": 979,
+                                          "end_byte": 980,
+                                          "text": "0",
+                                          "children": []
+                                        },
+                                        {
+                                          "type": "]",
+                                          "start_byte": 981,
+                                          "end_byte": 982,
+                                          "text": "]",
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": ";",
+                          "start_byte": 983,
+                          "end_byte": 984,
+                          "text": ";",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "expression_statement",
+                      "start_byte": 985,
+                      "end_byte": 1010,
+                      "text": "fun ( ptr , 0 , 0 , n ) ;",
+                      "children": [
+                        {
+                          "type": "call_expression",
+                          "start_byte": 985,
+                          "end_byte": 1008,
+                          "text": "fun ( ptr , 0 , 0 , n )",
+                          "children": [
+                            {
+                              "type": "identifier",
+                              "start_byte": 985,
+                              "end_byte": 988,
+                              "text": "fun",
+                              "children": []
+                            },
+                            {
+                              "type": "argument_list",
+                              "start_byte": 989,
+                              "end_byte": 1008,
+                              "text": "( ptr , 0 , 0 , n )",
+                              "children": [
+                                {
+                                  "type": "(",
+                                  "start_byte": 989,
+                                  "end_byte": 990,
+                                  "text": "(",
+                                  "children": []
+                                },
+                                {
+                                  "type": "identifier",
+                                  "start_byte": 991,
+                                  "end_byte": 994,
+                                  "text": "ptr",
+                                  "children": []
+                                },
+                                {
+                                  "type": ",",
+                                  "start_byte": 995,
+                                  "end_byte": 996,
+                                  "text": ",",
+                                  "children": []
+                                },
+                                {
+                                  "type": "number_literal",
+                                  "start_byte": 997,
+                                  "end_byte": 998,
+                                  "text": "0",
+                                  "children": []
+                                },
+                                {
+                                  "type": ",",
+                                  "start_byte": 999,
+                                  "end_byte": 1000,
+                                  "text": ",",
+                                  "children": []
+                                },
+                                {
+                                  "type": "number_literal",
+                                  "start_byte": 1001,
+                                  "end_byte": 1002,
+                                  "text": "0",
+                                  "children": []
+                                },
+                                {
+                                  "type": ",",
+                                  "start_byte": 1003,
+                                  "end_byte": 1004,
+                                  "text": ",",
+                                  "children": []
+                                },
+                                {
+                                  "type": "identifier",
+                                  "start_byte": 1005,
+                                  "end_byte": 1006,
+                                  "text": "n",
+                                  "children": []
+                                },
+                                {
+                                  "type": ")",
+                                  "start_byte": 1007,
+                                  "end_byte": 1008,
+                                  "text": ")",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": ";",
+                          "start_byte": 1009,
+                          "end_byte": 1010,
+                          "text": ";",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "expression_statement",
+                      "start_byte": 1011,
+                      "end_byte": 1034,
+                      "text": "printf ( \"%d\" , sum ) ;",
+                      "children": [
+                        {
+                          "type": "call_expression",
+                          "start_byte": 1011,
+                          "end_byte": 1032,
+                          "text": "printf ( \"%d\" , sum )",
+                          "children": [
+                            {
+                              "type": "identifier",
+                              "start_byte": 1011,
+                              "end_byte": 1017,
+                              "text": "printf",
+                              "children": []
+                            },
+                            {
+                              "type": "argument_list",
+                              "start_byte": 1018,
+                              "end_byte": 1032,
+                              "text": "( \"%d\" , sum )",
+                              "children": [
+                                {
+                                  "type": "(",
+                                  "start_byte": 1018,
+                                  "end_byte": 1019,
+                                  "text": "(",
+                                  "children": []
+                                },
+                                {
+                                  "type": "string_literal",
+                                  "start_byte": 1020,
+                                  "end_byte": 1024,
+                                  "text": "\"%d\"",
+                                  "children": [
+                                    {
+                                      "type": "\"",
+                                      "start_byte": 1020,
+                                      "end_byte": 1021,
+                                      "text": "\"",
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "string_content",
+                                      "start_byte": 1021,
+                                      "end_byte": 1023,
+                                      "text": "%d",
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "\"",
+                                      "start_byte": 1023,
+                                      "end_byte": 1024,
+                                      "text": "\"",
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": ",",
+                                  "start_byte": 1025,
+                                  "end_byte": 1026,
+                                  "text": ",",
+                                  "children": []
+                                },
+                                {
+                                  "type": "identifier",
+                                  "start_byte": 1027,
+                                  "end_byte": 1030,
+                                  "text": "sum",
+                                  "children": []
+                                },
+                                {
+                                  "type": ")",
+                                  "start_byte": 1031,
+                                  "end_byte": 1032,
+                                  "text": ")",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": ";",
+                          "start_byte": 1033,
+                          "end_byte": 1034,
+                          "text": ";",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "}",
+                      "start_byte": 1035,
+                      "end_byte": 1036,
+                      "text": "}",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "return_statement",
+              "start_byte": 1037,
+              "end_byte": 1047,
+              "text": "return 0 ;",
+              "children": [
+                {
+                  "type": "return",
+                  "start_byte": 1037,
+                  "end_byte": 1043,
+                  "text": "return",
+                  "children": []
+                },
+                {
+                  "type": "number_literal",
+                  "start_byte": 1044,
+                  "end_byte": 1045,
+                  "text": "0",
+                  "children": []
+                },
+                {
+                  "type": ";",
+                  "start_byte": 1046,
+                  "end_byte": 1047,
+                  "text": ";",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "}",
+              "start_byte": 1048,
+              "end_byte": 1049,
+              "text": "}",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

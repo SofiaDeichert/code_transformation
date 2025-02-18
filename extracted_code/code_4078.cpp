@@ -1,0 +1,1 @@
+int main ( ) { int T , i , min , n ; int * A ; scanf ( "%d" , & T ) ; while ( T -- ) { scanf ( "%d" , & n ) ; A = ( int * ) malloc ( n * sizeof ( int ) ) ; scanf ( "%d" , & A [ 0 ] ) ; min = A [ 0 ] ; for ( i = 1 ; i < n ; i ++ ) { scanf ( "%d" , & A [ i ] ) ; if ( min > A [ i ] ) min = A [ i ] ; } printf ( "%d\n" , min * ( n - 1 ) ) ; } return 0 ; }

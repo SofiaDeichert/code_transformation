@@ -1,0 +1,1 @@
+long long n1 , n2 ; int main ( ) { int tc ; scanf ( "%d" , & tc ) ; while ( tc -- ) { scanf ( "%lld%lld" , & n1 , & n2 ) ; long long ns = n1 ; int t ; int a = n1 , b = n2 ; while ( b > 0 ) { t = b ; b = a % b ; a = t ; } ns /= a ; printf ( "%d %lld\n" , a , ns * n2 ) ; } return 0 ; }

@@ -1,0 +1,1 @@
+long int gcd ( int a , int b ) { int temp ; while ( a ) { temp = a ; a = b % a ; b = temp ; } return b ; } int main ( int argc , char const * argv [ ] ) { int t , a , b ; long int hcf , lcm ; scanf ( "%d" , & t ) ; while ( t -- ) { scanf ( "%d%d" , & a , & b ) ; lcm = gcd ( a , b ) ; hcf = ( a * b ) / lcm ; printf ( "%ld %ld\n" , lcm , hcf ) ; } return 0 ; }

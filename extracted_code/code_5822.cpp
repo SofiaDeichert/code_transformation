@@ -1,0 +1,1 @@
+void main ( ) { int tcase , arr [ 1000 ] , N , i , j , count ; scanf ( "%d" , & tcase ) ; while ( tcase -- ) { count = 0 ; scanf ( "%d" , & N ) ; for ( i = 0 ; i < N ; i ++ ) scanf ( "%d" , & arr [ i ] ) ; for ( i = 0 ; i < N ; i ++ ) for ( j = i ; j < N ; j ++ ) if ( arr [ i ] == arr [ j ] ) count ++ ; printf ( "%d\n" , count ) ; } }

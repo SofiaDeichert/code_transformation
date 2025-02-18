@@ -1,0 +1,1 @@
+int main ( ) { int t , n , i , num , min ; long long int p ; scanf ( "%d" , & t ) ; while ( t -- ) { min = 20000 ; scanf ( "%d" , & n ) ; for ( i = 0 ; i < n ; i ++ ) { scanf ( "%d" , & num ) ; if ( num < min ) min = num ; } p = ( long long ) ( min * ( n - 1 ) ) ; printf ( "%lld\n" , p ) ; } return 0 ; }

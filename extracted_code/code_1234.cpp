@@ -1,0 +1,1 @@
+main ( ) { int T , i , a , b , k , j , l ; scanf ( "%d" , & T ) ; for ( i = 1 ; i <= T ; i ++ ) { scanf ( "%d %d\n" , & a , & b ) ; for ( j = 1 ; j <= a && j <= b ; j ++ ) { if ( a % j == 0 && b % j == 0 ) k = j ; } l = ( a * b ) / k ; printf ( "%d %d" , k , l ) ; } return 0 ; }

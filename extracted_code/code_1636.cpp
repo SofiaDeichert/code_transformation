@@ -1,0 +1,1 @@
+int main ( ) { int n1 , n2 , m , t ; scanf ( "%d" , & t ) ; while ( t -- ) { scanf ( "%d %d" , & n1 , & n2 ) ; m = ( n1 > n2 ) ? n1 : n2 ; while ( 1 ) { if ( m % n1 == 0 && m % n2 == 0 ) { break ; } ++ m ; } printf ( "1 %d\n" , m ) ; } }

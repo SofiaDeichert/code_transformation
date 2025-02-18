@@ -1,0 +1,1 @@
+main ( ) { long long int i , j , t , k , count , n ; scanf ( "%lld" , & t ) ; for ( i = 0 ; i < t ; i ++ ) { scanf ( "%lld" , & n ) ; long long int c [ n ] ; for ( j = 0 ; j < n ; j ++ ) scanf ( "%lld" , & c [ j ] ) ; for ( j = 0 ; j < n ; j ++ ) for ( k = j ; k < n ; k ++ ) { if ( c [ j ] >= c [ k ] ) count ++ ; } printf ( "%lld" , count ) ; } }

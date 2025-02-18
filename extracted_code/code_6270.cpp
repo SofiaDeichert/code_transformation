@@ -1,0 +1,1 @@
+int main ( ) { long int T , N , i , temp ; long long int cost ; scanf ( "%d" , & T ) ; while ( T -- ) { scanf ( "%ld" , & N ) ; int * A = ( int * ) calloc ( N , sizeof ( long int ) ) ; int min = 1000000 ; for ( i = 0 ; i < N ; i ++ ) { scanf ( "%ld" , & temp ) ; if ( temp < min ) { min = temp ; } } cost = ( N - 1 ) * min ; printf ( "%lld\n" , cost ) ; } return 0 ; }

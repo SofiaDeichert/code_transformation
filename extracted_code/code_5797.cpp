@@ -1,0 +1,1 @@
+int main ( ) { long long int t , n , x = 0 , i , l = 0 , a [ 10 ^ 9 ] ; scanf ( "%lld" , & t ) ; while ( t -- ) { x = 0 ; l = 1 ; scanf ( "%lld" , & n ) ; for ( i = 0 ; i < n ; i ++ ) scanf ( "%lld" , & a [ i ] ) ; for ( i = 0 ; i < n ; i ++ ) { if ( a [ i + 1 ] > a [ i ] ) l ++ ; else { x = x + ( l * ( l - 1 ) ) / 2 ; l = 1 ; } } printf ( "%lld\n" , x + n ) ; } return 0 ; }

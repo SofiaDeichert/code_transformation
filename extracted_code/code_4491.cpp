@@ -1,0 +1,1 @@
+int gcdf ( int , int ) ; int main ( ) { int t , i , a , b , d , lc ; scanf ( "%d" , & t ) ; for ( i = 1 ; i <= t ; i ++ ) { scanf ( "%d %d" , & a , & b ) ; d = gcdf ( a , b ) ; lc = ( a * b ) / d ; printf ( "%d %d\n" , d , lc ) ; } return 0 ; } int gcdf ( int x , int y ) { if ( y == 0 ) return x ; else return ( gcdf ( y , x % y ) ) ; }

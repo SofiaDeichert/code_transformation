@@ -1,0 +1,1 @@
+int gcd ( long a , long b ) ; int main ( ) { int t , i ; long int a , b , g , l ; scanf ( "%d" , & t ) ; for ( i = 0 ; i < t ; i ++ ) { scanf ( "%ld %ld" , & a , & b ) ; g = gcd ( a , b ) ; l = ( a * b ) / g ; printf ( "%ld %ld\n" , g , l ) ; } return 0 ; } int gcd ( long a , long b ) { if ( b == 0 ) return a ; else gcd ( b , a % b ) ; }

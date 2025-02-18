@@ -1,0 +1,1 @@
+int main ( ) { int t ; scanf ( "%d" , & t ) ; while ( t > 0 ) { int l , b , m , lcm , hcf ; scanf ( "%d %d" , & b , & l ) ; for ( m = b ; m >= b || m >= l ; m ++ ) { if ( m % b == 0 && m % l == 0 ) { lcm = m ; break ; } } for ( m = 1 ; m <= b || m <= l ; ++ m ) { if ( l % m == 0 && b % m == 0 ) hcf = m ; } printf ( "%d %d\n" , hcf , lcm ) ; t -- ; } return 0 ; }

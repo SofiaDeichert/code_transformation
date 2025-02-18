@@ -1,0 +1,1 @@
+long long unsigned gcd ( long long unsigned a , long long unsigned b ) { if ( a == 0 ) return b ; return gcd ( b % a , a ) ; } int main ( ) { int t ; scanf ( "%d" , & t ) ; while ( t -- ) { long long unsigned a , b , p , q ; scanf ( "%llu%llu" , & a , & b ) ; p = gcd ( a , b ) ; q = ( a * b ) / p ; printf ( "%llu %llu\n" , p , q ) ; } }

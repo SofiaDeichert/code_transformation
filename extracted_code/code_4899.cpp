@@ -1,0 +1,1 @@
+int main ( void ) { int i , t , n , * arr ; long long int small = 100000 ; scanf ( "%d" , & t ) ; while ( t > 0 ) { scanf ( "%d" , & n ) ; arr = ( int * ) malloc ( n * sizeof ( int ) ) ; for ( i = 0 ; i < n ; i ++ ) { scanf ( "%d" , & arr [ i ] ) ; if ( small > arr [ i ] ) small = arr [ i ] ; } printf ( "%lld" , ( small * ( n - 1 ) ) ) ; t -- ; } return 0 ; }

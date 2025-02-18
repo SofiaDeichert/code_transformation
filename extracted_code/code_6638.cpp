@@ -1,0 +1,1 @@
+int main ( ) { int i , j , num , tc , temp , prev , curr ; long long count ; scanf ( "%d" , & tc ) ; for ( i = 1 ; i <= tc ; i ++ ) { count = 1 ; temp = 0 ; for ( j = 1 ; j <= num ; j ++ ) { if ( j == 1 ) scanf ( "%d" , & prev ) ; else { scanf ( "%d" , & curr ) ; if ( prev > curr ) temp = j ; count += ( j - temp + 1 ) ; } } printf ( "%lld\n" , count ) ; } return 0 ; }

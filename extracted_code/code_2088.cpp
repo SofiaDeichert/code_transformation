@@ -1,0 +1,1 @@
+int main ( ) { int t , i , nn ; scanf ( "%d" , & t ) ; char N [ 50000 ] ; while ( t -- ) { long long int s = 0 ; scanf ( "%d" , & nn ) ; for ( i = 0 ; i < nn ; i ++ ) { scanf ( "%d" , & N [ i ] ) ; } for ( i = 0 ; i < nn ; i ++ ) if ( N [ i ] > N [ i + 1 ] ) s = s + N [ i + 1 ] ; else s = s + N [ i ] ; printf ( "%lld\n" , s ) ; } return 0 ; }

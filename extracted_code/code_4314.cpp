@@ -1,0 +1,1 @@
+int GCD ( int n1 , int n2 ) { if ( n2 != 0 ) { return ( GCD ( n2 , n1 % n2 ) ) ; } else { return n1 ; } } int main ( ) { int n , h , l , i , a , b ; scanf ( "%d" , & n ) ; for ( i = 0 ; i < n ; i ++ ) { scanf ( "%d%d" , & a , & b ) ; if ( a > b ) { h = GCD ( a , b ) ; } else { h = GCD ( b , a ) ; } l = ( a * b ) / h ; printf ( "%d\t%d\n" , h , l ) ; } return 0 ; }

@@ -1,0 +1,1 @@
+int main ( ) { long long ans , t , n , a [ 50001 ] , i , m = 10000000 , b ; scanf ( "%lld" , & t ) ; while ( t -- ) { scanf ( "%lld" , & n ) ; for ( i = 1 ; i <= n ; i ++ ) { scanf ( "%lld" , & b ) ; if ( m > b ) { m = b ; } } n -- ; ans = 1 ; ans = ans * m * n ; printf ( "%lld\n" , ans ) ; } }

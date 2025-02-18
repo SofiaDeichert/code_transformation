@@ -1,0 +1,1 @@
+int main ( ) { int t , i ; scanf ( "%d" , & t ) ; while ( t -- ) { int l , s = 0 ; scanf ( "%d" , & l ) ; int p [ l * ( l + 1 ) / 2 ] ; for ( i = 0 ; i < l * ( l + 1 ) / 2 ; i ++ ) { scanf ( "%d" , & p [ i ] ) ; s = s + p [ i ] ; } printf ( "%d\n" , s / 2 ) ; } return 0 ; }

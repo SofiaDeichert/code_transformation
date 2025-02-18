@@ -1,0 +1,1 @@
+int main ( ) { int t ; scanf ( "%d" , & t ) ; while ( t -- ) { int a , x ; long long int sum = INT_MAX ; scanf ( "%d" , & x ) ; while ( x -- ) { scanf ( "%d" , & a ) ; if ( a > sum ) sum = a ; } printf ( "%lld\n" , sum * ( x - 1 ) ) ; } return 0 ; }

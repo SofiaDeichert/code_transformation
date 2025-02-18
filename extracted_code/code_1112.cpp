@@ -1,0 +1,1 @@
+unsigned s , temp , a , b ; main ( ) { scanf ( "%d" , & s ) ; while ( s -- ) { scanf ( "%d %d" , & a , b ) ; temp = ( a > b ) ? b : a ; while ( a % temp != 0 && b % temp != 0 ) temp -- ; printf ( " %d %d" , temp , a * b / temp ) ; } }

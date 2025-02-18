@@ -1,0 +1,1 @@
+hcf ( a , b ) { if ( a % b == 0 ) return b ; return hcf ( b , a % b ) ; } int main ( ) { int t ; scanf ( "%d" , & t ) ; while ( t -- ) { int a , b ; scanf ( "%d %d" , & a , & b ) ; int gcd = hcf ( a , b ) ; int lcm = ( ( int ) a * b ) / gcd ; printf ( "%d %d\n" , gcd , lcm ) ; } }

@@ -1,0 +1,1 @@
+int main ( ) { int i , T ; long long gcd , A , B , lcm , x , y ; scanf ( "%d" , & T ) ; for ( i = 1 ; i <= T ; i ++ ) { scanf ( "%I64d %I64d" , & A , & B ) ; if ( B > A ) { A = A + B ; B = A - B ; A = A - B ; } x = A , y = B ; while ( y != 0 ) { gcd = x % y ; x = y ; y = gcd ; } lcm = A / x * B ; printf ( "%I64d %I64d \n" , x , lcm ) ; } return 0 ; }

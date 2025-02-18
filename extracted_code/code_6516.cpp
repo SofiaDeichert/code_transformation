@@ -1,0 +1,1 @@
+void main ( ) { int a [ 20 ] , n , i , k ; scanf ( "%d" , & n ) ; for ( i = 0 ; i < n ; i ++ ) scanf ( "%d" , & a [ i ] ) ; for ( i = 0 ; i < n - 1 ; i ++ ) { if ( a [ i ] < a [ i + 1 ] ) { for ( k = i + 1 ; k < n - 1 ; k ++ ) a [ k ] = a [ k + 1 ] ; i -- ; } else { for ( k = i ; k < n - 1 ; k ++ ) a [ k ] = a [ k + 1 ] ; i -- ; } n -- ; } printf ( "%d" , a [ 0 ] ) ; }

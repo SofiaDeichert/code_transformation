@@ -1,0 +1,1 @@
+int main ( ) { long long int t , m , a , b , orig1 , orig2 ; long long int lcm ; scanf ( "%lld" , & t ) ; while ( t -- ) { scanf ( "%lld%lld" , & a , & b ) ; orig1 = a ; orig2 = b ; while ( b != 0 ) { m = b ; b = a % b ; a = m ; } lcm = ( orig1 * orig2 ) / a ; printf ( "%lld %lld\n" , a , lcm ) ; } return 0 ; }

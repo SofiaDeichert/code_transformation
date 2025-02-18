@@ -1,0 +1,1 @@
+int main ( ) { int n , num ; scanf ( "%d" , & n ) ; while ( n -- ) { scanf ( "%d" , & num ) ; if ( num < 10 ) printf ( "What an obedient servant you are!\n" ) ; else printf ( "-1\n" ) ; } return 0 ; }

@@ -1,0 +1,1 @@
+long int A [ 100001 ] ; int main ( ) { int i , N , mn , T ; long int sum ; scanf ( "%d" , & T ) ; while ( T -- ) { sum = 0 ; mn = 100001 ; scanf ( "%d" , & N ) ; for ( i = 0 ; i < N ; i ++ ) { scanf ( "%d" , & A [ i ] ) ; if ( mn > A [ i ] ) mn = A [ i ] ; } if ( N == 1 ) { sum = mn ; } else sum = mn * ( N - 1 ) ; printf ( "%ld\n" , sum ) ; } return 0 ; }

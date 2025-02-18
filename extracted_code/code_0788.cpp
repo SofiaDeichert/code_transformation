@@ -1,0 +1,1 @@
+int main ( ) { int t , b , i , s , c ; int a [ 50 ] ; scanf ( "%d" , & t ) ; while ( t -- ) { scanf ( "%d" , & b ) ; for ( i = 0 ; i < b ; i ++ ) { scanf ( "%d" , & a [ i ] ) ; printf ( "\t" ) ; } for ( i = 0 ; i < b - 1 ; i ++ ) { if ( a [ i ] < a [ i + 1 ] ) s = a [ i ] ; else s = a [ i + 1 ] ; } c = s * ( b - 1 ) ; printf ( "%d\n" , c ) ; } return 0 ; }

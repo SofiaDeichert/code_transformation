@@ -1,0 +1,1 @@
+int main ( ) { int t , n , k [ 10 ] [ 10 ] ; int c , i , j ; scanf ( "%d" , & t ) ; while ( t -- ) { scanf ( "%d" , & n ) ; for ( i = 0 ; i < n ; i ++ ) { for ( j = 0 ; j <= i ; j ++ ) scanf ( "%d" , & k [ i ] [ j ] ) ; } for ( i = 1 ; i <= n ; i ++ ) { for ( j = 0 ; j <= i ; j ++ ) { c = MAX ; } } printf ( "%d" , c ) ; } return 0 ; }

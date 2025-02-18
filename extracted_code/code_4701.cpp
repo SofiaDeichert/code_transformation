@@ -1,0 +1,1 @@
+int main ( ) { int t , n , i , j , arr , sum , largest ; scanf ( "%d" , & t ) ; while ( t -- ) { scanf ( "%d" , & n ) ; sum = 0 ; for ( i = 1 ; i <= n ; i ++ ) { largest = - 1 ; for ( j = 1 ; j <= i ; j ++ ) { scanf ( "%d" , & arr ) ; if ( largest < arr ) largest = arr ; } printf ( "\n" ) ; sum += largest ; } printf ( "%d\n" , sum ) ; } }

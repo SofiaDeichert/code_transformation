@@ -1,0 +1,1 @@
+int main ( ) { int t ; scanf ( "%d" , & t ) ; int i ; for ( i = 0 ; i < t ; i ++ ) { long long int n ; scanf ( "%lld" , & n ) ; long long int u [ n ] ; long long int g ; for ( g = 0 ; g < n ; g ++ ) { scanf ( "%lld" , & u [ g ] ) ; } for ( g = 0 ; g < n ; g ++ ) { if ( u [ 0 ] > u [ g ] ) { u [ 0 ] = u [ g ] ; } } printf ( "%lld\n" , u [ 0 ] * ( n - 1 ) ) ; } return 0 ; }

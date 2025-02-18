@@ -1,0 +1,1 @@
+int main ( ) { long int a , flag = 0 , b , i , temp ; scanf ( "%ld" , & a ) ; while ( a -- ) { flag = 999999 ; scanf ( "%ld" , & b ) ; for ( i = 0 ; i < b ; i ++ ) { scanf ( "%ld" , & temp ) ; if ( temp < flag ) flag = temp ; } printf ( "%d\n" , flag * ( b - 1 ) ) ; } return 0 ; }

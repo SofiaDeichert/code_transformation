@@ -1,0 +1,1 @@
+int main ( ) { int i , j , k ; for ( i = 1 ; i <= 3 ; i ++ ) { k = 1 + i ; for ( j = 1 ; j <= 3 ; j ++ ) { if ( j <= i ) printf ( "%i,k--" ) ; else printf ( " " ) ; } printf ( "\n" ) ; } return 0 ; }

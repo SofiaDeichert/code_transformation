@@ -1,0 +1,1 @@
+typedef long long int ll ; int main ( ) { ll t , n , i ; scanf ( "%lld" , & t ) ; while ( t -- ) { scanf ( "%lld" , & n ) ; ll a [ n ] ; ll min = 9999999 ; for ( i = 0 ; i < n ; i ++ ) { scanf ( "%lld" , & a [ i ] ) ; if ( min > a [ i ] ) min = a [ i ] ; } printf ( "%lld" , ( ( n - 1 ) * min ) ) ; } }

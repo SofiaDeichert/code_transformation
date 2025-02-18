@@ -1,0 +1,1 @@
+int main ( ) { int n , a , b , l , r ; scanf ( "%d" , & n ) ; while ( n -- ) { scanf ( "%d %d" , & a , & b ) ; l = a * b ; do { r = a % b ; a = b ; b = r ; } while ( r != 0 ) ; printf ( "%d %d\n" , a , l / a ) ; } }

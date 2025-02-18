@@ -1,0 +1,1 @@
+int main ( ) { int t , a [ 1000 ] , i , r , c , m , n , mat [ 200 ] [ 200 ] , sum = 0 ; for ( i = 0 ; i < t ; i ++ ) { scanf ( "%d" , & a [ i ] ) ; } for ( i = 0 ; i < t ; i ++ ) { r = a [ i ] ; c = a [ i ] ; for ( m = 0 ; m < r ; m ++ ) { for ( n = 0 ; n < c ; n ++ ) { if ( m == n ) { sum = sum + mat [ r ] [ c ] ; } } } } printf ( "%d" , & sum ) ; return 0 ; }

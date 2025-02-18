@@ -1,0 +1,1 @@
+int main ( ) { int t ; scanf ( "%d" , & t ) ; while ( t -- ) { int n ; scanf ( "%d" , & n ) ; int arr [ n ] , i ; for ( i = 0 ; i < n ; i ++ ) { scanf ( "%d" , & arr [ i ] ) ; } int m = 100000 ; for ( i = 0 ; i < n - 1 ; i ++ ) { if ( m > arr [ i ] ) m = arr [ i ] ; } printf ( "%d\n" , m * ( n - 1 ) ) ; } }

@@ -1,0 +1,1 @@
+int main ( ) { int t ; scanf ( "%d" , & t ) ; while ( t -- ) { int n ; scanf ( "%d" , & n ) ; int * arr ; arr = malloc ( sizeof ( int ) * n ) ; int i , j , count = 0 ; for ( i = 0 ; i < n ; i ++ ) { if ( arr [ i + 1 ] >= arr [ i ] ) count ++ ; } printf ( "%d" , n + count ) ; } }

@@ -1,0 +1,1 @@
+int h ( int a , int b ) { while ( a != b ) { if ( a > b ) a = a - b ; else b = b - a ; } return a ; } int main ( ) { int t , a , b , hcf , lcm ; scanf ( "%d" , & t ) ; while ( t > 0 ) { t -- ; scanf ( "%d%d" , & a , & b ) ; hcf = h ( a , b ) ; lcm = ( a * b ) / hcf ; printf ( "%d %d\n" , hcf , lcm ) ; } return 0 ; }

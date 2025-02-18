@@ -1,0 +1,1 @@
+int main ( ) { int t , i , j ; long a , b ; scanf ( "%d" , & t ) ; long int h [ t ] , l [ t ] ; for ( i = 0 ; i < t ; i ++ ) { scanf ( "%ld %ld" , & a , & b ) ; for ( j = 1 ; ( j <= a && j <= b ) ; j ++ ) { if ( a % j == 0 && b % j == 0 ) h [ i ] = j ; } l [ i ] = a * b / h [ i ] ; } for ( i = 0 ; i < t ; i ++ ) printf ( "%ld %ld\n" , h [ i ] , l [ i ] ) ; return 0 ; }

@@ -1,0 +1,1 @@
+int main ( ) { int t , i , m , n , j , gcd , a ; scanf ( "%d" , & t ) ; for ( i = 0 ; i < t ; i ++ ) { scanf ( "%d %d" , & m , & n ) ; for ( j = 1 ; j <= m && j <= n ; j ++ ) { if ( m % j == 0 && n % j == 0 ) { gcd = j ; } } a = m > n ? m : n ; while ( 1 ) { if ( a % m == 0 && a % n == 0 ) { break ; } a ++ ; } printf ( "%d %d\n" , gcd , a ) ; } return 0 ; }

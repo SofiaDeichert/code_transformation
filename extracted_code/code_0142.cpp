@@ -1,0 +1,1 @@
+int main ( ) { int t ; sf ( t ) ; while ( t -- ) { int n , i , j , k , flag1 = 0 , flag2 = 0 , count = 0 ; sf ( n ) ; int a [ n ] ; for ( i = 0 ; i < n ; i ++ ) sf ( a [ i ] ) ; count += n ; for ( i = 0 ; i < n ; i ++ ) { for ( j = i ; j < n - 1 ; j ++ ) { if ( a [ j ] <= a [ j + 1 ] ) { count ++ ; } else break ; } } printf ( "%d\n" , count ) ; } return 0 ; }

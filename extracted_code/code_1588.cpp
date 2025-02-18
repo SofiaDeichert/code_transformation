@@ -1,0 +1,1 @@
+int main ( ) { int A , B , L , H , I , S , N ; scanf ( "%d" , & N ) ; while ( N != 0 ) { scanf ( "%d%d" , & A , & B ) ; S = ( A < B ) ? A : B ; for ( I = 1 ; I <= S ; I ++ ) { if ( ( A % I == 0 ) && ( B % I == 0 ) ) H = I ; } L = ( A * B ) / H ; printf ( "%d %d" , H , L ) ; N -- ; } return 0 ; }

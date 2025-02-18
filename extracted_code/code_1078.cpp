@@ -1,0 +1,1 @@
+int main ( ) { int n1 , n2 , lcm , gcd ; printf ( "Enter two numbers\n" ) ; scanf ( "%d%d" , & n1 , & n2 ) ; if ( n1 < n2 ) { gcd = n1 ; lcm = n2 ; } else { lcm = n1 ; gcd = n2 ; } while ( n1 % gcd != 0 || n2 % gcd != 0 ) { gcd -- ; } while ( lcm % n1 != 0 || lcm % n2 != 0 ) { lcm ++ ; } printf ( "GCD=%d and LCM=%d" , lcm , gcd ) ; return 0 ; }

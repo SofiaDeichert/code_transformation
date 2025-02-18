@@ -1,0 +1,1 @@
+int main ( ) { int t , n , i , j ; int ar [ 100 ] [ 100 ] ; scanf ( "%d" , & t ) ; while ( t -- ) { scanf ( "%d" , & n ) ; for ( i = 0 ; i < n ; i ++ ) { for ( j = 0 ; j <= i ; j ++ ) { get ; } } for ( i = n - 1 ; i > 0 ; i -- ) { for ( j = 0 ; j < i ; j ++ ) { ar [ i - 1 ] [ j ] += max ( ar [ i ] [ j ] , ar [ i ] [ j + 1 ] ) ; } } printf ( "%d\n" , ar [ 0 ] [ 0 ] ) ; } }

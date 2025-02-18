@@ -1,0 +1,1 @@
+int main ( ) { long long int T ; scanf ( "%lld" , & T ) ; while ( T -- ) { long long int N , ar [ 100000 ] , i , min , ans ; scanf ( "%lld" , & N ) ; for ( i = 0 ; i < N ; i ++ ) { scanf ( "%lld" , & ar [ i ] ) ; } min = ar [ 0 ] ; for ( i = 0 ; i < N ; i ++ ) { if ( ar [ i ] < min ) { min = ar [ i ] ; } } ans = min * ( N - 1 ) ; printf ( "%lld\n" , ans ) ; } return 0 ; }

@@ -1,0 +1,1 @@
+long hcf ( long a , long b ) { if ( a % b == 0 ) return b ; else return hcf ( b , a % b ) ; } int main ( void ) { int t ; long a , b ; scanf ( "%d" , & t ) ; while ( t -- ) { scanf ( "%ld %ld" , & a , & b ) ; long h = hcf ( a , b ) ; long l = ( a * b ) / h ; printf ( "%ld %ld\n" , h , l ) ; } return 0 ; }

@@ -1,0 +1,1 @@
+int main ( ) { int a [ 100 ] , max , sum , i , j , k , t , n ; scanf ( "%d" , & t ) ; for ( i = 0 ; i < t ; i ++ ) { max = 0 ; sum = 0 ; scanf ( "%d" , & n ) ; for ( j = 0 ; j < n ; j ++ ) { sum = 0 ; for ( k = 0 ; k <= j ; k ++ ) { scanf ( "%d" , & a [ k ] ) ; sum = sum + a [ k ] ; } if ( max < sum ) { max = sum ; } } printf ( "%d\n" , max ) ; } return 0 ; }

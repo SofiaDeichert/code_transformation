@@ -1,0 +1,1 @@
+int main ( void ) { int n ; scanf ( "%d" , & n ) ; while ( n -- ) { unsigned int m , i ; scanf ( "%u" , & m ) ; i = m - 1 ; long int q1 , q2 ; scanf ( "%li" , & q1 ) ; while ( i -- ) { scanf ( "%li" , & q2 ) ; if ( q1 > q2 ) { q1 = q2 ; } } printf ( "%li\n" , q1 * ( m - 1 ) ) ; } return 0 ; }

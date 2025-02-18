@@ -1,0 +1,1 @@
+int main ( ) { int num , prevnum = - 1 , t , n , cursize = 1 , i ; long long count = 0 ; scanf ( "%d" , & t ) ; while ( t -- ) { scanf ( "%d" , & n ) ; cursize = 0 ; for ( i = 0 ; i < n ; ++ i ) { scanf ( "%d" , & num ) ; count ++ ; if ( num >= prevnum ) { count += cursize ; cursize ++ ; } else { cursize = 1 ; } prevnum = num ; } printf ( "%lld\n" , count ) ; } }

@@ -1,0 +1,1 @@
+int main ( ) { int i , a , b , t , gcd , lcm , mul ; scanf ( "%d" , & t ) ; for ( i = 0 ; i < t ; i ++ ) { scanf ( "%d%d" , & a , & b ) ; gcd = 0 ; lcm = 0 ; mul = a * b ; while ( a > 1 || b > 1 ) { if ( a > b ) a = a - b ; else if ( b > a ) b = b - a ; else if ( a == b ) break ; } gcd = a ; lcm = mul / gcd ; printf ( "%d %d" , gcd , lcm ) ; } return 0 ; }

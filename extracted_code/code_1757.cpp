@@ -1,0 +1,1 @@
+int euclid ( int a , int b ) { if ( a % b == 0 ) return b ; else return euclid ( b , a % b ) ; } int main ( ) { int t ; scanf ( "%d" , & t ) ; while ( t -- ) { int a , b ; int gcd ; long long int lcm ; scanf ( "%d%d" , & a , & b ) ; if ( a < b ) { gcd = a ; a = b ; gcd = b ; } gcd = euclid ( a , b ) ; lcm = ( a * b ) / gcd ; printf ( "%d %lld\n" , gcd , lcm ) ; } return 0 ; }

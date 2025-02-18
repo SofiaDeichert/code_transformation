@@ -1,0 +1,1 @@
+int main ( ) { int i , t , n , count ; scanf ( "%d" , & t ) ; while ( t -- ) { scanf ( "%d" , & n ) ; long long int a [ n ] ; count = 0 ; for ( i = 0 ; i < n ; i ++ ) scanf ( "%lld" , & a [ i ] ) ; for ( i = 0 ; i < ( n - 1 ) ; i ++ ) { if ( a [ i ] < a [ i + 1 ] ) count ++ ; } count = count + n ; printf ( "%d\n" , count ) ; } }

@@ -1,0 +1,1 @@
+int main ( ) { int arr [ 100000 ] , t , count , n , i , j ; scanf ( "%d" , & t ) ; while ( t -- ) { scanf ( "%d" , & n ) ; for ( i = 0 ; i < n ; i ++ ) scanf ( "%d" , & arr [ i ] ) ; count = n ; for ( i = 0 ; i < n ; i ++ ) { for ( j = 0 ; j < n ; j ++ ) { if ( arr [ i ] < arr [ j ] ) { count ++ ; break ; } } } printf ( "%d\n" , count ) ; } return 0 ; }

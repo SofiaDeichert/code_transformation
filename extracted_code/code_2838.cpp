@@ -1,0 +1,1 @@
+int main ( ) { unsigned int t , n , * a , s , i ; scanf ( "%d" , & t ) ; while ( t -- ) { scanf ( "%d" , & n ) ; a = ( unsigned int * ) calloc ( n , sizeof ( unsigned int ) ) ; i = 0 ; scanf ( "%d" , & a [ i ] ) ; s = a [ i ] ; for ( i = 1 ; i < n ; i ++ ) { scanf ( "%d" , & a [ i ] ) ; if ( s > a [ i ] ) s = a [ i ] ; } printf ( "%d\n" , s * ( n - 1 ) ) ; } return 0 ; }

@@ -1,0 +1,1 @@
+int main ( ) { int t , a , n , x , i ; freopen ( "Test.txt" , "r" , stdin ) ; scanf ( "%d" , & t ) ; while ( t -- ) { scanf ( "%d" , & n ) ; for ( i = 1 , x = 100001 ; i <= n ; ++ i ) { scanf ( "%d" , & a ) ; if ( a < x ) x = a ; } printf ( "%lld\n" , ( long long ) x * ( n - 1 ) ) ; } return 0 ; }

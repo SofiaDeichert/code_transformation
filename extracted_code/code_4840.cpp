@@ -1,0 +1,1 @@
+int main ( void ) { int T , N , i ; int a , b ; scanf ( "%d" , & T ) ; while ( T -- ) { scanf ( "%d" , & N ) ; scanf ( "%d%d" , & a , & b ) ; if ( a > b ) { a = b ; } for ( i = 2 ; i < N ; i ++ ) { scanf ( "%d" , & b ) ; if ( a > b ) { a = b ; } } if ( N > 21474 ) { printf ( "%lld\n" , ( N - 1 ) * ( long long ) a ) ; } else { printf ( "%d\n" , ( N - 1 ) * a ) ; } } return 0 ; }

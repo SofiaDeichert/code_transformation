@@ -1,0 +1,1 @@
+int main ( ) { int t , i , n , a [ 100 ] , x = 0 , y = 0 ; scanf ( "%d" , & t ) ; while ( t -- ) { scanf ( "%d" , & n ) ; for ( i = 1 ; i < n ; i ++ ) { if ( a [ i - 1 ] > a [ i ] ) x = x + a [ i ] ; else y = y + a [ i - 1 ] ; } printf ( "%d\n" , x + y ) ; } return 0 ; }

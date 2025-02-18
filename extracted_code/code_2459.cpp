@@ -1,0 +1,1 @@
+int gcd ( int x , int y ) { int a ; a = y % x ; if ( a == 0 ) return x ; gcd ( a , x ) ; } int main ( ) { int a , b , swap , c , d , t , i , lcm , x ; scanf ( "%d" , & t ) ; for ( i = 1 ; i <= t ; i ++ ) { scanf ( "%d%d" , & a , & b ) ; if ( a > b ) { swap = a ; a = b ; b = swap ; } x = gcd ( a , b ) ; lcm = ( a * b ) / x ; printf ( "%d %d\n" , x , lcm ) ; } return 0 ; }

@@ -1,0 +1,1 @@
+int main ( ) { int q [ 5 ] , t , f , i , j , p [ 5 ] , count = 0 , l ; scanf ( "%d" , & t ) ; for ( i = 0 ; i < t ; i ++ ) { count = 0 ; scanf ( "%d" , & l ) ; for ( j = 0 ; j < l ; j ++ ) { int p [ j + 1 ] ; for ( f = 0 ; f <= j ; f ++ ) { scanf ( "%d" , & p [ f ] ) ; } count += p [ 0 ] ; q [ i ] = count ; } } for ( i = 0 ; i < t ; i ++ ) { printf ( "%d\t" , q [ i ] + 1 ) ; } }

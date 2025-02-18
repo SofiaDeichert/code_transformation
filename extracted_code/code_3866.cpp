@@ -1,0 +1,1 @@
+int main ( ) { int t , n , i , a , b , cost ; scanf ( "%d" , & t ) ; while ( t -- ) { cost = 0 ; scanf ( "%d" , & n ) ; scanf ( "%d" , & a ) ; for ( i = 1 ; i < n ; i ++ ) { scanf ( "%d" , & b ) ; a = a < b ? a : b ; } printf ( "%d\n" , a * n - 1 ) ; } return 0 ; }

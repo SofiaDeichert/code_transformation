@@ -1,0 +1,1 @@
+int main ( void ) { int T , A , B , C , D ; scanf ( "%d" , & T ) ; scanf ( "%d %d" , & A , & B ) ; if ( A % B == 0 && B % A == 0 ) { C = 1 ; D = A * B ; printf ( "%d %d" , C , D ) ; } else printf ( "sorry for inconvenience" ) ; return 0 ; }

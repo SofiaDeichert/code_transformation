@@ -1,0 +1,1 @@
+int main ( ) { long int a , b , r , t , prod ; scanf ( "l%d" , & t ) ; while ( t -- ) { scanf ( "%ld%ld" , & a , & b ) ; prod = a * b ; while ( 1 ) { r = a % b ; if ( r == 0 ) break ; b = r ; } printf ( "%ld\n" , b ) ; printf ( "%ld\n" , prod / b ) ; } return 0 ; }

@@ -1,0 +1,1 @@
+long gcd ( long a , long b ) { if ( b == 0 ) return a ; return gcd ( b , a % b ) ; } int main ( ) { int t ; long a , b , max , min , h , l ; int i ; scanf ( "%d" , & t ) ; for ( i = 0 ; i < t ; i ++ ) { scanf ( "%ld%ld" , & a , & b ) ; min = a < b ? a : b ; max = a > b ? a : b ; h = gcd ( max , min ) ; l = a * b / h ; printf ( "%ld %ld\n" , h , l ) ; } return 0 ; }

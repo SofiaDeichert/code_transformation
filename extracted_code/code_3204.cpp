@@ -1,0 +1,1 @@
+int calGcd ( int , int ) ; int main ( void ) { int t ; scanf ( "%d" , & t ) ; int i , gcd , lcm ; for ( i = 0 ; i < t ; i ++ ) { int a , b ; scanf ( "%d %d" , & a , & b ) ; gcd = calGcd ( a , b ) ; lcm = a * b / gcd ; printf ( "%d %d\n" , gcd , lcm ) ; } } int calGcd ( int a , int b ) { if ( b == 0 ) return a ; else return calGcd ( b , a % b ) ; }

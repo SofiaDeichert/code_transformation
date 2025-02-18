@@ -1,0 +1,1 @@
+void main ( ) { int t , a , b , gcd , lcm ; for ( int i = 0 ; i < t ; i ++ ) { scanf ( "%d% d" , & a , & b ) ; gcd = 1 ; lcm = a * b ; printf ( "\n%d %d" , gcd , lcm ) ; } }

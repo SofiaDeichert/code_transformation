@@ -1,0 +1,1 @@
+int gc ( int , int ) ; int main ( ) { int n , a , b , g , l ; scanf ( "%d" , & n ) ; while ( n -- ) { scanf ( "%d %d" , & a , & b ) ; g = gc ( a , b ) ; l = a * b / g ; printf ( "%d %d\n" , g , l ) ; } } int gc ( int a , int b ) { if ( b = 0 ) { return a ; } else { gc ( b , a % b ) ; } }

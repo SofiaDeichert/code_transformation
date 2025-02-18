@@ -1,0 +1,1 @@
+int main ( ) { int t ; scanf ( "%d" , & t ) ; while ( t -- ) { int b , c = 0 , i , n ; scanf ( "%d" , & n ) ; int a [ n ] ; for ( i = 0 ; i < n ; i ++ ) { scanf ( "%d" , & a [ i ] ) ; } for ( i = 0 ; i < n - 1 ; i ++ ) { b = min ( a [ i ] , a [ i + 1 ] ) ; c = c + b ; } printf ( "%d\n" , c ) ; } }

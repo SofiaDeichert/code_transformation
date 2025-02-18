@@ -1,0 +1,1 @@
+int main ( ) { register int i ; float c ; int test ; int n , a , b ; scanf ( "%d" , & test ) ; while ( test -- ) { scanf ( "%d" , & n ) ; scanf ( "%d" , & a ) ; for ( i = 1 ; i < n ; ++ i ) { scanf ( "%d" , & b ) ; if ( a > b ) a = b ; } c = ( n - 1 ) * a ; printf ( "%ld\n" , ( int ) c ) ; } return 0 ; }

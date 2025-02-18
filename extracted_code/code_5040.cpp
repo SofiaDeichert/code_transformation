@@ -1,0 +1,1 @@
+int main ( void ) { int t , flag , m ; long int a , b , g , i , l ; while ( t -- ) { int x [ 100 ] ; flag = 0 ; scanf ( "%ld%ld" , & a , & b ) ; if ( a < b ) { m = a , a = b , b = m ; } for ( i = 2 ; i <= a ; i ++ ) { if ( a % i == 0 && b % i == 0 ) { flag ++ ; break ; } } if ( flag == 1 ) { g = i ; } else { g = 1 ; } printf ( "%ld\n" , g ) ; } return 0 ; }

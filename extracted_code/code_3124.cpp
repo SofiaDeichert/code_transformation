@@ -1,0 +1,1 @@
+int main ( ) { unsigned long long int cs , j , n , k , a [ 100000 ] ; int i , t ; scanf ( "%d" , & t ) ; for ( i = 1 ; i <= t ; i ++ ) { scanf ( "%lld" , & n ) ; cs = 0 ; for ( j = 0 ; j < n ; j ++ ) { scanf ( "%lld" , & a [ j ] ) ; } for ( j = 0 ; j < n ; j ++ ) { cs ++ ; if ( j != n - 1 ) { if ( a [ j ] <= a [ j + 1 ] ) cs ++ ; } } printf ( "%lld\n" , cs ) ; } return 0 ; }

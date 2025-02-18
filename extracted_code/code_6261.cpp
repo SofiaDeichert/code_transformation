@@ -1,0 +1,1 @@
+int hcf ( int n1 , int n2 ) { if ( n2 != 0 ) return hcf ( n2 , n1 % n2 ) ; else return n1 ; } int main ( ) { int testcases , a , b , i ; int h , l ; scanf ( "%d" , & testcases ) ; for ( i = 0 ; i < testcases ; i ++ ) { scanf ( "%d %d" , & a , & b ) ; h = hcf ( a , b ) ; l = a * b / h ; printf ( "%d %d\n" , h , l ) ; } return 0 ; }

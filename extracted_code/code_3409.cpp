@@ -1,0 +1,1 @@
+int main ( ) { int t ; scanf ( "%d" , & t ) ; while ( t -- ) { int i , j , n , prev , arr [ 50009 ] , x ; long long int sum = 0 ; scanf ( "%d%d" , & n , & prev ) ; for ( i = 1 ; i < n ; i ++ ) { scanf ( "%d" , & x ) ; if ( prev > x ) { sum += x ; prev = x ; } else { sum += prev ; } } printf ( "%lld\n" , sum ) ; } return 0 ; }

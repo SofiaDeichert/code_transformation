@@ -1,0 +1,1 @@
+int cal ( int a , int b ) { int i = 2 , c ; c = a ; while ( c % b != 0 ) { c = a * i ; i ++ ; } return c ; } int main ( ) { int t , lcm , gcd , a , b ; scanf ( "%d" , & t ) ; while ( t -- ) { scanf ( "%d%d" , & a , & b ) ; lcm = cal ( a , b ) ; gcd = ( a * b ) / lcm ; printf ( "%d %d\n" , gcd , lcm ) ; } return 0 ; }

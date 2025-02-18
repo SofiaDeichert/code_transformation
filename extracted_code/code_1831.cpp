@@ -1,0 +1,1 @@
+int main ( ) { long long cases , n , a , min , i ; scanf ( "%lld" , & cases ) ; while ( cases -- ) { scanf ( "%lld" , & n ) ; min = 100009 ; for ( i = 0 ; i < n ; i ++ ) { scanf ( "%lld" , & a ) ; if ( a <= min ) min = a ; } printf ( "%lld\n" , min * ( n - 1 ) ) ; } return 0 ; }

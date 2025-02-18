@@ -1,0 +1,1 @@
+int main ( int argc , char const * argv [ ] ) { int t , i , temp , min ; long long int n , cost ; scanf ( "%d" , & t ) ; while ( t -- ) { min = INT_MAX ; cost = 0 ; scanf ( "%lld" , & n ) ; for ( i = 0 ; i < n ; i ++ ) { scanf ( "%d" , & temp ) ; if ( temp < min ) min = temp ; if ( i >= 1 ) cost += min ; } printf ( "\n%lld\n" , cost ) ; } return 0 ; }

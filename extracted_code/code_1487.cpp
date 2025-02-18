@@ -1,0 +1,1 @@
+main ( ) { int t , x , y , z , p ; scanf ( "%d" , & t ) ; while ( t -- ) { scanf ( "%d %d" , & x , & y ) ; z = x > y ? x : y ; while ( 1 ) { if ( z % y == 0 && z % x == 0 ) break ; z ++ ; } p = x * y / z ; printf ( "%d %d" , p , z ) ; } return 0 ; }

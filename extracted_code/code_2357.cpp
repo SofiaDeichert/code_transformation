@@ -1,0 +1,1 @@
+int main ( ) { long i , j , T , n , a , min ; long cost = 0 ; scanf ( "%li" , & T ) ; for ( i = 1 ; i <= T ; i ++ ) { scanf ( "%li" , & n ) ; min = 9999999999999999 ; cost = 0 ; for ( j = 1 ; j <= n ; j ++ ) { scanf ( "%li" , & a ) ; if ( a < min ) min = a ; } cost = min * ( n - 1 ) ; printf ( "%d\n" , cost ) ; } return 0 ; }

@@ -1,0 +1,1 @@
+int main ( ) { int i , j , k , t , a ; long long int n , sum ; int arr [ 100001 ] ; scanf ( "%d" , & t ) ; for ( i = 0 ; i < t ; i ++ ) { scanf ( "%lld" , & n ) ; for ( j = 0 ; j < n ; j ++ ) { scanf ( "%d" , & arr [ j ] ) ; } a = arr [ 0 ] ; for ( k = 1 ; k < n ; k ++ ) { if ( a > arr [ k ] ) { a = arr [ k ] ; } } sum = a * ( n - 1 ) ; printf ( "%lld\n" , sum ) ; } }

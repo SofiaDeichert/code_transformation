@@ -1,0 +1,1 @@
+void findgcdlcm ( ) { int a , b , c , prod , gcd , lcm ; scanf ( "%d %d" , & a , & b ) ; prod = a * b ; while ( b != 0 ) { c = a % b ; if ( c != 0 ) { a = b ; b = c ; } else { gcd = b ; } } lcm = prod / gcd ; printf ( "\n%d %d" , gcd , lcm ) ; } int main ( ) { int i , n ; scanf ( "%d" , & n ) ; for ( i = 0 ; i < n ; i ++ ) { findgcdlcm ( ) ; } return 0 ; }

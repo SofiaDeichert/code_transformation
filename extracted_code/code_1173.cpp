@@ -1,0 +1,1 @@
+int main ( ) { long num1 , num2 , i , l , count2 , t , j ; long count = 0 ; scanf ( "%ld" , & t ) ; while ( t -- ) { scanf ( "%ld%ld" , & num1 , & num2 ) ; if ( num1 >= num2 ) l = num2 ; else l = num1 ; for ( i = 1 ; i <= l ; i ++ ) { if ( num1 % i == 0 && num2 % i == 0 ) count = i ; } printf ( "%ld " , count ) ; printf ( "%ld\n" , num1 * ( num2 / count ) ) ; } return 0 ; }

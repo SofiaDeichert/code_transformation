@@ -1,0 +1,1 @@
+int main ( ) { int x , n , t , s = 0 , s1 = 0 , i , j , k ; scanf ( "%d" , & t ) ; for ( i = 1 ; i <= t ; i ++ ) { scanf ( "%d" , & n ) ; for ( j = 1 ; j <= n ; j ++ ) { s = 0 ; for ( k = 1 ; k <= j ; k ++ ) { scanf ( "%d" , & x ) ; s = s + x ; } if ( s1 < s ) s1 = s ; } printf ( "%d" , s1 ) ; s1 = 0 ; } return ( 0 ) ; }

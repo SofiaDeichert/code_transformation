@@ -1,0 +1,1 @@
+int gcm ( int , int ) ; int main ( ) { int g , nt , a , b ; scanf ( "%d" , & nt ) ; while ( nt -- ) { g = 0 ; scanf ( "%d%d" , & a , & b ) ; g = gcm ( a , b ) ; printf ( "%d %d\n" , g , a * b / g ) ; } return 0 ; } int gcm ( int x , int y ) { int i , g = 0 ; for ( i = 1 ; i <= ( x <= y ? x : y ) ; i ++ ) { if ( x % i == 0 && y % i == 0 ) g = i ; } return g ; }

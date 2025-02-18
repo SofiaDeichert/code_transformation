@@ -1,0 +1,1 @@
+int main ( ) { int n , x , a , s = 0 , i , j ; scanf ( "%d" , & n ) ; while ( n -- ) { scanf ( "%d" , & x ) ; for ( i = 1 ; i <= x ; i ++ ) { for ( j = 1 ; j <= i ; j ++ ) { scanf ( "%d" , & a ) ; if ( ( i == x && j == 1 ) || ( i == x - 1 && j == 1 ) || ( i == x && j == 2 ) ) { s = a + s ; } } printf ( "\n" ) ; } } printf ( "%d" , s ) ; return 0 ; }

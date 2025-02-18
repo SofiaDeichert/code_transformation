@@ -1,0 +1,1 @@
+int main ( ) { int n , sum = 0 , i , j , t ; scanf ( "%d" , & t ) ; if ( t < 1001 ) exit ( 1 ) ; while ( t -- > 0 ) { sum = 0 ; scanf ( "%d" , & n ) ; int arr [ n ] ; for ( i = 0 ; i < n ; i ++ ) { for ( j = 0 ; j < i + 1 ; j ++ ) { scanf ( "%d" , & arr [ i ] ) ; if ( arr [ i ] > 100 ) exit ( 1 ) ; sum = sum + arr [ i ] ; } } printf ( "%d" , sum ) ; } return 0 ; }

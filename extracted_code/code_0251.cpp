@@ -1,0 +1,1 @@
+main ( ) { int i , t = 32677 , a [ 50000 ] , n , k , p [ 1000 ] , j ; scanf ( "%d" , & k ) ; for ( i = 0 ; i < k ; i ++ ) { scanf ( "%d" , & n ) ; for ( j = 0 ; j < n ; j ++ ) { scanf ( "%d" , & a [ j ] ) ; if ( a [ j ] < t ) t = a [ j ] ; } p [ i ] = t * ( n - 1 ) ; t = - 32678 ; } for ( i = 0 ; i < k ; i ++ ) printf ( "%d" , p [ i ] ) ; }

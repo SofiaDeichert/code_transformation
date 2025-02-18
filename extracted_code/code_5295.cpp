@@ -1,0 +1,1 @@
+int main ( ) { long int n , * p , i , c = 0 ; int t ; scanf ( "%d" , & t ) ; while ( t -- ) { c = 0 ; scanf ( "%ld" , & n ) ; p = ( long int * ) malloc ( sizeof ( long int ) * n ) ; for ( i = 0 ; i < n ; i ++ ) { scanf ( "%ld" , & p [ i ] ) ; } for ( i = 0 ; i < n - 1 ; i ++ ) { if ( p [ i ] <= p [ i + 1 ] ) c ++ ; } printf ( "%ld\n" , c + n ) ; } return ( 0 ) ; }

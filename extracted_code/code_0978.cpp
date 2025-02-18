@@ -1,0 +1,1 @@
+int main ( ) { long long int t , test_cases , i , n , val ; scanf ( "%lld" , & test_cases ) ; for ( t = 0 ; t < test_cases ; t ++ ) { scanf ( "%lld" , & n ) ; long long int min = 100001 ; for ( i = 0 ; i < n ; i ++ ) { scanf ( "%lld" , & val ) ; if ( val < min ) min = val ; } printf ( "%lld\n" , min * ( n - 1 ) ) ; } return 0 ; }

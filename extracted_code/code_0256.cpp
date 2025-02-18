@@ -1,0 +1,1 @@
+int main ( ) { int T , A , B , i , c , D , a ; D = 1 ; scanf ( "%d\n" , & T ) ; for ( a = 0 ; a < T ; a ++ ) { scanf ( "%d\t%d\n" , & A , & B ) ; } for ( a = 0 ; a < T ; a ++ ) { for ( i = 1 ; i < A && i < B ; i ++ ) { if ( A % i == 0 && B % i == 0 ) { c = i ; printf ( "%d\t%d\n" , D , c ) ; } } } return 0 ; }

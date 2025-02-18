@@ -1,0 +1,1 @@
+int main ( ) { int count ; int i , N ; int min ; int a ; int cost ; scanf ( "%d" , & count ) ; while ( count -- ) { scanf ( "%d" , & N ) ; min = 100000 ; for ( i = 0 ; i < N ; i ++ ) { scanf ( "%d" , & a ) ; if ( min > a ) { min = a ; } } if ( N == 1 ) { cost = min ; } else cost = min * ( N - 1 ) ; printf ( "%d\n" , cost ) ; } return 0 ; }

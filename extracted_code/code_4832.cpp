@@ -1,0 +1,1 @@
+int main ( int argc , char * argv [ ] ) { int t ; scanf ( "%d" , & t ) ; while ( t -- ) { long int i , n , tmp , min ; scanf ( "%ld" , & n ) ; for ( i = 0 ; i < n ; i ++ ) { scanf ( "%ld" , & tmp ) ; if ( i == 0 ) min = tmp ; if ( tmp < min ) min = tmp ; } long long int ans = ( long long ) min * ( long long ) ( i - 1 ) ; fprintf ( stdout , "%lld\n" , ans ) ; } }

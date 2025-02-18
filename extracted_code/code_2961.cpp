@@ -1,0 +1,1 @@
+int main ( ) { int T , N , i , j , k , l , S , current , next ; scanf ( "%d" , & T ) ; for ( i = 0 ; i < T ; i ++ ) { scanf ( "%d" , & N ) ; S = N ; scanf ( "%d" , & current ) ; for ( j = 0 ; j < N - 1 ; j ++ ) { scanf ( "%d" , & next ) ; if ( current <= next ) S ++ ; current = next ; } printf ( "%d\n" , S ) ; } return 0 ; }

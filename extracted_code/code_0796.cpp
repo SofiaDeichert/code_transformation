@@ -1,0 +1,1 @@
+int main ( ) { long int j , t , i , n , m , temp ; scanf ( "%ld" , & t ) ; for ( i = 0 ; i < t ; i ++ ) { scanf ( "%ld" , & n ) ; for ( j = 0 ; j < n ; j ++ ) { scanf ( "%ld" , & m ) ; if ( j == 0 ) temp = m ; if ( temp > m ) temp = m ; } printf ( "%d\n" , temp * ( n - 1 ) ) ; } return 0 ; }

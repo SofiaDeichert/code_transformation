@@ -1,0 +1,1 @@
+int main ( void ) { int arr [ 10 ] , n , c , i , j ; scanf ( "%d" , & n ) ; c = n ; for ( i = 0 ; i < n ; i ++ ) scanf ( "%d" , & arr [ i ] ) ; for ( i = 0 ; i < n ; i ++ ) { for ( j = i ; arr [ j ] <= arr [ j + 1 ] ; j ++ ) c ++ ; } printf ( "\n%d" , c ) ; return 0 ; }

@@ -1,0 +1,1 @@
+int main ( ) { int TestCases ; int N1 ; int N2 ; int LCM , GCD ; int iTemp ; scanf ( "%d" , & TestCases ) ; while ( TestCases > 0 ) { scanf ( "%d %d" , & N1 , & N2 ) ; for ( iTemp = 1 ; iTemp <= N2 / 2 ; iTemp ++ ) { if ( N1 % iTemp == 0 && N2 % iTemp == 0 ) { GCD = iTemp ; } } LCM = N1 * N2 / GCD ; printf ( "%d %d\n" , GCD , LCM ) ; } }

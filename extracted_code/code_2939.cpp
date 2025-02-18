@@ -1,0 +1,1 @@
+int main ( void ) { int t ; scanf ( "%d" , & t ) ; while ( t -- ) { int n ; scanf ( "%d" , & n ) ; int val , n1 = n ; long min = 99999 ; while ( n -- ) { scanf ( "%d" , & val ) ; if ( val < min ) min = val ; } unsigned long s = ( n1 - 1 ) * min ; printf ( "%ld\n" , s ) ; } return 0 ; }

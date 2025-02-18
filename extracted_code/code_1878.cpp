@@ -1,0 +1,1 @@
+int main ( ) { int t , i ; scanf ( "%d" , & t ) ; for ( i = 0 ; i < t ; i ++ ) { int n , j , k , cnt = 0 ; scanf ( "%d" , & n ) ; long long int a [ n ] ; for ( j = 0 ; j < n ; j ++ ) { scanf ( "%lld" , & a [ j ] ) ; } for ( j = 0 ; j < n - 1 ; j ++ ) { if ( a [ j ] <= a [ j + 1 ] ) cnt ++ ; else { cnt = ( cnt * ( cnt + 1 ) ) / 2 ; break ; } } printf ( "%d\n" , cnt + n ) ; } }

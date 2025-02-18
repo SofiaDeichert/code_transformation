@@ -1,0 +1,1 @@
+main ( ) { char a [ 101 ] , b [ 10 ] ; int i , j , k , count = 0 , l ; scanf ( "%s" , a ) ; l = strlen ( a ) ; for ( i = 0 ; i < l ; i ++ ) { if ( a [ i ] == 'C' ) { for ( j = i , k = 0 ; j < ( i + 4 ) ; k ++ , j ++ ) b [ k ] = a [ j ] ; if ( strcmp ( b , "CHEF" ) == 0 ) { count ++ ; } } } printf ( "%d\n" , count ) ; return 0 ; }

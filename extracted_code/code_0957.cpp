@@ -1,0 +1,1 @@
+int main ( ) { int t , max , min , i ; scanf ( "%d" , & t ) ; while ( t > 0 ) { scanf ( "%d" , & max ) ; int a [ max ] ; for ( i = 0 ; i < max ; i ++ ) { scanf ( "%d" , & a [ i ] ) ; } min = a [ 0 ] ; for ( i = 0 ; i < max ; i ++ ) { if ( a [ i ] < min ) min = a [ i ] ; } int sum = min * ( max - 1 ) ; printf ( "%d\n" , sum ) ; t -- ; } return 0 ; }

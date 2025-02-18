@@ -1,0 +1,1 @@
+int main ( ) { int t ; scanf ( "%d" , & t ) ; while ( t -- ) { int n , N ; scanf ( "%d" , & n ) ; N = n ; if ( ( N > 1 && N < 15 ) || ( N > 1 && N <= 100 ) || ( N > 1 && N <= 50000 ) ) { int a [ n ] ; while ( n -- ) { scanf ( "%d" , & a [ N - n ] ) ; } printf ( "%d\n" , N + 1 ) ; } } return 0 ; }

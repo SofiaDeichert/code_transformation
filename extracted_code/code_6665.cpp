@@ -1,0 +1,1 @@
+main ( ) { int i , j , a [ 500 ] [ 500 ] , m , t , n ; scanf ( "%d" , & t ) ; while ( t -- ) { m = 0 ; scanf ( "%d" , & n ) ; for ( i = 1 ; i <= n ; i ++ ) for ( j = 1 ; j <= i ; j ++ ) { scanf ( "%d" , & a [ i ] [ j ] ) ; a [ i ] [ j ] += M ( a [ i - 1 ] [ j ] , a [ i - 1 ] [ j - 1 ] ) ; if ( a [ i ] [ j ] > m ) m = a [ i ] [ j ] ; } printf ( "%d\n" , m ) ; } return 0 ; }

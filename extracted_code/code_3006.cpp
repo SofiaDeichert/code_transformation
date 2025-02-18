@@ -1,0 +1,1 @@
+int main ( ) { int T , c , d ; long long int a , b ; scanf ( "%d" , & T ) ; while ( T -- ) { scanf ( "%d %d" , & a , & b ) ; if ( ( a % b == 0 ) || ( b % a == 0 ) ) { if ( a > b ) { c = a ; d = b ; } else { c = b ; d = a ; } } else { c = a * b ; d = 1 ; } printf ( "lcm is %d\n" , c ) ; printf ( "gcd is %d" , d ) ; } return 0 ; }

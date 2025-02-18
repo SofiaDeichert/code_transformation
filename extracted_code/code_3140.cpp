@@ -1,0 +1,1 @@
+long gcdca ( long a , long b ) { a = abs ( a ) ; b = abs ( b ) ; return ( b == 0 ) ? a : gcdca ( b , a % b ) ; } int main ( ) { long t , a , b , i , gcd , lcm ; scanf ( "%ld" , & t ) ; while ( t -- ) { lcm = 0 ; gcd = 0 ; scanf ( "%ld%ld" , & a , & b ) ; gcd = gcdca ( a , b ) ; lcm = ( a * b ) / gcd ; printf ( "%ld %ld\n" , gcd , lcm ) ; } }

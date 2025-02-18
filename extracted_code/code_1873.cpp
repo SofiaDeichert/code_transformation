@@ -1,0 +1,1 @@
+int main ( ) { char n ; scanf ( "%d" , & n ) ; for ( ; ( n != 42 ) ; printf ( "%d\n" , n ) , scanf ( "%d" , & n ) ) ; return 0 ; }

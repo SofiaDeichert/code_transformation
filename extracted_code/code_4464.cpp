@@ -1,0 +1,1 @@
+int main ( ) { int T , j , i , N ; scanf ( "%d" , & T ) ; for ( j = 0 ; j < T ; j ++ ) { int cost , small ; scanf ( "%d" , & N ) ; int arr [ N ] ; for ( i = 0 ; i < N ; i ++ ) { scanf ( "%d" , & arr [ i ] ) ; } small = arr [ 0 ] ; for ( i = 0 ; i < N ; i ++ ) { if ( arr [ i ] < small ) small = arr [ i ] ; } cost = small * ( N - 1 ) ; printf ( "%d\n" , cost ) ; } }

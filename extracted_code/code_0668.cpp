@@ -1,0 +1,1 @@
+int main ( ) { int T ; long int N ; scanf ( "%ld" , & T ) ; for ( int i = 0 ; i < T ; i ++ ) { scanf ( "%ld" , & N ) ; int ar [ N ] ; long int min = 11111101 ; for ( int j = 0 ; j < N ; j ++ ) { scanf ( "%d" , & ar [ j ] ) ; if ( min > ar [ j ] ) min = ar [ j ] ; } long cost = min * ( N - 1 ) ; printf ( "%lld\n" , cost ) ; } return 0 ; }

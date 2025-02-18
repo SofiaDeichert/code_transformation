@@ -1,0 +1,1 @@
+int main ( ) { int test ; long int a , b , c , d , hcf ; printf ( "enter number of test cases\n" ) ; scanf ( "%d" , & test ) ; while ( test -- ) { scanf ( "%ld%ld" , & a , & b ) ; c = a ; d = b ; while ( a != b ) { if ( a < b ) { b = b - a ; } else a = a - b ; } printf ( "%ld  %ld\n" , a , ( c * d ) / a ) ; } return 0 ; }

@@ -1,0 +1,1 @@
+int main ( ) { int t ; scanf ( "%d" , & t ) ; while ( t -- ) { int a , b , t , i , p ; scanf ( "%d %d" , & a , & b ) ; if ( a < b ) t = a ; else t = b ; p = a * b ; for ( i = t ; i > 0 ; i -- ) { if ( a % i == 0 && b % i == 0 ) { printf ( "%d %d\n" , i , p / i ) ; break ; } } } return 0 ; }

@@ -1,0 +1,1 @@
+int gcd ( int a , int b ) { return ( b == 0 ? a : gcd ( b , a % b ) ) ; } int main ( void ) { int t ; int a ; int b ; int d ; freopen ( "Test.txt" , "r" , stdin ) ; scanf ( "%d" , & t ) ; while ( t -- ) { scanf ( "%d%d" , & a , & b ) ; d = gcd ( a , b ) ; printf ( "%d %lld\n" , d , ( long long ) a / d * b ) ; } return 0 ; }

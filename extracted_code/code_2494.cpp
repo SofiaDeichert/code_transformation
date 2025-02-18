@@ -1,0 +1,1 @@
+int main ( ) { int l , t , i , j , count , prev , cur , n , a [ 100000 ] ; scanf ( "%d" , & t ) ; for ( l = 0 ; l < t ; l ++ ) { scanf ( "%d" , & n ) ; count = 0 ; for ( i = 0 ; i < n ; i ++ ) { scanf ( "%d" , & a [ i ] ) ; count ++ ; for ( j = i ; j > 0 ; j ++ ) { if ( a [ j - 1 ] <= a [ j ] ) count ++ ; else break ; } } printf ( "%d\n" , count ) ; } return 0 ; }

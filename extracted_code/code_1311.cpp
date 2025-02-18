@@ -1,0 +1,1 @@
+int main ( ) { int T ; scanf ( "%d" , & T ) ; for ( int i = 0 ; i < T ; ++ i ) { int A , B , hcf = 1 ; int smaller = A < B ? A : B ; scanf ( "%d %d" , & A , & B ) ; int tempA = A , tempB = B ; for ( int j = 2 ; j <= smaller ; ++ j ) { while ( A % j == 0 && B % j == 0 ) { hcf *= j ; A /= j ; B /= j ; } } printf ( "%d %d \n" , hcf , tempA * tempB / hcf ) ; } return 0 ; }

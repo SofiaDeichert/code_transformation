@@ -1,0 +1,1 @@
+int main ( ) { int t , B ; scanf ( "%d" , & t ) ; while ( t -- ) { int sum = 0 ; scanf ( "%d" , & B ) ; while ( B > 3 ) { B = B - 2 ; sum = sum + B / 2 ; } printf ( "%d\n" , sum ) ; } return 0 ; }

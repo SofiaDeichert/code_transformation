@@ -1,0 +1,1 @@
+int main ( ) { int t ; scanf ( "%d" , & t ) ; while ( t -- ) { long unsigned int i , n ; scanf ( "%lu" , & n ) ; long unsigned int a [ n ] , cost = 0 ; for ( i = 0 ; i < n ; i ++ ) scanf ( "%lu" , & a [ i ] ) ; for ( i = 0 ; i < n - 1 ; i ++ ) { if ( a [ i ] < a [ i + 1 ] ) cost += a [ i ] ; else cost += a [ i + 1 ] ; } printf ( "%lu\n" , cost ) ; } return 0 ; }

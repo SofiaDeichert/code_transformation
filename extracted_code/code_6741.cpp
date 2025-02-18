@@ -1,0 +1,1 @@
+int main ( ) { int t ; scanf ( "%d" , & t ) ; while ( t -- ) { long long int N ; scanf ( "%lld" , & N ) ; long long int A [ N ] ; long long int y = 0 ; while ( y < N ) { scanf ( "%d" , & A [ y ] ) ; y ++ ; } long long int u = 0 , flag = N ; while ( u < N ) { if ( A [ u ] > A [ u + 1 ] ) { flag ++ ; } u ++ ; } printf ( "%lld\n" , flag ) ; } return 0 ; }

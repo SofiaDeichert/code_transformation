@@ -1,0 +1,1 @@
+int main ( ) { int x , y , max , i , T , lcm , hcf ; scanf ( "%d%d" , & x , & y ) ; if ( x > y ) { max = x ; } else { max = y ; } for ( i = 1 ; i <= max ; i ++ ) { if ( x % i == 0 && y % i == 0 ) { hcf = i ; } } for ( i = max ; i <= x * y ; i ++ ) { if ( i % x == 0 && i % y == 0 ) { lcm = i ; } } printf ( "%d %d" , hcf , lcm ) ; }

@@ -1,0 +1,1 @@
+int gdc ( int , int ) ; int main ( ) { int s , t , a , b ; scanf ( "%d" , & t ) ; while ( t -- ) { scanf ( "%d%d" , & a , & b ) ; s = gdc ( a , b ) ; printf ( "%d %d\n" , s , ( a * b ) / s ) ; } return 0 ; } int gdc ( int a , int b ) { int p ; while ( b != 0 ) { p = b ; b = a % b ; a = p ; } return a ; }

@@ -1,0 +1,1 @@
+int main ( ) { int t ; scanf ( "%d" , & t ) ; while ( t > 0 ) { long unsigned int n ; scanf ( "%lu" , & n ) ; long unsigned int m = n ; long unsigned int a = 0 , b ; scanf ( "%lu" , & b ) ; while ( -- n > 0 ) { scanf ( "%lu" , & a ) ; b = a < b ? a : b ; } printf ( "%lu\n" , ( -- m ) * b ) ; -- t ; } return 0 ; }

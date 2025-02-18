@@ -1,0 +1,1 @@
+int main ( ) { int t , n1 , n2 , j , i , gcd ; scanf ( "%d" , & t ) ; for ( i = 0 ; i < t ; i ++ ) { scanf ( "%d%d" , & n1 , & n2 ) ; j = 2 ; gcd = 1 ; while ( j <= n1 && j <= n2 ) { if ( n1 % j == 0 && n2 % j == 0 ) { gcd = gcd * j ; n1 /= j ; n2 /= j ; continue ; } if ( j > 2 ) j += 2 ; if ( j == 2 ) ++ j ; } printf ( "%d%d\n" , gcd , gcd * n1 * n2 ) ; } return 0 ; }

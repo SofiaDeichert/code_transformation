@@ -1,0 +1,1 @@
+int main ( void ) { int t , n , a , prev ; scanf ( "%d" , & t ) ; while ( t -- ) { scanf ( "%d" , & n ) ; scanf ( "%d" , & a ) ; int count = 1 ; n = n - 1 ; while ( n -- ) { prev = a ; scanf ( "%d" , & a ) ; if ( a > prev ) { count = count + 2 ; } else { count = count + 1 ; } } printf ( "%d\n" , count ) ; } return 0 ; }

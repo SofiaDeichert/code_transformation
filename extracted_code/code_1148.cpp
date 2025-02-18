@@ -1,0 +1,1 @@
+int main ( ) { int i , j , k , row , t , n ; long int sum , gr = 0 ; scanf ( "%d" , & t ) ; for ( i = 0 ; i < t ; i ++ ) { scanf ( "%d" , & row ) ; gr = 0 ; for ( j = 1 ; j <= row ; j ++ ) { sum = 0 ; for ( k = 1 ; k <= j ; k ++ ) { scanf ( "%d " , & n ) ; sum += n ; } if ( sum > gr ) { gr = sum ; } } printf ( "%d" , gr ) ; printf ( "\n" ) ; } return 0 ; }

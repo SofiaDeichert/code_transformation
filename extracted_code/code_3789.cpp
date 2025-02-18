@@ -1,0 +1,1 @@
+int main ( void ) { int T ; scanf ( "%d" , & T ) ; while ( T > 0 ) { int A , B , R , NM , DM , LCM , GCD ; scanf ( "%d %d" , & A , & B ) ; if ( A > B ) { NM = A ; DM = B ; } else { NM = B ; DM = A ; } R = NM % DM ; while ( R != 0 ) { NM = DM ; DM = R ; R = NM % DM ; } GCD = DM ; LCM = A * B / GCD ; printf ( "%d  %d\n" , GCD , LCM ) ; T -- ; } }

@@ -1,0 +1,1 @@
+void main ( ) { int t ; scanf ( "%d" , & t ) ; while ( t -- ) { int n1 , n2 , minmultiple , lcm ; scanf ( "%d %d" , & n1 , & n2 ) ; minmultiple = ( n1 > n2 ) ? n1 : n2 ; while ( 1 ) { if ( minmultiple % n1 == 0 && minmultiple % n2 == 0 ) { lcm = minmultiple ; break ; } ++ minmultiple ; } int gcd ; gcd = ( n1 * n2 ) / lcm ; printf ( "%d %d" , gcd , lcm ) ; } }

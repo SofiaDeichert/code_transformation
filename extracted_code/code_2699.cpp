@@ -1,0 +1,1 @@
+int main ( ) { int T ; scanf ( "%d" , & T ) ; while ( T -- ) { int N ; scanf ( "%d" , & N ) ; int min = INT_MAX , n = N ; while ( N -- ) { int x ; scanf ( "%d" , & x ) ; if ( min > x ) min = x ; } printf ( "%ld\n" , ( min * ( n - 1 ) ) ) ; } return 0 ; }

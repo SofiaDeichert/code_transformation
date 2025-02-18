@@ -1,0 +1,1 @@
+main ( ) { long unsigned int i , j , x , y , k , sum = 0 ; scanf ( "%lu" , & i ) ; for ( j = 1 ; j <= i ; j ++ ) { printf ( "\n" ) ; scanf ( "%lu%lu" , & x , & y ) ; for ( ; ; ) { sum = sum + x ; if ( sum % y == 0 ) { break ; } } for ( ; ; ) { if ( x % y == 0 ) break ; else { k = x % y ; x = y ; y = k ; } } printf ( "\n%lu %lu" , y , sum ) ; sum = 0 ; } return 0 ; }

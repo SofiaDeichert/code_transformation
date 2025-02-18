@@ -1,0 +1,1 @@
+int main ( ) { int tcase , A , B , x , y , g , l ; scanf ( "%d" , & tcase ) ; while ( tcase -- ) { scanf ( "%d %d" , & A , & B ) ; x = A ; y = B ; while ( x != y ) { if ( x > y ) { x = x - y ; g = x ; } else { y = y - x ; g = y ; } } l = ( A * B ) / g ; printf ( "%d %d\n" , g , l ) ; } return 0 ; }

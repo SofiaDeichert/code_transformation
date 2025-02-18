@@ -1,0 +1,1 @@
+int main ( ) { int i , j , k , l [ 100004 ] , n , m ; scanf ( "%d" , & n ) ; for ( i = 1 ; i <= n ; i ++ ) { k = 0 ; scanf ( "%d" , & m ) ; for ( j = 0 ; j < m ; j ++ ) { scanf ( "%d " , & l [ j ] ) ; } for ( j = 0 ; j < m ; j ++ ) { if ( j == ( m - 1 ) ) k += 1 ; else if ( l [ j ] <= l [ j + 1 ] ) k += 2 ; else k += 1 ; } printf ( "%d\n" , k ) ; } }

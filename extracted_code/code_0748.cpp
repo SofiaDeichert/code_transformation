@@ -1,0 +1,1 @@
+int sc ( ) { int t = 0 ; char ch ; ch = gc ( ) ; while ( ch < 48 || ch > 57 ) ch = gc ( ) ; while ( ch >= 48 && ch <= 57 ) { t = ( t << 3 ) + ( t << 2 ) + ch - 48 ; ch = gc ( ) ; } return t ; } int main ( ) { int test_case , n ; test_case = sc ( ) ; while ( test_case -- ) { n = sc ( ) ; if ( ( n & 1 ) == 0 ) printf ( "%d\n" , n ) ; else printf ( "%d\n" , n - 1 ) ; } return 0 ; }

@@ -1,0 +1,1 @@
+int main ( ) { int n , i ; int minimum = 99999 , t , numb ; scanf ( "%d" , & t ) ; while ( t != 0 ) { fflush ( stdin ) ; scanf ( "%d" , & n ) ; i = n ; while ( n != 0 ) { fflush ( stdin ) ; scanf ( "%d" , & numb ) ; if ( numb < minimum ) minimum = numb ; n -- ; } printf ( "\n%d" , ( i - 1 ) * minimum ) ; t -- ; } return 0 ; }

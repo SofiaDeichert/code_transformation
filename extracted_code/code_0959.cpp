@@ -1,0 +1,1 @@
+int main ( ) { int T , N , error , count , i , j ; long int A [ 100000 ] ; scanf ( "%d" , & T ) ; for ( j = 1 ; j <= T ; j ++ ) { scanf ( "%d" , & N ) ; count = 0 ; for ( i = 0 ; i < N - 1 ; i ++ ) if ( A [ i + 1 ] >= A [ i ] ) count ++ ; printf ( "%d\n" , count + N ) ; } return 0 ; }

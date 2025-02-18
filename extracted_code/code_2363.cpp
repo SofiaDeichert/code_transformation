@@ -1,0 +1,1 @@
+main ( ) { int t , i , j ; long int n ; long int x1 [ 50005 ] ; scanf ( "%d" , & t ) ; for ( i = 1 ; i <= t ; i ++ ) { scanf ( "%ld" , & n ) ; for ( j = 0 ; j < n ; j ++ ) { scanf ( "%ld" , & x1 [ j ] ) ; } long long sum = 0 ; for ( j = 0 ; j < n - 1 ; j ++ ) { if ( x1 [ j + 1 ] > x1 [ j ] ) { x1 [ j + 1 ] = x1 [ j ] ; } sum += x1 [ j + 1 ] ; } printf ( "%lld\n" , sum ) ; } }

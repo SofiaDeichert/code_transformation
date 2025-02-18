@@ -1,0 +1,1 @@
+int gd ( int x , int y ) ; int main ( void ) { int t ; scanf ( "%d" , & t ) ; while ( t -- ) { long long int x , y , gcd , lcm ; scanf ( "%lld %lld" , & x , & y ) ; gcd = gd ( x , y ) ; lcm = ( x * y ) / gcd ; printf ( "%lld %lld" , gcd , lcm ) ; } return 0 ; } int gd ( int x , int y ) { if ( y != 0 ) { gd ( y , x % y ) ; } else { return ( x ) ; } }

@@ -1,0 +1,1 @@
+int main ( void ) { int t , i ; scanf ( "%d" , & t ) ; unsigned int a , b , min , j , gcd , lcm ; for ( i = 0 ; i <= t - 1 ; i ++ ) { scanf ( "%u %u" , & a , & b ) ; min = ( a >= b ? b : a ) ; for ( j = min ; j >= 1 ; j -- ) { if ( a % j == 0 && b % j == 0 ) { gcd = j ; break ; } } lcm = a * b / gcd ; printf ( "%u %u\n" , gcd , lcm ) ; } return 0 ; }

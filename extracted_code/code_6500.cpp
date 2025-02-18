@@ -1,0 +1,1 @@
+void main ( ) { int t , n , d , r , num1 , num2 , gcd , lcm ; scanf ( "%d\n" , & t ) ; for ( int i = 0 ; i < t ; i ++ ) { scanf ( "%d %d" , & num1 , & num2 ) ; if ( num1 > num2 ) { n = num1 ; d = num2 ; } else { n = num2 ; d = num1 ; } r = n % d ; while ( r != 0 ) { n = d ; d = r ; r = n % d ; } gcd = d ; lcm = num1 * num2 / gcd ; printf ( "%d %d\n" , gcd , lcm ) ; } return 0 ; }

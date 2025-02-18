@@ -1,0 +1,1 @@
+int main ( ) { int i , j , k , n , m , s , a [ 100 ] [ 100 ] ; scanf ( "%d" , & n ) ; for ( i = 0 ; i < n ; i ++ ) { s = 0 ; scanf ( "%d" , & m ) ; for ( j = 0 ; j < m ; j ++ ) { for ( k = 0 ; k <= j ; k ++ ) scanf ( "%d" , & a [ j ] [ k ] ) ; } for ( j = m - 1 ; j >= 0 ; j -- ) { s = s + a [ j ] [ 0 ] ; } printf ( "%d\n" , s ) ; } return 0 ; }

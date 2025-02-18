@@ -1,0 +1,1 @@
+void main ( ) { int y ; scanf ( "%d" , & y ) ; for ( ; y > 0 ; -- y ) { long int a , b , j , c , i , q = 1 ; scanf ( "%ld %ld" , & a , & b ) ; if ( a > b ) { j = a ; c = b ; } else { c = a ; j = b ; } for ( ; q > 0 ; ) { q = j % c ; j = c ; c = q ; } printf ( "%ld %ld\n" , j , a * b / j ) ; } }

@@ -1,0 +1,1 @@
+int main ( void ) { int temp , cost , i , t , n , a [ 1000000 ] ; scanf ( "%d" , & t ) ; while ( t -- ) { scanf ( "%d" , & n ) ; cost = 0 ; for ( i = 0 ; i < n ; i ++ ) scanf ( "%d" , & a [ i ] ) ; temp = a [ 0 ] ; for ( i = 1 ; i < n ; i ++ ) { if ( temp > a [ i ] ) temp = a [ i ] ; cost = cost + temp ; } printf ( "%d\n" , cost ) ; } return 0 ; }

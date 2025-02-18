@@ -1,0 +1,1 @@
+int main ( ) { int T , N , i , a [ 500000 ] , p = 0 ; scanf ( "%d\n" , & T ) ; while ( T -- ) { scanf ( "%d\n" , & N ) ; for ( i = 0 ; i < N ; i ++ ) { scanf ( "%d" , & a [ i ] ) ; } for ( i = 0 ; i < N - 1 ; i ++ ) { if ( a [ i ] > a [ i + 1 ] ) { p = p + a [ i + 1 ] ; a [ i + 1 ] = a [ i ] ; } else p = p + a [ i ] ; } printf ( "%d" , p ) ; } return 0 ; }

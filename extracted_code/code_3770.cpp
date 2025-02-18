@@ -1,0 +1,1 @@
+int main ( void ) { int a , b , l , g ; unsigned int j , i , t ; printf ( "Enter the number of cases\n" ) ; scanf ( "%d" , & t ) ; for ( i = 1 ; i <= t ; i ++ ) { scanf ( "mm" , & a , & b ) ; l = a * b ; a = a > 0 ? a : - a ; b = b > 0 ? b : - b ; for ( j = 1 ; j <= a && j <= b ; j ++ ) { if ( j % a == 0 && j % b == 0 ) g = j ; } printf ( "\n%d%d" , g , l / g ) ; } return 0 ; }

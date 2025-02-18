@@ -1,0 +1,1 @@
+int main ( void ) { int t , a , b , prod , gcd , lcm ; scanf ( "%d" , & t ) ; while ( ( t >= 1 ) && ( t <= 1000 ) ) { scanf ( "%d %d" , & a , & b ) ; prod = a * b ; while ( a != b ) { if ( a > b ) a = a - b ; gcd = b ; if ( b > a ) b = b - a ; gcd = b ; lcm = prod / gcd ; } printf ( "%d %d\n" , gcd , lcm ) ; t -- ; } return 0 ; }

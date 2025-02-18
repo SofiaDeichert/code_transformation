@@ -1,0 +1,1 @@
+int main ( ) { int tcase , num , j , i , sum , temp , prev , curr ; scanf ( "%d" , & tcase ) ; for ( i = 0 ; i < tcase ; i ++ ) { scanf ( "%d\n" , & num ) ; sum = 1 ; temp = 0 ; for ( j = 0 ; j < num ; j ++ ) { if ( j = 0 ) scanf ( "%d" , & prev ) ; else scanf ( "%d" , & curr ) ; if ( curr < prev ) temp = j ; sum = sum + ( j - temp + 1 ) ; } printf ( "%d" , sum ) ; } return 0 ; }

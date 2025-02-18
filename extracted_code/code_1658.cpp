@@ -1,0 +1,1 @@
+int main ( ) { int i , gcd , lcd ; long long int t , A , B , H , M ; scanf ( "%lld" , & t ) ; for ( i = 0 ; i < t ; i ++ ) { scanf ( "%lld%lld" , & A , & B ) ; H = A ; M = B ; while ( A != B ) { if ( A > B ) A = A - B ; else B = B - A ; } gcd = B ; lcd = ( H * M ) / gcd ; printf ( "%d %d\n" , gcd , lcd ) ; } return 0 ; }

@@ -1,0 +1,1 @@
+int main ( ) { int T , A , B , gcd , lcm , i ; scanf ( "%d" , & T ) ; while ( T -- ) { scanf ( "%d %d\n" , & A , & B ) ; for ( i = 1 ; i <= A && i <= B ; ++ i ) { if ( A % i == 0 && B % i == 0 ) gcd = i ; } lcm = ( A * B ) / gcd ; printf ( "%d %d\n" , gcd , lcm ) ; } return 0 ; }

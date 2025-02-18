@@ -1,0 +1,1 @@
+int main ( ) { int t , i ; long long int a , b , temp , lcm , m , n ; scanf ( "%d" , & t ) ; for ( i = 0 ; i < t ; i ++ ) { scanf ( "%lld %lld" , & a , & b ) ; m = a ; n = b ; while ( n ) { temp = m ; m = n ; n = temp % m ; } lcm = ( a * b ) / m ; printf ( "%lld %lld" , m , lcm ) ; } return 0 ; }

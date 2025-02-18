@@ -1,0 +1,1 @@
+int GCD ( int a , int b ) { if ( a == b ) return a ; if ( a > b ) return GCD ( a - b , b ) ; return GCD ( a , b - a ) ; } int main ( ) { int t ; scanf ( "%d\n" , & t ) ; int x , y , gcd ; for ( int i = 0 ; i < t ; i ++ ) { scanf ( "%d %d\n" , & x , & y ) ; gcd = GCD ( x , y ) ; printf ( "%d %d\n" , gcd , ( x * y ) / gcd ) ; gcd = 0 ; } }

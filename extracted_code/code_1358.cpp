@@ -1,0 +1,1 @@
+int main ( ) { long long t , i , n , a , min , cost ; scanf ( "%lld" , & t ) ; while ( t -- ) { min = 10000000 ; scanf ( "%lld" , & n ) ; for ( i = 0 ; i < n ; i ++ ) { scanf ( "%lld" , & a ) ; if ( a < min ) { min = a ; } } cost = min * ( n - 1 ) ; printf ( "%lld\n" , cost ) ; } return 0 ; }

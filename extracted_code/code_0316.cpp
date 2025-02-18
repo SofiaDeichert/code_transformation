@@ -1,0 +1,1 @@
+int main ( ) { int a , b , x , t , gcd , lcm , product , i , n ; scanf ( "%d" , & n ) ; for ( i = 0 ; i < n ; i ++ ) { scanf ( "%d %d" , & a , & b ) ; product = a * b ; if ( a == 0 ) gcd = a ; else if ( b == 0 ) gcd = b ; else { while ( b != 0 ) { t = b ; b = a % b ; a = t ; } gcd = a ; } lcm = product / gcd ; printf ( "%d %d\n" , gcd , lcm ) ; } return 0 ; }

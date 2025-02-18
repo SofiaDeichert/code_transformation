@@ -1,0 +1,1 @@
+main ( ) { int T ; long int N , A [ 50000 ] , min , i ; scanf ( "%d" , & T ) ; while ( T -- ) { scanf ( "%ld" , & N ) ; for ( i = 0 ; i < N ; i ++ ) { scanf ( "%ld" , & A [ i ] ) ; if ( i == 0 ) min = A [ i ] ; else min = ( min < A [ i ] ? min : A [ i ] ) ; } printf ( "%lld\n" , ( min * ( N - 1 ) ) ) ; } }

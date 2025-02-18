@@ -1,0 +1,1 @@
+int main ( int argc , const char * argv [ ] ) { int T ; scanf ( "%d" , & T ) ; while ( T -- ) { unsigned int m , n , a , r ; scanf ( "%u %u" , & m , & n ) ; a = m ; r = n ; while ( r != 0 ) { int tmp = r ; r = a % r ; a = tmp ; } printf ( "%u %u\n" , a , ( m * n ) / a ) ; } return 0 ; }

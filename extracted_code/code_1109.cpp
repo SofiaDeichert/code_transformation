@@ -1,0 +1,1 @@
+int main ( ) { int dong ; scanf ( "%d" , & dong ) ; while ( dong -- ) { int so1 , so2 , ucln , bcnn , gan1 , gan2 ; scanf ( "%d%d" , & so1 , & so2 ) ; gan1 = so1 ; gan2 = so2 ; while ( so1 != so2 ) { if ( so1 > so2 ) so1 = so1 - so2 ; else so2 = so2 - so1 ; } ucln = so1 ; bcnn = ( gan1 * gan2 ) / so1 ; printf ( "%d %d\n" , ucln , bcnn ) ; } return 0 ; }

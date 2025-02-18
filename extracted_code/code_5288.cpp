@@ -1,0 +1,1 @@
+int main ( ) { int inputs , i , j , k , size , max , ans , l ; scanf ( "%d" , & inputs ) ; for ( l = 0 ; l < inputs ; l ++ ) { ans = 0 ; scanf ( "%d" , & size ) ; for ( i = 1 ; i <= size ; i ++ ) { max = 0 ; for ( j = 1 ; j <= i ; j ++ ) { scanf ( "%d" , & k ) ; if ( k > max ) { max = k ; } } ans = ans + max ; } printf ( "%d\n" , ans - 1 ) ; } return 0 ; }

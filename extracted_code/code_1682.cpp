@@ -1,0 +1,1 @@
+int main ( ) { int t ; scanf ( "%d" , & t ) ; while ( t -- ) { int n1 , n2 , rem , lcm ; scanf ( "%d%d" , & n1 , & n2 ) ; lcm = n1 * n2 ; if ( n1 > n2 ) { rem = n1 % n2 ; while ( rem != 0 ) { n1 = n2 ; n2 = rem ; rem = n1 % n2 ; } } else { rem = n2 % n1 ; while ( rem != 0 ) { n2 = n1 ; n1 = rem ; rem = n2 % n1 ; } } printf ( "%d %d\n" , n2 , lcm ) ; } }

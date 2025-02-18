@@ -1,0 +1,1 @@
+main ( ) { int t , i , n , a [ 100000 ] , sml , cost ; scanf ( "%d" , & t ) ; for ( i = 0 ; i < t ; i ++ ) { scanf ( "%d" , & n ) ; for ( i = 0 ; i < n ; i ++ ) { scanf ( "%d" , & a [ i ] ) ; } sml = a [ i ] ; cost = 0 ; for ( i = 0 ; i < n ; i ++ ) { if ( a [ i + 1 ] < sml ) { sml = a [ i + 1 ] ; cost = cost + sml ; } } printf ( "%d\n" , cost ) ; } }

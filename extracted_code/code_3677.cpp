@@ -1,0 +1,1 @@
+int main ( void ) { int i , j , t ; long int a , b , temp , gcd ; scanf ( "%d" , & t ) ; for ( i = 0 ; i < t ; i ++ ) { scanf ( "%ld %ld" , & a , & b ) ; if ( a > b ) { for ( j = 1 ; j <= b ; j ++ ) { if ( a % j == 0 && b % j == 0 ) gcd = j ; } } else { for ( j = 1 ; j <= a ; j ++ ) { if ( a % j == 0 && b % j == 0 ) gcd = j ; } } printf ( "%ld %ld\n" , gcd , a * b / gcd ) ; } }

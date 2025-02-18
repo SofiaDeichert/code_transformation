@@ -1,0 +1,1 @@
+int main ( ) { int t ; float a , b ; scanf ( "%d" , & t ) ; while ( t -- ) { int n , i = 0 , s = 0 ; scanf ( "%d" , & n ) ; int p ; p = n - 1 ; while ( n -- ) { long int k ; scanf ( "%ld" , & k ) ; if ( n == p ) i = k ; if ( k < i ) { i = k ; s = s + i ; } else if ( k > i ) { s = s + i ; } } printf ( "%d\n" , s ) ; } return 0 ; }

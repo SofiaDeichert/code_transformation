@@ -1,0 +1,1 @@
+int main ( ) { int t , i , j ; scanf ( "%d" , & t ) ; long int n , p ; long long int arr [ 50000 ] , a ; for ( i = 0 ; i < t ; i ++ ) { scanf ( "%ld" , & n ) ; for ( j = 0 ; j < n ; j ++ ) { scanf ( "%lld" , & arr [ j ] ) ; } a = arr [ 0 ] ; for ( j = 0 ; j < n ; j ++ ) { if ( a > arr [ j ] ) { a = arr [ j ] ; } } printf ( "%lld" , a * ( n - 1 ) ) ; } return 0 ; }

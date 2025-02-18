@@ -1,0 +1,1 @@
+int main ( ) { int t , a , b , p = 0 , hcf , lcm , temp = 0 ; scanf ( "%d" , & t ) ; while ( t > 0 ) { scanf ( "%d%d" , & a , & b ) ; p = a * b ; while ( b != 0 ) { temp = b ; b = a % b ; a = temp ; } hcf = a ; lcm = p / hcf ; printf ( "%d %d\n" , hcf , lcm ) ; t -- ; } return 0 ; }

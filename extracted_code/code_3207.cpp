@@ -1,0 +1,1 @@
+int find_gcd ( long long int x , long long int y ) { if ( y == 0 ) return x ; else return find_gcd ( y , x % y ) ; } int main ( ) { int T , gcd ; long long int a , b ; scanf ( "%d" , & T ) ; while ( T -- ) { scanf ( "%lld%lld" , & a , & b ) ; gcd = find_gcd ( a , b ) ; printf ( "%d %lld\n" , gcd , ( a * b ) / gcd ) ; } }

@@ -1,0 +1,1 @@
+int main ( ) { int x , y , i , j , p ; int a [ 100 ] [ 100 ] ; scanf ( "%d" , & x ) ; while ( x -- ) { p = 0 ; a [ 0 ] [ 1 ] = 0 ; scanf ( "%d" , & y ) ; for ( i = 0 ; i < y ; i ++ ) { for ( j = 0 ; j <= i ; j ++ ) { scanf ( "%d" , & a [ i ] [ j ] ) ; } } for ( i = 0 ; i < y - 1 ; i ++ ) { p = p + a [ i ] [ 0 ] ; } printf ( "\n%d" , p + a [ y - 1 ] [ 1 ] ) ; } return 0 ; }

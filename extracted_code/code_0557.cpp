@@ -1,0 +1,1 @@
+int main ( ) { int t ; scanf ( "%d" , & t ) ; while ( t -- ) { long a , b , minmultiple ; scanf ( "%ld %ld" , & a , & b ) ; minmultiple = ( a > b ) ? a : b ; while ( 1 ) { if ( minmultiple % a == 0 && minmultiple % b == 0 ) { break ; } ++ minmultiple ; } printf ( "%ld %ld\n" , ( a * b ) / minmultiple , minmultiple ) ; } }

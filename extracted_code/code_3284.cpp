@@ -1,0 +1,1 @@
+int main ( ) { int a , b , num , den , rem , gcd , lcm ; scanf ( "%d\t%d" , & a , & b ) ; if ( a > b ) { num = a ; den = b ; } else { num = b ; den = a ; } rem = num % den ; while ( rem != 0 ) { num = den ; den = rem ; rem = num % den ; } gcd = den ; lcm = ( a * b ) / gcd ; printf ( "%d" , gcd ) ; printf ( "\t%d" , lcm ) ; return 0 ; }

@@ -1,0 +1,1 @@
+int main ( ) { int a , b ; int temp , gcd ; long lcm , product ; printf ( "\n enter two number:" ) ; scanf ( "%d%d" , & a , & b ) ; product = a * b ; while ( a > 0 ) { if ( a < b ) { temp = a ; a = b ; b = temp ; } a = a % b ; } gcd = b ; lcm = product / gcd ; printf ( "\ngcd and lcm values are:" ) ; printf ( "%d\t%ld" , gcd , lcm ) ; return 0 ; }

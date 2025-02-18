@@ -1,0 +1,1 @@
+int main ( ) { int len , i = 0 , min = 0 , j = 0 ; int b [ 100 ] ; int nc ; scanf ( "%d" , & nc ) ; scanf ( "%d" , & len ) ; while ( nc -- ) { for ( i = 0 ; i < len ; i ++ ) { scanf ( "%d" , & b [ i ] ) ; } for ( j = 0 ; j < len ; j ++ ) { min = b [ 0 ] ; if ( b [ i ] < b [ 0 ] ) { min = b [ j ] ; } } printf ( "%d" , ( len - 1 ) * min ) ; } return 0 ; }

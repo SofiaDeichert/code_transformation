@@ -1,0 +1,1 @@
+int main ( ) { int dong ; scanf ( "%d" , & dong ) ; while ( dong -- ) { int mang [ 100000 ] ; int sopt , i = 0 , j = 0 ; scanf ( "%d" , & sopt ) ; while ( i < sopt ) { scanf ( "%d" , & mang [ i ] ) ; i ++ ; } int min = mang [ 0 ] ; while ( j < sopt ) { if ( mang [ j ] < min ) min = mang [ j ] ; j ++ ; } printf ( "%d\n" , min ) ; } return 0 ; }

@@ -1,0 +1,1 @@
+int main ( ) { unsigned t , a , b , lcm , gcd ; scanf ( "%u" , & t ) ; while ( t -- ) { scanf ( "%u%u" , & a , & b ) ; lcm = b ; while ( lcm % a != 0 ) lcm += b ; gcd = a ; while ( b % gcd != 0 || a % gcd != 0 ) gcd -- ; printf ( "%u %u\n" , gcd , lcm ) ; } return 0 ; }

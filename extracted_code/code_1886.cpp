@@ -1,0 +1,1 @@
+int main ( ) { int t , i , j , A ; scanf ( "%d" , & t ) ; int a [ t ] ; for ( i = 0 ; i < t ; i ++ ) { scanf ( "%d" , & a [ i ] ) ; } for ( j = 0 ; j < t ; j ++ ) { if ( a [ j ] != 2 ) A = a [ j ] / 2 + 1 ; else A = 2 ; printf ( "%d\n" , A ) ; } }

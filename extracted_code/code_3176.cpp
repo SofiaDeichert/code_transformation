@@ -1,0 +1,1 @@
+int main ( ) { int t , i ; long int n , a [ 100000 ] , j , sum = 0 ; scanf ( "%d" , & t ) ; for ( i = 1 ; i <= t ; i ++ ) { scanf ( "%ld" , & n ) ; for ( j = 0 ; j < n ; j ++ ) scanf ( "%ld" , & a [ j ] ) ; for ( j = 0 ; j < n - 1 ; j ++ ) { if ( a [ j ] >= a [ j + 1 ] ) sum = sum + a [ j + 1 ] ; else sum = sum + a [ j ] ; } printf ( "%ld\n" , sum ) ; sum = 0 ; } return 0 ; }

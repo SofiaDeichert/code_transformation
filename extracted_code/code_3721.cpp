@@ -1,0 +1,1 @@
+int main ( ) { int t , c ; scanf ( "%d" , & t ) ; for ( int i = 0 ; i < t ; i ++ ) { int x ; scanf ( "%d" , & x ) ; int fact = 1 ; for ( int j = 1 ; j <= x ; j ++ ) { fact *= j ; } printf ( "%d\n" , fact ) ; } }

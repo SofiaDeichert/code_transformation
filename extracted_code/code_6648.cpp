@@ -1,0 +1,1 @@
+int main ( ) { int i , j , k , b , c ; unsigned int n , m ; scanf ( "%u" , & n ) ; for ( i = 0 ; i < n ; i ++ ) { scanf ( "%u" , & m ) ; unsigned int a [ m ] ; for ( j = 0 ; j < m ; j ++ ) { scanf ( "%u" , & a [ j ] ) ; } for ( k = 1 ; k < m ; k ++ ) { if ( a [ 0 ] > a [ k ] ) { c = a [ 0 ] ; a [ 0 ] = a [ k ] ; a [ k ] = c ; } } b = m - 1 ; printf ( "%u\n" , a [ 0 ] * b ) ; } }

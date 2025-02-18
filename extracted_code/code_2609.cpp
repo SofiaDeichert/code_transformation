@@ -1,0 +1,1 @@
+int main ( void ) { int t , n , s [ 500000 ] , i , j , k , amt ; scanf ( "%d\n" , & t ) ; for ( i = 0 ; i < t ; i ++ ) { scanf ( "%d\n" , & n ) ; k = 100000 ; amt = 0 ; for ( j = 0 ; j < n ; j ++ ) { scanf ( "%d" , & s [ j ] ) ; if ( k >= s [ j ] ) { k = s [ j ] ; } } amt = k * ( n - 1 ) ; printf ( "%d\n" , amt ) ; } return 0 ; }

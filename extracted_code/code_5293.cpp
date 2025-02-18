@@ -1,0 +1,1 @@
+int main ( ) { int t , n , i , j , sum , ans ; scanf ( "%d" , & t ) ; while ( t -- > 0 ) { sum = 0 ; ans = 0 ; scanf ( "%d" , & n ) ; if ( n < 99 ) { int arr [ n ] ; for ( i = 0 ; i < n ; i ++ ) { for ( j = 0 ; j < i + 1 ; j ++ ) { scanf ( "%d" , & arr [ i ] ) ; sum = sum + arr [ i ] ; ans = sum / 2 ; } } printf ( "%d\n" , ans ) ; } } return 0 ; }

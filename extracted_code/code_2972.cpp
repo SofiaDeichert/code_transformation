@@ -1,0 +1,1 @@
+int main ( ) { int T ; scanf ( "%d" , & T ) ; int cost [ T ] , i ; for ( i = 0 ; i < T ; i ++ ) { int N , min , num , j ; min = 100001 ; scanf ( "%d" , & N ) ; for ( j = 0 ; j < N ; j ++ ) { scanf ( "%d" , & num ) ; if ( num < min ) { min = num ; } } cost [ i ] = min * ( N - 1 ) ; } for ( i = 0 ; i < T ; i ++ ) { printf ( "%d\n" , cost [ i ] ) ; } return 0 ; }

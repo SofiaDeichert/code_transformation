@@ -1,0 +1,1 @@
+int great ( int a , int b ) { int r ; if ( b == 0 ) return a ; else { r = b ; b = a % b ; a = r ; } } int main ( ) { int n , a , b ; long int gcd , lcm ; scanf ( "%d" , & n ) ; while ( n -- ) { scanf ( "%d%d" , & a , & b ) ; gcd = great ( a , b ) ; lcm = ( a * b ) / gcd ; printf ( "%ld %ld\n" , gcd , lcm ) ; } return 0 ; }

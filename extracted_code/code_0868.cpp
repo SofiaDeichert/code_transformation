@@ -1,0 +1,1 @@
+void main ( ) { int t , i , p , n , m , max , l , k ; scanf ( "%d" , & t ) ; k = 0 ; while ( k < t ) { k ++ ; scanf ( "%d %d" , & n , & m ) ; p = n * m ; if ( n > m ) max = n ; else max = m ; for ( i = 1 ; i < max ; i ++ ) { if ( n % i == 0 && m % i == 0 ) max = i ; } l = p / max ; printf ( "%d %d \n" , max , l ) ; } }

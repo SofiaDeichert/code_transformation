@@ -1,0 +1,1 @@
+int main ( void ) { int t , n , j , arr ; unsigned long long int min = 100000 ; scanf ( "%d" , & t ) ; for ( int i = 0 ; i < t ; i ++ ) { min = 100000 ; scanf ( "%d" , & n ) ; for ( j = 0 ; j < n ; j ++ ) { scanf ( "%d" , & arr ) ; if ( min > arr ) min = arr ; } min = min * ( n - 1 ) ; printf ( "%llu\n" , min ) ; } return 0 ; }

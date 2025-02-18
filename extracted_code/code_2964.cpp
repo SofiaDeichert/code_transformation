@@ -1,0 +1,1 @@
+int main ( ) { int a , i , j , total , in , t ; scanf ( "%d" , & t ) ; while ( t -- ) { total = 0 ; scanf ( "%d" , & a ) ; if ( a >= 1 && a <= 100 ) { for ( i = 1 ; i <= a ; i ++ ) { for ( j = 1 ; j <= i ; j ++ ) { scanf ( "%d" , & in ) ; if ( in >= 0 && in <= 99 ) total = total + in ; } } printf ( "%g\n" , ( float ) total / 2 ) ; } } return 0 ; }

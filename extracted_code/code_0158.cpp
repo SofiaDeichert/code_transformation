@@ -1,0 +1,1 @@
+int main ( ) { long long int T , N , m ; scanf ( "%d" , & T ) ; for ( int j = 1 ; j <= T ; j ++ ) { int c = 0 ; scanf ( "%lld" , & N ) ; int * a = ( int * ) malloc ( N * sizeof ( int ) ) ; for ( int i = 0 ; i < N ; i ++ ) { scanf ( "%d" , & a [ i ] ) ; if ( i == 0 ) m = a [ i ] ; else if ( a [ i ] < m ) m = a [ i ] ; } printf ( "%lld\n" , m * ( N - 1 ) ) ; } return 0 ; }

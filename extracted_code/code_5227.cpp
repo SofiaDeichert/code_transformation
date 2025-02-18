@@ -1,0 +1,1 @@
+int main ( ) { int t , a , b , g , i , l ; scanf ( "%d" , & t ) ; if ( t >= 1 && t <= 1000 ) { { scanf ( "%d %d" , & a , & b ) ; } a = ( ( a > b ) ? b : a ) ; for ( i = 1 ; i <= a ; i ++ ) { if ( a % i == 0 && b % i == 0 ) { g = i ; } } l = ( a * b ) / g ; printf ( "%d %d" , g , l ) ; } return 0 ; }

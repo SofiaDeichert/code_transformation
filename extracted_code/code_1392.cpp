@@ -1,0 +1,1 @@
+main ( ) { int t , a , b , i , j , g , l ; scanf ( "%d" , & t ) ; for ( i = 1 ; i <= t ; i ++ ) { scanf ( "%d%d" , & a , & b ) ; for ( j = 1 ; j <= ( a < b ? a : b ) ; j ++ ) { if ( a % j == 0 && b % j == 0 ) g = j ; } for ( j = ( a > b ? a : b ) ; j <= a * b ; j ++ ) { if ( j % a == 0 && j % b == 0 ) { l = j ; break ; } } printf ( "%d %d\n" , g , l ) ; } }

@@ -1,0 +1,1 @@
+main ( ) { int N , n = 1 , t , m , a , sum = 0 , large = - 1 ; scanf ( "%d" , & t ) ; while ( t -- ) { scanf ( "%d" , & N ) ; while ( N -- ) { m = n ; while ( m > 0 ) { scanf ( "%d" , & a ) ; if ( a > large ) { large = a ; } m -- ; } sum += large ; n ++ ; } printf ( "%d" , sum ) ; sum = 0 ; large = - 1 ; m = n = 1 ; } return 0 ; }

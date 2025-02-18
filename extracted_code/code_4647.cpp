@@ -1,0 +1,1 @@
+typedef unsigned long long ll ; int main ( ) { int t , n , a , i , min = 0x7FFFFFFF ; scanf ( "%d" , & t ) ; while ( t -- ) { scanf ( "%d" , & n ) ; for ( i = 0 ; i < n ; i ++ ) { scanf ( "%d" , & a ) ; min = ( min < a ? min : a ) ; } printf ( "%llu\n" , ( ll ) min * ( ll ) ( n - 1 ) ) ; } return 0 ; }

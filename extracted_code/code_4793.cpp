@@ -1,0 +1,1 @@
+typedef long long int ll ; int main ( ) { ll a , b , t , i , c , d , k , l ; scanf ( "%lld" , & t ) ; for ( i = 1 ; i <= t ; i ++ ) { scanf ( "%lld%lld" , & a , & b ) ; c = a > b ? a : b ; d = a < b ? a : b ; while ( c != d ) { if ( c > d ) c = c - d ; else d = d - c ; } l = ( a * b ) / d ; printf ( "%lld %lld\n" , d , l ) ; } }

@@ -1,0 +1,1 @@
+int main ( ) { int i , t , m , n , p , q , r ; scanf ( "%d" , & t ) ; for ( i = 0 ; i < t ; i ++ ) { scanf ( "%d%d" , & m , & n ) ; while ( n != 0 ) { r = m % n ; m = n ; n = r ; } printf ( "%d\t%d\n" , m , ( p * q ) / m ) ; } return 0 ; }

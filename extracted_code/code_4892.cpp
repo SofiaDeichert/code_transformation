@@ -1,0 +1,1 @@
+char _str [ 10 ] ; int main ( void ) { int i , min , n , t , x ; READ_INT ( t ) ; while ( t -- ) { READ_INT ( n ) ; READ_INT ( min ) ; for ( i = 1 ; i < n ; i ++ ) { READ_INT ( x ) ; if ( x < min ) min = x ; } WRITE_INT ( ( n - 1 ) * ( long long ) min ) ; putchar_unlocked ( '\n' ) ; } return 0 ; }

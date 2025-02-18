@@ -1,0 +1,1 @@
+int main ( ) { long long int T , A , B , temp1 , temp2 ; scanf ( "%lld" , & T ) ; while ( T > 0 ) { scanf ( "%lld%lld" , & A , & B ) ; temp1 = A ; temp2 = B ; while ( temp1 != temp2 ) { if ( temp1 > temp2 ) temp1 -= temp2 ; else temp2 -= temp1 ; } printf ( "%lld %lld\n" , temp1 , ( A * B ) / ( temp1 ) ) ; T -- ; } return 0 ; }

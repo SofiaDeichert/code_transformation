@@ -1,0 +1,1 @@
+int main ( ) { int t , n , i , j , ar [ 100 ] [ 100 ] , s ; scanf ( "%d" , & t ) ; while ( t -- ) { scanf ( "%d" , & n ) ; for ( i = 0 ; i < n ; i ++ ) { for ( j = 0 ; j <= i ; j ++ ) scanf ( "%d" , & ar [ i ] [ j ] ) ; } s = ar [ n - 2 ] [ 0 ] + ar [ n - 1 ] [ 0 ] + ar [ n - 1 ] [ 1 ] ; printf ( "%d\n" , s ) ; } return 0 ; }

@@ -1,0 +1,1 @@
+int main ( ) { int t ; scanf ( "%d" , & t ) ; while ( t -- ) { int size , * arr , min , i ; scanf ( "%d" , & size ) ; arr = ( int * ) calloc ( size , sizeof ( int ) ) ; min = arr [ 0 ] ; for ( i = 1 ; i < size ; i ++ ) { if ( arr [ i ] < min ) { min = arr [ i ] ; } } printf ( "%d\n" , min * ( size - 1 ) ) ; } return 0 ; }

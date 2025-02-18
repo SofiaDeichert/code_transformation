@@ -1,0 +1,1 @@
+int main ( ) { int a [ 100000 ] , b , i , j , m , k , p = 0 , s ; scanf ( "%d" , & i ) ; for ( b = 0 ; b < i ; b ++ ) { scanf ( "%d" , & m ) ; for ( j = 0 ; j < m ; j ++ ) scanf ( "%d" , & a [ m ] ) ; for ( j = 0 ; j < m ; j ++ ) { for ( k = j + 1 ; k < m ; k ++ ) { if ( a [ j ] == a [ k ] ) p ++ ; } } s = ( m - p ) * ( m - p - 1 ) ; printf ( "%d" , s / 2 ) ; } }

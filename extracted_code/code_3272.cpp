@@ -1,0 +1,1 @@
+int lcm ( int a , int b ) ; int main ( ) { int t , a , b , i ; scanf ( "%d" , & t ) ; for ( i = 0 ; i < t ; i ++ ) { scanf ( "%d%d" , & a , & b ) ; printf ( "%d %d\n" , a * b / lcm ( a , b ) , lcm ( a , b ) ) ; } } int lcm ( int a , int b ) { int lcm ; lcm = ( a > b ) ? a : b ; while ( 1 ) { if ( lcm % a == 0 && lcm % b == 0 ) { return lcm ; } lcm ++ ; } }

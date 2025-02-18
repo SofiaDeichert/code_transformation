@@ -1,0 +1,1 @@
+int main ( ) { int a , b , x , y , t , gcd , lcm ; printf ( "Enter two integers\n" ) ; scanf ( "%d%d" , & x , & y ) ; a = x ; b = y ; while ( b != 0 ) { t = b ; b = a % b ; a = t ; } gcd = a ; lcm = ( x * y ) / gcd ; printf ( "Greatest common divisor and Least common multiple is %d and %d\n" , gcd , lcm ) ; return 0 ; }

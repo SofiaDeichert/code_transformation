@@ -1,0 +1,1 @@
+int main ( ) { int T , A , B , tmp ; double GCD , LCM ; scanf ( "%d" , & T ) ; while ( T -- ) { scanf ( "%d%d" , & A , & B ) ; LCM = A * B * 1.0 ; while ( B != 0 ) { tmp = A % B ; A = B ; B = tmp ; } GCD = A ; LCM /= GCD ; printf ( "%.0lf %.0lf\n" , GCD , LCM ) ; } return 0 ; }

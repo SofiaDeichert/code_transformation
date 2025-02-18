@@ -1,0 +1,1 @@
+int main ( ) { unsigned int i , j , n , c , t ; scanf ( "%d" , & t ) ; for ( j = 0 ; j < t ; j ++ ) { scanf ( "%d" , & n ) ; unsigned int a , min = 100001 ; long long int cost ; c = 0 ; for ( i = 0 ; i < n ; i ++ ) { scanf ( "%d" , & a ) ; if ( min > a ) min = a ; } cost = min * ( n - 1 ) ; printf ( "%lld\n" , cost ) ; } return 0 ; }

@@ -1,0 +1,1 @@
+int main ( ) { int t ; scanf ( "%d" , & t ) ; int i ; int s1 [ t ] , s2 [ t ] , s3 [ t ] ; for ( i = 0 ; i < t ; i ++ ) { scanf ( "%d%d%d" , & s1 [ i ] , & s2 [ i ] , s3 [ i ] ) ; } for ( i = 0 ; i < t ; i ++ ) { if ( s1 [ i ] + s2 [ i ] + s3 [ i ] == 180 ) { printf ( "YES" ) ; } else printf ( "NO" ) ; } return 0 ; }

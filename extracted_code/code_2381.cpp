@@ -1,0 +1,1 @@
+int main ( ) { int test ; scanf ( "%d" , & test ) ; while ( test -- ) { int size , sl = 9999999 ; scanf ( "%d" , & size ) ; int arr [ size ] , i , j , k ; for ( i = 0 ; i < size ; i ++ ) { scanf ( "%d" , & arr [ i ] ) ; if ( arr [ i ] < sl ) sl = arr [ i ] ; } int result = sl * ( size - 1 ) ; printf ( "%d\n" , result ) ; } }

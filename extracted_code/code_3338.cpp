@@ -1,0 +1,1 @@
+int main ( ) { int t , p , s , i ; scanf ( "%d" , & t ) ; while ( t -- ) { scanf ( "%d" , & p ) ; int array [ p ] ; for ( i = 0 ; i < p ; ++ i ) scanf ( "%d" , & array [ i ] ) ; int smallest = array [ 0 ] ; for ( i = 1 ; i < p ; ++ i ) { if ( array [ i ] < smallest ) smallest = array [ i ] ; } printf ( "%lld\n" , ( long long int ) smallest * ( p - 1 ) ) ; } return 0 ; }

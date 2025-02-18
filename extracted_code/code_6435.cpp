@@ -1,0 +1,1 @@
+int hcf ( int n , int a , int b ) { if ( a % n != 0 || b % n != 0 ) hcf ( n - 1 , a , b ) ; else return n ; } int main ( ) { int t , i ; long int a , b , n ; scanf ( "%d" , & t ) ; for ( i = 0 ; i < t ; i ++ ) { scanf ( "%ld" , & a ) ; scanf ( "%ld" , & b ) ; n = ( a > b ? b : a ) ; n = hcf ( n , a , b ) ; printf ( "%ld %ld\n" , n , ( a * b ) / n ) ; } return 0 ; }

@@ -1,0 +1,1 @@
+int main ( void ) { int t , gcd , lcm ; scanf ( "%i" , & t ) ; for ( int z = 0 ; z < t ; z ++ ) { int a , b ; scanf ( "%i%i" , & a , & b ) ; for ( int i = 1 ; i <= a * b ; i ++ ) { if ( a % i == 0 && b % i == 0 ) gcd = i ; if ( i % a == 0 && i % b == 0 ) { lcm = i ; break ; } } printf ( "%i %i\n" , gcd , lcm ) ; } return 0 ; }

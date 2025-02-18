@@ -1,0 +1,1 @@
+int main ( ) { int t , n , m , coins , k , l , min , i ; scanf ( "%d" , & t ) ; while ( t -- ) { scanf ( "%d %d %d" , & n , & m , & coins ) ; k = minm ( n , m ) ; l = max ( n , m ) ; min = abs ( n - m ) ; for ( i = k ; i <= k + coins ; i ++ ) { if ( abs ( i - l ) < min ) min = abs ( i - l ) ; } printf ( "%d\n" , min ) ; } return 0 ; }

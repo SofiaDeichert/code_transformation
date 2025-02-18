@@ -1,0 +1,1 @@
+long int gcd ( long int a , long int b ) { while ( a != b ) { if ( a > b ) return ( gcd ( a - b , b ) ) ; else return ( gcd ( a , b - a ) ) ; } return a ; } int main ( ) { int t ; long int lcm , a , b , max ; scanf ( "%d" , & t ) ; while ( t -- ) { scanf ( "%ld%ld" , & a , & b ) ; max = gcd ( a , b ) ; lcm = ( a * b ) / max ; printf ( "%ld %ld\n" , max , lcm ) ; } }

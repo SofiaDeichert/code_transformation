@@ -1,0 +1,1 @@
+typedef long int li ; li gcd ( li a , li b ) { return b == 0 ? a : gcd ( b , a % b ) ; } main ( ) { li t , a , b , c ; for ( scanf ( "%ld" , & t ) ; t > 0 ; scanf ( "%ld %ld" , & a , & b ) , printf ( "%ld %ld\n" , gcd ( a , b ) , ( a * b ) / gcd ( a , b ) ) , t -- ) ; }

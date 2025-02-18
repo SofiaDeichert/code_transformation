@@ -1,0 +1,1 @@
+int main ( ) { int a , b , max , i ; scanf ( "%d%d" , & a , & b ) ; max = ( a < b ) ? a : b ; for ( i = max ; i > 0 ; i -- ) { if ( a % i == 0 && b % i == 0 ) { printf ( "%d " , i ) ; break ; } } max = ( a > b ) ? a : b ; for ( i = max ; ; i ++ ) { if ( i % a == 0 && i % b == 0 ) { printf ( "%d" , i ) ; break ; } } }

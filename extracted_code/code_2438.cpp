@@ -1,0 +1,1 @@
+int main ( void ) { int t ; unsigned long n , a [ 100000 ] , i , s ; scanf ( "%ld" , & t ) ; while ( t -- ) { s = 0 ; scanf ( "%lu" , & n ) ; for ( i = 0 ; i < n ; i ++ ) { scanf ( "%lu" , & a [ i ] ) ; } for ( i = 0 ; i <= n - 1 ; i ++ ) { if ( a [ i ] < a [ i + 1 ] ) { s += a [ i ] ; a [ i + 1 ] = a [ i ] ; } else { s += a [ i + 1 ] ; } } printf ( "%lu\n" , s ) ; } return 0 ; }

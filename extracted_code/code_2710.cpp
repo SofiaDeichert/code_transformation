@@ -1,0 +1,1 @@
+int main ( void ) { int size , i , T , j ; long long int cnt , a [ 100000 ] ; scanf ( "%d" , & T ) ; while ( T -- > 0 ) { scanf ( "%d" , & size ) ; cnt = size ; for ( i = 0 ; i < size ; i ++ ) scanf ( "%lld" , & a [ i ] ) ; for ( i = 0 ; i < size ; i ++ ) { j = i ; while ( a [ j + 1 ] >= a [ j ] && j < size ) { cnt ++ ; j ++ ; } } printf ( "%lld\n" , cnt ) ; } return 0 ; }

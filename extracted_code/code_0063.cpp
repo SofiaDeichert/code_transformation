@@ -1,0 +1,1 @@
+int gcd_euclid ( int a , int b ) { if ( b == 0 ) return a ; if ( a >= b && b > 0 ) return gcd_euclid ( b , a % b ) ; return 0 ; } int main ( void ) { int t , a , b , gcd ; scanf ( "%d" , & t ) ; while ( t -- ) { scanf ( "%d %d" , & a , & b ) ; gcd = gcd_euclid ( a , b ) ; printf ( "%d %d\n" , gcd , ( a * b ) / gcd ) ; } return 0 ; }

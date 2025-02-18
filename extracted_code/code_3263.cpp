@@ -1,0 +1,1 @@
+int main ( ) { int t , a , b ; scanf ( "%d" , & t ) ; while ( t -- ) { scanf ( "%d %d" , & a , & b ) ; int hcf , i , grt = 0 ; if ( a > b ) { grt = a ; } else { grt = b ; } for ( i = 1 ; i <= grt ; i ++ ) { if ( a % i == 0 && b % i == 0 ) { hcf = i ; } } printf ( "%d %d\n" , hcf , ( a * b ) / hcf ) ; } return 0 ; }

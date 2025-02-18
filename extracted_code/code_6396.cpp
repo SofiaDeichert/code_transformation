@@ -1,0 +1,1 @@
+int main ( ) { long long int t , n , a [ 5 ] , c , i , j ; scanf ( "%lld" , & t ) ; while ( t -- ) { scanf ( "%lld" , & n ) ; c = 0 ; scanf ( "%lld" , & a [ 0 ] ) ; for ( i = 1 ; i < n ; i ++ ) { scanf ( "%lld" , & a [ 1 ] ) ; if ( a [ 0 ] > a [ 1 ] ) { a [ 0 ] = a [ 1 ] ; c = c + a [ 1 ] ; } else { c = c + a [ 0 ] ; } } printf ( "%lld\n" , c ) ; } return 0 ; }

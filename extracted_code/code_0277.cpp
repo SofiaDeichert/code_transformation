@@ -1,0 +1,1 @@
+int main ( ) { int i , j , no , sum , t , n ; int k , max , pmax ; scanf ( "%d" , & t ) ; while ( t -- ) { max = 0 ; pmax = 0 ; scanf ( "%d" , & n ) ; k = 1 ; while ( k <= n ) { sum = 0 ; for ( i = 1 ; i <= k ; i ++ ) { scanf ( "%d" , & no ) ; sum = sum + no ; } pmax = sum ; if ( pmax > max ) max = pmax ; k ++ ; } printf ( "%d" , max ) ; } return 0 ; }

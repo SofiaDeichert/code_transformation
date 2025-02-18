@@ -1,0 +1,1 @@
+int main ( ) { int t , i , j , k , l , m = 0 , count = 0 ; scanf ( "%d" , & t ) ; if ( t <= 1000 ) { while ( t -- ) { scanf ( "%d" , & i ) ; if ( i < 100 ) { for ( j = 1 ; j <= i ; j ++ ) { for ( k = 1 ; k <= j ; k ++ ) { scanf ( "%d" , & l ) ; if ( m < l && l < 100 && j != 1 ) { m = l ; } } count += m ; m = 0 ; } printf ( "%d\n" , count ) ; count = 0 ; } } } return 0 ; }

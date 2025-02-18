@@ -1,0 +1,1 @@
+int main ( ) { int t , a , b , hcf , lcm , n ; scanf ( "%d" , & t ) ; while ( t -- ) { scanf ( "%d%d" , & a , & b ) ; n = ( a < b ) ? a : b ; while ( a % n != 0 || b % n != 0 ) { n -- ; } hcf = n ; printf ( "\n%d %d" , hcf , a * b / hcf ) ; } return 0 ; }

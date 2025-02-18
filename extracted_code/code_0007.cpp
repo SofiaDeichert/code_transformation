@@ -1,0 +1,1 @@
+main ( ) { int t , i , size , min , j ; scanf ( "%d" , & t ) ; int a [ t ] ; for ( i = 0 ; i < t ; i ++ ) { int size , arr ; scanf ( "%d" , & size ) ; scanf ( "%d" , & arr ) ; min = arr ; for ( j = 1 ; j < size ; j ++ ) { scanf ( "%d" , & arr ) ; if ( min > arr ) min = arr ; } a [ i ] = min * ( size - 1 ) ; } for ( i = 0 ; i < t ; i ++ ) { printf ( "\n%d" , a [ i ] ) ; } }

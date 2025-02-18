@@ -1,0 +1,1 @@
+int main ( ) { long num1 , num2 , total , tmp , GCD , LCM ; scanf ( "%ld" , & total ) ; while ( total -- ) { scanf ( "%ld%ld" , & num1 , & num2 ) ; LCM = num1 * num2 * 1.0 ; while ( num2 != 0 ) { tmp = num1 % num2 ; num1 = num2 ; num2 = tmp ; } GCD = num1 ; LCM /= GCD ; printf ( "%ld %ld\n" , GCD , LCM ) ; } return 0 ; }

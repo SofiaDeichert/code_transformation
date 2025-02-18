@@ -1,0 +1,1 @@
+int main ( ) { long int test , n , i , j , k , arr [ 600000 ] , min , sum ; scanf ( "%ld" , & test ) ; for ( i = 0 ; i < test ; i ++ ) { scanf ( "%ld" , & n ) ; for ( j = 0 ; j < n ; j ++ ) { scanf ( "%ld" , & arr [ j ] ) ; } min = arr [ 0 ] ; for ( k = 0 ; k < n ; k ++ ) { if ( arr [ k ] < min ) { min = arr [ k ] ; } } sum = min * ( n - 1 ) ; printf ( "%ld\n" , sum ) ; } }

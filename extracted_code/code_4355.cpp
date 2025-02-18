@@ -1,0 +1,1 @@
+int main ( ) { int test_case , a , b , p ; scanf ( "%d" , & test_case ) ; while ( test_case -- ) { scanf ( "%d%d" , & a , & b ) ; p = a * b ; while ( a != b ) { if ( a > b ) { a = a - b ; } else { b = b - a ; } } printf ( "%d %d\n" , a , ( p / a ) ) ; } return 0 ; }

@@ -1,0 +1,1 @@
+int a [ 50000 ] ; int main ( ) { int n , t , i ; scanf ( "%d" , & n ) ; while ( n -- ) { int key ; scanf ( "%d" , & t ) ; for ( i = 0 ; i < t ; i ++ ) scanf ( "%d" , & a [ i ] ) ; key = a [ 0 ] ; for ( i = 1 ; i < t ; i ++ ) { if ( key > a [ i ] ) key = a [ i ] ; } long int k = key * ( t - 1 ) ; printf ( "%ld\n" , k ) ; } return 0 ; }

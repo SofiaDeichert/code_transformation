@@ -1,0 +1,1 @@
+int main ( ) { int t , n ; int val , temp , cost , count ; scanf ( "%d" , & t ) ; while ( t -- ) { count = 0 ; cost = 0 ; scanf ( "%d" , & n ) ; while ( n -- ) { scanf ( "%d" , & temp ) ; if ( count == 1 ) { if ( val >= temp ) { cost += temp ; val = temp ; } else { cost += val ; } count = 1 ; } else if ( count == 0 ) { val = temp ; count += 1 ; } } printf ( "%d\n" , cost ) ; } }

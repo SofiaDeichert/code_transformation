@@ -1,0 +1,1 @@
+int max ( int x , int y ) { if ( x > y ) return x ; else return y ; } int main ( ) { int t , a , b , c ; scanf ( "%d" , & t ) ; while ( t -- ) { scanf ( "%d %d" , & a , & b ) ; c = max ( a , b ) ; printf ( "%d %d\n" , c , a + b ) ; } return 0 ; }

@@ -1,0 +1,1 @@
+int main ( ) { long int n1 , n2 , x , y , lcm ; int t , i ; scanf ( "%d" , & t ) ; for ( i = 0 ; i < t ; i ++ ) { scanf ( "%d%d" , & n1 , & n2 ) ; x = n1 ; y = n2 ; while ( n1 != n2 ) { if ( n1 > n2 ) n1 = n1 - n2 ; else n2 = n2 - n1 ; } lcm = ( x * y ) / n1 ; printf ( "%d\t%d\n" , n1 , lcm ) ; } }

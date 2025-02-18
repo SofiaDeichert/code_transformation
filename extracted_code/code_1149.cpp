@@ -1,0 +1,1 @@
+int main ( ) { int testcase , num1 , num2 , i , t , gcd , lcm ; scanf ( "%d" , & testcase ) ; while ( testcase != 0 ) { scanf ( "%d%d" , & num1 , & num2 ) ; if ( num1 > num2 ) t = num2 ; else t = num1 ; for ( i = 1 ; i <= t ; i ++ ) { if ( num1 % i == 0 && num2 % i == 0 ) gcd = i ; } lcm = ( num1 * num2 ) / gcd ; printf ( "%d  %d" , gcd , lcm ) ; testcase -- ; } return 0 ; }

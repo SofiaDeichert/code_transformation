@@ -1,0 +1,1 @@
+int main ( ) { int n , l , i , j , sum1 , sum2 ; scanf ( "%d" , & n ) ; while ( n -- ) { sum1 = 0 ; sum2 = 0 ; scanf ( "%d" , & l ) ; for ( i = 1 ; i <= l ; i ++ ) { int a [ i ] ; for ( j = 0 ; j < i ; j ++ ) { scanf ( "%d" , & a [ j ] ) ; } sum1 += a [ 0 ] ; sum2 += a [ i - 1 ] ; } if ( sum1 > sum2 ) printf ( "%d\n" , sum1 ) ; else printf ( "%d\n" , sum2 ) ; } return 0 ; }

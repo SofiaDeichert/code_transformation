@@ -1,0 +1,1 @@
+int arr [ 50005 ] ; int main ( ) { int j , i , t , n , min , l , k , sum ; scanf ( "%d" , & t ) ; for ( l = 1 ; l <= t ; l ++ ) { scanf ( "%d" , & n ) ; for ( j = 0 ; j < n ; j ++ ) { scanf ( "%d" , & arr [ j ] ) ; } min = arr [ 0 ] ; for ( i = 1 ; i < n ; i ++ ) { if ( min > arr [ i ] ) { min = arr [ i ] ; } } sum = min * ( n - 1 ) ; printf ( "%d\n" , sum ) ; } return 0 ; }

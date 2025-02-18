@@ -1,0 +1,1 @@
+int main ( ) { int a , b , t , i , j , n , sum ; scanf ( "%d" , & t ) ; for ( i = 0 ; i < t ; i ++ ) { sum = 0 ; scanf ( "%d" , & n ) ; scanf ( "%d" , & a ) ; for ( j = 0 ; j < n - 1 ; j ++ ) { scanf ( "%d" , & b ) ; if ( a > b ) { sum += b ; a = b ; } else { sum += a ; } } printf ( "%d\n" , sum ) ; } }

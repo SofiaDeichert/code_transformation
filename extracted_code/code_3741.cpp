@@ -1,0 +1,1 @@
+int main ( ) { int t , i , j , e ; scanf ( "%d" , & t ) ; int a [ t ] , b [ t ] ; for ( i = 0 ; i < t ; i ++ ) { scanf ( "%d" , & a [ i ] ) ; scanf ( "%d" , & b [ i ] ) ; } for ( i = 0 ; i < t ; i ++ ) { for ( j = 1 ; j < b ; j ++ ) { if ( ( a [ i ] % j ) == 0 && ( b [ i ] % j ) == 0 ) e = j ; } printf ( "%d" , e ) ; printf ( "%d" , ( a [ i ] * b [ i ] ) / e ) ; } }

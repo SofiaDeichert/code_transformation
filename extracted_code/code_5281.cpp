@@ -1,0 +1,1 @@
+int main ( ) { int A [ 8 ] = { 12 , 25 , 14 , 8 , 21 , 69 , 3 , 74 } ; int i , large , small , minmcost ; large = small = A [ 0 ] ; for ( i = 1 ; i < 8 ; i ++ ) { if ( A [ i ] < small ) small = A [ i ] ; } minmcost = small * 7 ; printf ( "MINIMUM COST=%d" , minmcost ) ; return 0 ; }

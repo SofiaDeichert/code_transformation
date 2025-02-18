@@ -1,0 +1,1 @@
+void main ( ) { int t , n , i = 0 , j = 0 ; long long int count = 0 , a [ 100005 ] , max = 0 ; scanf ( "%d" , & t ) ; while ( t > 0 ) { t -- ; scanf ( "%d" , & n ) ; while ( i < n ) { scanf ( "%d" , & a [ i ] ) ; j = a [ i ] ; if ( j > n ) continue ; while ( j < n ) { if ( a [ j - 1 ] > max ) count ++ ; else break ; j ++ ; } max = 0 ; i ++ ; } printf ( "%d" , count ) ; } }

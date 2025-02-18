@@ -1,0 +1,1 @@
+int main ( ) { int t , row , i , j , num , sum , max ; scanf ( "%d" , & t ) ; while ( t -- ) { scanf ( "%d" , & row ) ; sum = 0 ; for ( i = 1 ; i <= row ; i ++ ) { scanf ( "%d" , & num ) ; max = num ; for ( j = 1 ; j < i ; j ++ ) { scanf ( "%d" , & num ) ; if ( max < num ) max = num ; } sum += max ; } printf ( "%d\n" , sum - 1 ) ; } return 0 ; }

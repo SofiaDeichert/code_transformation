@@ -1,0 +1,1 @@
+void print ( long long x , long long y ) { long long hcf ; for ( long long a = x ; a >= 1 ; a -- ) { if ( y % a == 0 && x % a == 0 ) { hcf = a ; break ; } } printf ( "%lld %lld\n" , hcf , x * y / hcf ) ; } int main ( ) { int t ; scanf ( "%d" , & t ) ; while ( t -- ) { long long int x , y ; scanf ( "%lld %lld" , & x , & y ) ; print ( x , y ) ; } }

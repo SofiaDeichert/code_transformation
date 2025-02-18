@@ -1,0 +1,1 @@
+int main ( ) { int i , n , min , num ; printf ( "\n enter total number of values - " ) ; scanf ( "%d" , & n ) ; printf ( "\n number 1  - " ) ; scanf ( "%d" , & min ) ; for ( i = 2 ; i <= n ; i ++ ) { printf ( "\n number %d - " , i ) ; scanf ( "%d" , & num ) ; if ( min > num ) { min = num ; } } printf ( "\n the minimum number is %d" , min ) ; return 0 ; }

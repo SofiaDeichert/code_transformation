@@ -1,0 +1,1 @@
+int main ( ) { int test_case , size , i ; int temp , min , result ; scanf ( "%d" , & test_case ) ; while ( test_case -- ) { scanf ( "%d" , & size ) ; scanf ( "%d" , & min ) ; for ( i = 0 ; i < size - 1 ; i ++ ) { scanf ( "%d" , & temp ) ; if ( temp < min ) { min = temp ; } } result = min * ( size - 1 ) ; printf ( "%d\n" , result ) ; } return 0 ; }

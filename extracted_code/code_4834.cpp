@@ -1,0 +1,1 @@
+long long sum ; int main ( ) { int t ; long n , ar [ 100001 ] , i , min , m ; scanf ( "%d" , & t ) ; while ( t -- ) { scanf ( "%ld" , & n ) ; for ( i = 0 ; i < n ; i ++ ) scanf ( "%ld" , & ar [ i ] ) ; sum = 0 ; min = ar [ 0 ] ; for ( i = 1 ; i < n ; i ++ ) { if ( ar [ i ] < min ) min = ar [ i ] ; } m = n - 1 ; sum = min * m ; printf ( "%lld\n" , sum ) ; } return 0 ; }

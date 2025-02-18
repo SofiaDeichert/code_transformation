@@ -1,0 +1,1 @@
+int main ( ) { unsigned int t , a , b , i , g , x , f ; scanf ( "%u" , & t ) ; while ( t -- ) { g = 1 ; f = 0 ; scanf ( "%u%u" , & a , & b ) ; if ( a < b ) x = a ; else x = b ; for ( i = x ; i >= x / 2 ; i -- ) { if ( a % i == 0 && b % i == 0 ) { f = 1 ; break ; } } if ( f == 1 ) g = i ; printf ( "%u %u\n" , g , ( a * b ) / g ) ; } return 0 ; }

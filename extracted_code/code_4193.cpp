@@ -1,0 +1,1 @@
+int cmmd ( int a , int b ) { if ( b == 0 ) return a ; else cmmd ( b , a % b ) ; } int main ( ) { int a , b , T , l ; scanf ( "%d" , & T ) ; while ( T > 0 ) { scanf ( "%d%d" , & a , & b ) ; l = cmmd ( a , b ) ; printf ( "%d %d\n" , l , ( a * b ) / l ) ; T -- ; } return 0 ; }

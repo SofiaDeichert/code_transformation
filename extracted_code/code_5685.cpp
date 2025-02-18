@@ -1,0 +1,1 @@
+int main ( ) { int t ; long long int i , a , b , max , lcm ; scanf ( "%d" , & t ) ; while ( t -- ) { scanf ( "%d %d" , & a , & b ) ; for ( i = 1 ; i <= b / 2 ; i ++ ) { if ( a % i == 0 && b % i == 0 ) max = i ; } printf ( "ll%d ll%d\n" , max , ( a * b ) / max ) ; } }

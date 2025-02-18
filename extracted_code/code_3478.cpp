@@ -1,0 +1,1 @@
+int main ( void ) { int t , n , a [ 50000 ] , i , j , cost = { 0 } , k , min ; si ( t ) ; for ( i = 0 ; i < t ; i ++ ) { si ( n ) ; for ( j = 0 ; j < n ; j ++ ) si ( a [ j ] ) ; cost = 0 ; min = 0 ; for ( j = 1 ; j < n ; j ++ ) if ( a [ j ] < a [ min ] ) min = j ; cost = a [ min ] * ( n - 1 ) ; printf ( "%d\n" , cost ) ; } return 0 ; }

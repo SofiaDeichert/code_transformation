@@ -1,0 +1,1 @@
+int main ( ) { int t ; scanf ( "%d" , & t ) ; while ( t -- > 0 ) { int n , m ; scanf ( "%d" , & n ) ; scanf ( "%d" , & m ) ; long long int lcm , gcd = 1 , i = 1 ; while ( i <= n && i <= m ) { if ( n % i == 0 && m % i == 0 ) { gcd = i ; } i ++ ; } lcm = ( n * m ) / gcd ; printf ( "%lld  %lld\n" , gcd , lcm ) ; } return 0 ; }

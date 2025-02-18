@@ -1,0 +1,1 @@
+int main ( ) { long long int T , N , m , x ; scanf ( "%lld" , & T ) ; for ( int j = 1 ; j <= T ; j ++ ) { int c = 0 ; scanf ( "%lld" , & N ) ; scanf ( "%lld" , & x ) ; m = x ; for ( int i = 2 ; i <= N ; i ++ ) { scanf ( "%lld" , & x ) ; if ( x < m ) m = x ; } printf ( "%lld\n" , m * ( N - 1 ) ) ; } return 0 ; }

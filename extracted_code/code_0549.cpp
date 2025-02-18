@@ -1,0 +1,1 @@
+main ( ) { long int A , B , gcd , lcm , rem , T , nr , dr ; scanf ( "%ld" , & T ) ; while ( T -- ) { scanf ( "%ld%ld" , & A , & B ) ; if ( A > B ) { nr = A ; dr = B ; } else { nr = B ; dr = A ; } while ( dr != 0 ) { rem = nr % dr ; nr = dr ; dr = rem ; } gcd = nr ; lcm = ( A * B ) / gcd ; printf ( "%ld\t" , gcd ) ; printf ( "%ld\n" , lcm ) ; } return 0 ; }

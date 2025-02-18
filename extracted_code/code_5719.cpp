@@ -1,0 +1,1 @@
+int main ( ) { int i , a , b , x , y , r , t ; printf ( "Enter the number of testcases:\n" ) ; scanf ( "%d" , & t ) ; for ( i = 1 ; i <= t ; i ++ ) { printf ( "Enter two integers:\n" ) ; scanf ( "%d%d" , & a , & b ) ; x = a ; y = b ; while ( b != 0 ) { r = a % b ; a = b ; b = r ; } printf ( "GCD=%d LCM=%d\n" , a , ( x * y ) / a ) ; } return 0 ; }

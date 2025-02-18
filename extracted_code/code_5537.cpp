@@ -1,0 +1,1 @@
+void main ( ) { int n , arr , i , j ; int test ; int cost = 1000 ; scanf ( "%d" , & test ) ; for ( j = 1 ; j <= test ; j ++ ) { scanf ( "%d" , & n ) ; for ( i = 0 ; i < n ; i ++ ) { scanf ( "%d" , & arr ) ; if ( cost > arr ) { cost = arr ; } } printf ( "%d" , cost * ( n - 1 ) ) ; cost = 1000 ; } }

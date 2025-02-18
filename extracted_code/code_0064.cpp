@@ -1,0 +1,1 @@
+int findGCD ( int number1 , int number2 ) { if ( number2 == 0 ) { return number1 ; } return findGCD ( number2 , number1 % number2 ) ; } int main ( ) { int t , i , j , a , b , g , l ; scanf ( "%d" , & t ) ; for ( i = 0 ; i < t ; i ++ ) { scanf ( "%d %d" , & a , & b ) ; g = findGCD ( a , b ) ; l = ( int ) a * b / g ; printf ( "%d %d\n" , g , l ) ; } return 0 ; }

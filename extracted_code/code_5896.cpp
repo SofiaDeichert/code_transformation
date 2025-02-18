@@ -1,0 +1,1 @@
+int buyuk ( int a , int b ) ; int main ( ) { int t , a , b , buy , kuc ; scanf ( "%d" , & t ) ; while ( t -- ) { scanf ( "%d %d" , & a , & b ) ; buy = buyuk ( a , b ) ; kuc = ( a * b ) / buy ; printf ( "%d %d\n" , buy , kuc ) ; } return 0 ; } int buyuk ( int a , int b ) { if ( b == 0 ) return a ; else return buyuk ( b , a % b ) ; }

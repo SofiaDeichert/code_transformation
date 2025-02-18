@@ -1,0 +1,1 @@
+int main ( ) { int i , t ; long long int sum ; long int n , min ; scanf ( " %d" , & t ) ; while ( t -- ) { sum = 0 ; scanf ( " %ld" , & n ) ; long int a [ n ] ; for ( i = 0 ; i < n ; i ++ ) { scanf ( " %ld" , & a [ i ] ) ; } min = a [ 0 ] ; for ( i = 1 ; i < n ; i ++ ) { if ( a [ i ] < min ) { min = a [ i ] ; } } sum = ( n - 1 ) * min ; printf ( "%d\n" , sum ) ; } return 0 ; }

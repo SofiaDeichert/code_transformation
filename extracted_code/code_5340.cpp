@@ -1,0 +1,1 @@
+int main ( ) { int T ; scanf ( "%d" , & T ) ; while ( T -- ) { int n , k , temp ; scanf ( "%d %d" , & n , & k ) ; int p = n * k ; if ( n > k ) { while ( n % k != 0 ) { temp = n ; n = k ; k = temp % k ; } printf ( "%d %d\n" , k , p / k ) ; } else { while ( k % n != 0 ) { temp = k ; k = n ; n = temp % n ; } printf ( "%d %d\n" , n , p / n ) ; } } return 0 ; }

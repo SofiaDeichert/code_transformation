@@ -1,0 +1,1 @@
+int main ( ) { int testcases , a , b , m , n , temp ; scanf ( "%d" , & testcases ) ; while ( testcases ) { scanf ( "%d" , & m ) ; scanf ( "%d" , & n ) ; a = m > n ? m : n ; b = m < n ? m : n ; while ( b != 0 ) { temp = b ; b = a % temp ; a = temp ; } printf ( "%d " , a ) ; printf ( "%d\n" , m * n / a ) ; testcases -- ; } }

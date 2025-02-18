@@ -1,0 +1,1 @@
+int main ( ) { int t , a [ 50000 ] , s , max , n , i , j ; scanf ( "%d" , & t ) ; for ( i = 0 ; i < t ; i ++ ) { s = 0 ; max = - 1000000 ; scanf ( "%d" , & n ) ; for ( j = 0 ; j < n ; j ++ ) { scanf ( "%d" , & a [ j ] ) ; if ( max < a [ j ] ) max = a [ j ] ; s = s + a [ j ] ; } printf ( "%d\n" , s - max ) ; } return 0 ; }

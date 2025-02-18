@@ -1,0 +1,1 @@
+int main ( ) { int i , t ; long n1 , n2 , m ; scanf ( "%d" , & t ) ; while ( t -- ) { scanf ( "%ld%ld" , & n1 , & n2 ) ; m = n1 * n2 ; while ( n1 != n2 ) { if ( n1 > n2 ) n1 = n1 - n2 ; else n2 = n2 - n1 ; } printf ( "%ld\t%ld\n" , n1 , ( m ) / n1 ) ; } return 0 ; }

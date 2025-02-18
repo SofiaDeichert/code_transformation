@@ -1,0 +1,1 @@
+int main ( ) { long int i , j , t , a , c , arr [ 10000 ] ; scanf ( "%ld" , & t ) ; while ( t -- ) { c = 0 ; scanf ( "%d" , & a ) ; for ( i = 1 ; i <= a ; i ++ ) scanf ( "%d" , & arr [ i ] ) ; for ( i = 1 ; i <= a ; i ++ ) { j = i + 1 ; if ( arr [ i ] < arr [ j ] ) c = c + 1 ; } c = c + a ; printf ( "%ld" , c ) ; } return 0 ; }

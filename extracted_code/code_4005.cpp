@@ -1,0 +1,1 @@
+int gcd ( int x , int y ) { if ( y == 0 ) return x ; else { gcd ( y , x % y ) ; } } int main ( void ) { int no_of_times ; int a , b ; scanf ( "%d" , & no_of_times ) ; for ( int i = 0 ; i < no_of_times ; i ++ ) { scanf ( "%d%d" , & a , & b ) ; int g = gcd ( a , b ) ; int l = ( a * b ) / g ; printf ( "%d %d\n" , g , l ) ; } return 0 ; }

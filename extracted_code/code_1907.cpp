@@ -1,0 +1,1 @@
+int main ( void ) { int i , n , a , b , gcd , lcd , j ; scanf ( "%d" , & n ) ; for ( j = 1 ; j <= n ; j ++ ) { scanf ( "%d%d" , & a , & b ) ; for ( i = 1 ; i <= a && i <= b ; i ++ ) { if ( ( a % i == 0 ) && ( b % i == 0 ) ) gcd = i ; } lcd = ( a * b ) / gcd ; printf ( "%d %d\n" , gcd , lcd ) ; } return 0 ; }

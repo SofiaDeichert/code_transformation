@@ -1,0 +1,1 @@
+void main ( ) { int i , q , C , D , A , B , T , gcd [ 10 ] , lcm [ 10 ] , div , rem ; scanf ( "%d" , & T ) ; for ( i = 0 ; i < T ; i ++ ) { scanf ( "%d%d" , & A , & B ) ; C = A ; D = B ; while ( B % A != 0 ) { rem = B % A ; B = A ; A = rem ; } gcd [ i ] = A ; lcm [ i ] = ( C * D ) / gcd [ i ] ; } for ( i = 0 ; i < T ; i ++ ) printf ( "\n%d %d" , gcd [ i ] , lcm [ i ] ) ; }

@@ -1,0 +1,1 @@
+void LcmHcf ( long x , long y ) { long a = x , b = y , t ; while ( b != 0 ) { t = b ; b = a % b ; a = t ; } printf ( "%ld %ld\n" , ( a , ( x * y ) / a ) ) ; } int main ( ) { int n , i ; long a , b ; scanf ( "%d" , & n ) ; for ( i = 0 ; i < n ; i ++ ) { scanf ( "%ld%ld" , & a , & b ) ; LcmHcf ( a , b ) ; } return 0 ; }

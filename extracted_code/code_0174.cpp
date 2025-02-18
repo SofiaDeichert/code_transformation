@@ -1,0 +1,1 @@
+int main ( ) { unsigned long n , i , x , y , a , b , t ; scanf ( "%lu" , & n ) ; for ( i = 0 ; i < n ; i ++ ) { scanf ( "%lu%lu" , & x , & y ) ; if ( x > y ) { a = x ; b = y ; } else { a = y ; b = x ; } while ( b != 0 ) { t = b ; b = a % b ; a = t ; } printf ( "%lu %lu\n" , a , ( x * y ) / a ) ; } return 0 ; }

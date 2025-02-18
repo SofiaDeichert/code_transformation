@@ -1,0 +1,1 @@
+void main ( ) { int t , i , j , c , subnum , alen , ar , arr ; scanf ( "%d" , & t ) ; for ( i = 0 ; i < t ; i ++ ) { scanf ( "%d" , & alen ) ; c = 1 ; subnum = 1 ; scanf ( "%d" , & ar ) ; for ( j = 1 ; j < alen ; j ++ ) { scanf ( "%d" , & arr ) ; if ( arr >= ar ) { c ++ ; subnum += c ; } else { c = 1 ; subnum ++ ; } ar = arr ; } printf ( "%d\n" , subnum ) ; } }

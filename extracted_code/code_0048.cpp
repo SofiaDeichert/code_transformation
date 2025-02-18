@@ -1,0 +1,1 @@
+int main ( ) { int t , i , small , N ; scanf ( "%d" , & t ) ; while ( t -- ) { scanf ( "%d" , & N ) ; int A [ N ] ; for ( i = 0 ; i < N ; i ++ ) { scanf ( "%d" , & A [ i ] ) ; } small = A [ 0 ] ; for ( i = 0 ; i < N ; i ++ ) { if ( small > A [ i ] ) small = A [ i ] ; } printf ( "%d\n" , ( N - 1 ) * small ) ; } return 0 ; }

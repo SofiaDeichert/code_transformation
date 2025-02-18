@@ -1,0 +1,1 @@
+int main ( ) { int i , T , HCF ; long a , b , temp , LCM , m ; scanf ( "%d" , & T ) ; while ( T -- ) { scanf ( "%ld %ld" , & a , & b ) ; m = a * b ; while ( a > 0 || b > 0 ) { b = b % a ; if ( b == 0 ) { HCF = a ; break ; } a = a % b ; if ( a == 0 ) { HCF = b ; break ; } } LCM = m / HCF ; printf ( "%d %ld" , HCF , LCM ) ; printf ( "\n" ) ; } }

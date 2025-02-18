@@ -1,0 +1,1 @@
+int main ( ) { int i , t , j , a , b , z ; scanf ( "%d" , & t ) ; int gcd [ t ] , lcm [ t ] ; for ( i = 0 ; i < t ; i ++ ) { scanf ( "\n%d %d" , & a , & b ) ; if ( a > b ) { z = a ; a = b ; b = z ; } for ( j = 1 ; j <= b / 2 ; j ++ ) { if ( b % i == 0 && b % i == 0 ) gcd [ i ] *= i ; } } return 0 ; }

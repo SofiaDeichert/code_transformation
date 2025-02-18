@@ -1,0 +1,1 @@
+int main ( ) { int i , a [ 100 ] , n , c = 0 ; scanf ( "%d" , & n ) ; for ( i = 0 ; i < n ; i ++ ) { scanf ( "%d" , & a [ i ] ) ; } for ( i = 0 ; i < n ; i ++ ) { if ( a [ i ] < a [ i + 1 ] ) { c = c + 1 ; while ( i < n ) { if ( a [ i + 1 ] < a [ i + 2 ] ) { c = c + 2 ; } i ++ ; } } } printf ( "%d" , c + n ) ; return 0 ; }

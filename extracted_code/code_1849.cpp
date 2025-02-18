@@ -1,0 +1,1 @@
+int main ( ) { int t ; scanf ( "%d" , & t ) ; while ( t -- ) { int n , i , j , a [ 50 ] [ 50 ] , sum ; scanf ( "%d" , & n ) ; for ( i = 0 ; i < n ; i ++ ) { for ( j = 0 ; j < i + 1 ; j ++ ) scanf ( "%d" , & a [ i ] [ j ] ) ; } sum = a [ n - 1 ] [ 0 ] + a [ n - 1 ] [ 1 ] + a [ n - 2 ] [ 0 ] ; printf ( "%d\n" , sum ) ; } }

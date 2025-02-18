@@ -1,0 +1,1 @@
+int main ( ) { int T ; scanf ( "%d" , & T ) ; int N ; while ( T -- ) { scanf ( "%d" , & N ) ; int i , arr [ 50000 ] ; for ( i = 0 ; i < N ; i ++ ) { scanf ( "%d\t" , & arr [ i ] ) ; } int cost = 0 , j ; for ( j = 0 ; j < N ; j ++ ) { if ( arr [ i ] > arr [ i + 1 ] ) { cost = cost + arr [ i + 1 ] ; } else { cost = cost + arr [ i ] ; } } printf ( "%d\n" , cost ) ; } return 0 ; }

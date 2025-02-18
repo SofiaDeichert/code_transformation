@@ -1,0 +1,1 @@
+int main ( ) { int t ; unsigned int a , b , x , y ; scanf ( "%d" , & t ) ; while ( t -- ) { printf ( "\n" ) ; scanf ( "%u%u" , & a , & b ) ; x = a ; y = b ; while ( x != y ) { if ( x > y ) x -= y ; else y -= x ; } printf ( "%u" , x ) ; x = a ; y = b ; while ( x != y ) { if ( x < y ) x += a ; else y += b ; } printf ( " %u" , x ) ; } return 0 ; }

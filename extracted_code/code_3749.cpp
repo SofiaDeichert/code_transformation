@@ -1,0 +1,1 @@
+long fun ( int a , int b ) { if ( b == 0 ) return a ; else return fun ( b , a % b ) ; } int main ( ) { long a , b , h , l ; int s ; scanf ( "%d" , & s ) ; while ( s -- ) { scanf ( "%ld%ld" , & a , & b ) ; h = fun ( a , b ) ; l = ( a * b ) / fun ( a , b ) ; printf ( "%ld %ld\n" , h , l ) ; } return 0 ; }

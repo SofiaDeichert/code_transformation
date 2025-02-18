@@ -1,0 +1,1 @@
+int main ( ) { int T , a , b , i , mul ; scanf ( "%d" , & T ) ; while ( T -- ) { scanf ( "%d" , & a ) ; scanf ( "%d" , & b ) ; mul = a * b ; while ( a != b ) { if ( a > b ) a = a - b ; else b = b - a ; } printf ( "%d " , a ) ; printf ( "%d" , mul / a ) ; } }

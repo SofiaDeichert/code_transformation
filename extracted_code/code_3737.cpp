@@ -1,0 +1,1 @@
+int main ( ) { int i , t ; long int j , n ; long int pre ; scanf ( "%d" , & t ) ; for ( i = 0 ; i < t ; i ++ ) { pre = 50001 ; scanf ( "%ld" , & n ) ; long int A [ n + 1 ] ; for ( j = 0 ; j < n ; j ++ ) { scanf ( "%ld" , & A [ j ] ) ; if ( pre > A [ j ] ) pre = A [ j ] ; } printf ( "%ld\n" , ( pre * ( n - 1 ) ) ) ; } return 0 ; }

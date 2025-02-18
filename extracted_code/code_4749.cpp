@@ -1,0 +1,1 @@
+main ( ) { int t , i , n1 , n2 , temp1 , temp2 , hcf ; scanf ( "%d" , & t ) ; for ( i = 1 ; i <= t ; i ++ ) { scanf ( "%d%d" , & n1 , & n2 ) ; temp1 = n1 ; temp2 = n2 ; while ( n1 != n2 ) { if ( n1 > n2 ) { n1 = n1 - n2 ; hcf = n1 ; } else { n2 = n2 - n1 ; hcf = n2 ; } } printf ( "%d %d\n" , hcf , ( temp1 * temp2 ) / hcf ) ; } }

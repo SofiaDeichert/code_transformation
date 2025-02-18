@@ -1,0 +1,1 @@
+int main ( ) { long long int n , max , z , i , t ; long long int ans ; scanf ( "%lld" , & t ) ; while ( t -- ) { ans = 0 ; max = LLONG_MAX ; scanf ( "%lld" , & n ) ; for ( i = 0 ; i < n ; i ++ ) { scanf ( "%lld" , & z ) ; if ( max > z ) { max = z ; } } ans = max * ( n - 1 ) ; printf ( "%lld\n" , ans ) ; } }

@@ -1,0 +1,1 @@
+int n , i , j , k , l , T , n , a , b ; int main ( ) { scanf ( "%d" , & T ) ; int M [ T ] [ 2 ] ; for ( i = 0 ; i < T ; i ++ ) { scanf ( "%d%d" , & a , & b ) ; for ( j = a ; ; j -- ) { if ( b % j == 0 && a % j == 0 ) { M [ i ] [ 0 ] = j ; break ; } } M [ i ] [ 1 ] = a * b / M [ i ] [ 0 ] ; } for ( l = 0 ; l < T ; l ++ ) { printf ( "%d %d\n" , M [ l ] [ 0 ] , M [ l ] [ 1 ] ) ; } }

@@ -1,0 +1,1 @@
+void main ( ) { int a , b , i , n , j ; scanf ( "%d" , & n ) ; for ( i = 0 ; i < n ; i ++ ) { int m , n , g_c_d = 1 ; scanf ( "%d %d" , & a , & b ) ; m = a ; n = b ; for ( j = b ; j > 1 ; j -- ) { if ( a % j == 0 && b % j == 0 ) { g_c_d *= j ; a = a / j ; b = b / j ; } } printf ( "%d %d\n" , g_c_d , ( m * n ) / g_c_d ) ; } }

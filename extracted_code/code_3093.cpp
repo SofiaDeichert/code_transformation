@@ -1,0 +1,1 @@
+int a [ 50000 ] ; int main ( ) { int t , i , j , s ; long long int c , n , b ; scanf ( "%d" , & t ) ; for ( i = 1 ; i <= t ; i ++ ) { scanf ( "%lld" , & n ) ; s = 0 ; for ( j = 0 ; j < n ; j ++ ) { scanf ( "%d" , & a [ j ] ) ; } b = a [ 0 ] ; for ( j = 1 ; j < n ; j ++ ) { if ( b > a [ j ] ) { b = a [ j ] ; } } c = b * ( n - 1 ) ; printf ( "%lld\n" , c ) ; } return 0 ; }

@@ -1,0 +1,1 @@
+long long h ( long long a , long long b ) { while ( a != b ) { if ( a > b ) a = a - b ; else b = b - a ; } return a ; } int main ( ) { long long t , a , b , hcf , lcm ; scanf ( "%lld" , & t ) ; while ( t > 0 ) { t -- ; scanf ( "%lld%lld" , & a , & b ) ; hcf = h ( a , b ) ; lcm = ( a * b ) / hcf ; printf ( "%lld %lld\n" , hcf , lcm ) ; } return 0 ; }

@@ -1,0 +1,1 @@
+void main ( ) { int tc , a , b , c ; scanf ( "%d" , & tc ) ; while ( tc != 0 ) { scanf ( "%d %d %d" , & a , & b , & c ) ; printf ( "%d\n" , a > b ? ( b > c ? b : ( a > c ? c : a ) ) : b < c ? b : a < c ? c : a ) ; tc -- ; } }

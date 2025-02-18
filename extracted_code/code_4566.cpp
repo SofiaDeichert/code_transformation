@@ -1,0 +1,1 @@
+int main ( ) { int t ; long int n , i , temp , * p ; scanf ( "%d" , & t ) ; while ( t -- ) { scanf ( "%ld" , & n ) ; i = n ; while ( n -- ) { scanf ( "%ld" , p ) ; p ++ ; } n = i ; while ( n -- ) { p -- ; } temp = * p ; p ++ ; n -- ; while ( n -- ) { if ( * p < temp ) temp = * p ; p ++ ; } n = i ; printf ( "%ld\n" , temp * ( n - 1 ) ) ; } return 0 ; }

@@ -1,6 +1,6 @@
 # Sofia Deichert - Code Transformation Project
 # Takes separate .cpp files and puts them back into single jsonl file
-# Does opposite of code_transformation.py
+# Does opposite of jsonl_to_cpp.py
 
 import json
 import os
@@ -47,7 +47,7 @@ def process_cpp_directory(input_dir, output_file, original_jsonl=None):
             file_path = os.path.join(input_dir, filename)
             
             try:
-                # Read C++ file exactly as written by code_transformation.py
+                # Read C++ file exactly as written by jsonl_to_cpp.py
                 with open(file_path, 'r', encoding='utf-8') as cpp_file:
                     code = cpp_file.read()
                 
@@ -59,7 +59,7 @@ def process_cpp_directory(input_dir, output_file, original_jsonl=None):
                     # Extract original data
                     original_data = json.loads(original_line)
                     
-                    # because we did \n -> \\n in code_transformation.py 
+                    # because we did \n -> \\n in jsonl_to_cpp.py 
                     code = code.replace('\\n', '\n')
                     
                     # Create new data object with updated input
@@ -79,7 +79,7 @@ def process_cpp_directory(input_dir, output_file, original_jsonl=None):
                     }
                     out_f.write(json.dumps(json_obj) + '\n')
                 
-                print(f"Processed file: {filename}")
+                # print(f"Processed file: {filename}")
                 
             except Exception as e:
                 print(f"Error processing file {filename}: {e}")

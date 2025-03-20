@@ -176,7 +176,7 @@ def transform_file(input_ast_path, output_ast_path):
         with open(output_ast_path, 'w', encoding='utf-8') as f:
             json.dump(modified_ast, f, indent=2)
             
-        print(f"Transformed {input_ast_path} -> {output_ast_path}")
+        # print(f"Transformed {input_ast_path} -> {output_ast_path}")
         
     except Exception as e:
         print(f"Error transforming {input_ast_path}: {e}")

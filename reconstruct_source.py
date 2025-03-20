@@ -49,7 +49,7 @@ def process_all_asts(ast_dir="transformed_asts/return_type_deduction", output_di
             ast_file_path = os.path.join(ast_dir, filename)
             output_file = reconstruct_and_save(ast_file_path, output_dir)
             output_files.append(output_file)
-            print(f"Reconstructed: {output_file}")
+            # print(f"Reconstructed: {output_file}")
     
     return output_files
 

@@ -93,8 +93,8 @@ def process_modernized_code(input_dir="modernized_code", output_file="modernized
 if __name__ == "__main__":
     # By default, process modernized_code directory
     # Change parameters as needed
-    input_directory = "extracted_code"
-    output_jsonl = "modernized_code.jsonl"
+    input_directory = "return_type_deduction_code"
+    output_jsonl = "return_type_deduction.jsonl"
     original_jsonl = "test 1.jsonl"  # Original JSONL to get formatting
     
     process_cpp_directory(input_directory, output_jsonl, original_jsonl)

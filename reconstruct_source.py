@@ -41,7 +41,7 @@ def reconstruct_and_save(ast_file_path, output_dir="modernized_code"):
 # default dir = asts, change as necessary
 # output dir = modernized_code, change as necessary
 # process all AST files in directory + save reconstructed source code
-def process_all_asts(ast_dir="asts", output_dir="modernized_code"):
+def process_all_asts(ast_dir="transformed_asts/return_type_deduction", output_dir="return_type_deduction_code"):
     output_files = []
     
     for filename in os.listdir(ast_dir):

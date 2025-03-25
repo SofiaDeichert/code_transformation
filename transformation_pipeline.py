@@ -17,14 +17,13 @@ from transform_ast import apply_transformations
 from reconstruct_source import process_all_asts
 from cpp_to_jsonl import process_cpp_directory
 
-def run_pipeline(input_jsonl, output_dir="pipeline_output", transformation_type="return_type_deduction"):
+def run_pipeline(input_jsonl, output_dir="pipeline_output"):
     """
     Run complete transformation pipeline:
     
     Args:
         input_jsonl: Path to input jsonl file
         output_dir: Directory to store all intermediate and final outputs
-        transformation_type: Type of transformation to apply (e.g., "return_type_deduction")
     """
     start_time = time.time()
     
@@ -33,12 +32,9 @@ def run_pipeline(input_jsonl, output_dir="pipeline_output", transformation_type=
     extracted_code_dir = base_dir / "extracted_code"
     asts_dir = base_dir / "asts"
     transformed_asts_dir = base_dir / "transformed_asts"
-    modernized_code_dir = base_dir / f"{transformation_type}_code"
-    output_jsonl = base_dir / f"{transformation_type}.jsonl"
-    
     base_dir.mkdir(exist_ok=True)
     
-    print(f"Starting transformation pipeline on {input_jsonl}")
+    print(f"\nStarting transformation pipeline on {input_jsonl}")
     print(f"All outputs will be saved to {base_dir.absolute()}")
     
     # Step 1: Extract code from jsonl to .cpp files
@@ -59,7 +55,7 @@ def run_pipeline(input_jsonl, output_dir="pipeline_output", transformation_type=
             src = os.path.join('asts', file)
             dst = os.path.join(str(asts_dir), file)
             
-            # Copy instead of move to avoid permission issues
+            # Copy instead of move (avoid permission issues)
             with open(src, 'r', encoding='utf-8') as src_file:
                 content = src_file.read()
                 with open(dst, 'w', encoding='utf-8') as dst_file:
@@ -78,36 +74,54 @@ def run_pipeline(input_jsonl, output_dir="pipeline_output", transformation_type=
             print("Could not remove 'asts' directory, continuing...")
     
     # Step 3: Apply transformations to ASTs
-    print(f"\n--- Step 3: Applying {transformation_type} transformation ---")
+    print(f"\n--- Step 3: Applying transformations ---")
     transformed_asts_base_dir = transformed_asts_dir
     transformed_asts_base_dir.mkdir(exist_ok=True)
     apply_transformations(str(asts_dir), str(transformed_asts_base_dir))
     
     # Step 4: Reconstruct source code from transformed ASTs
     print("\n--- Step 4: Reconstructing source code ---")
-    transformation_ast_dir = transformed_asts_base_dir / transformation_type
-    modernized_code_dir.mkdir(exist_ok=True)
-    process_all_asts(str(transformation_ast_dir), str(modernized_code_dir))
     
-    # Step 5: Convert modernized code back to jsonl
-    print("\n--- Step 5: Converting modernized code to JSONL ---")
-    process_cpp_directory(str(modernized_code_dir), str(output_jsonl), input_jsonl)
+    # Process each transformation folder
+    output_jsonls = []
+    for transform_dir in os.listdir(str(transformed_asts_dir)):
+        # skip non-directories
+        transform_path = transformed_asts_dir / transform_dir
+        if not os.path.isdir(transform_path):
+            continue
+            
+        print(f"Processing transformation: {transform_dir}")
+        
+        # Create output directory for this transformation
+        modernized_code_dir = base_dir / f"{transform_dir}_code"
+        modernized_code_dir.mkdir(exist_ok=True)
+        
+        # Process ASTs for this transformation
+        process_all_asts(str(transform_path), str(modernized_code_dir))
+        
+        # Step 5: Convert modernized code back to jsonl
+        output_jsonl = base_dir / f"{transform_dir}.jsonl"
+        process_cpp_directory(str(modernized_code_dir), str(output_jsonl), input_jsonl)
+        output_jsonls.append(output_jsonl)
     
     elapsed_time = time.time() - start_time
     print(f"\nPipeline completed in {elapsed_time:.2f} seconds!")
-    print(f"Transformed JSONL saved to: {output_jsonl}")
+    
+    if output_jsonls:
+        print("Transformed JSONL files saved to:")
+        for jsonl in output_jsonls:
+            print(f"- {jsonl}")
+    else:
+        print("No transformations were applied. Check if any are enabled in transform_ast.py")
 
 def main():
     parser = argparse.ArgumentParser(description="Run the complete C++ modernization pipeline")
     parser.add_argument("--input", default="test 1.jsonl", help="Path to input jsonl file")
     parser.add_argument("--output-dir", default="pipeline_output", help="Directory to store all outputs")
-    parser.add_argument("--transform", default="return_type_deduction", 
-                        choices=["return_type_deduction"], 
-                        help="Type of transformation to apply")
     
     args = parser.parse_args()
     
-    run_pipeline(args.input, args.output_dir, args.transform)
+    run_pipeline(args.input, args.output_dir)
 
 if __name__ == "__main__":
     main()

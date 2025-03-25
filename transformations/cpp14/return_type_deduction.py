@@ -211,9 +211,7 @@ def apply_transformation(input_dir, output_dir):
         input_dir: Directory containing input AST files
         output_dir: Directory to save transformed AST files
     """
-    print("Applying C++14 return type deduction transformation...")
     transform_directory(input_dir, output_dir)
-    print("Transformation complete.")
 
 if __name__ == "__main__":
     # For testing module independently

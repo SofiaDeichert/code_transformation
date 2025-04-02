@@ -116,13 +116,17 @@ def run_pipeline(input_jsonl, output_dir="pipeline_output"):
 
 def main():
     parser = argparse.ArgumentParser(description="Run the complete C++ modernization pipeline")
-    # CHANGE DATASET FILE NAME HERE, pipeline_output/increment_to_assignment.jsonl, test 1.jsonl
-    parser.add_argument("--input", default="test 1.jsonl", help="Path to input jsonl file")
     parser.add_argument("--output-dir", default="pipeline_output", help="Directory to store all outputs")
     
     args = parser.parse_args()
     
-    run_pipeline(args.input, args.output_dir)
+    input_jsonl = input("Enter the name of the JSONL file to process: ")
+    
+    if not os.path.exists(input_jsonl):
+        print(f"Error: File '{input_jsonl}' not found.")
+        return
+    
+    run_pipeline(input_jsonl, args.output_dir)
 
 if __name__ == "__main__":
     main()

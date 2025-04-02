@@ -116,6 +116,7 @@ def run_pipeline(input_jsonl, output_dir="pipeline_output"):
 
 def main():
     parser = argparse.ArgumentParser(description="Run the complete C++ modernization pipeline")
+    # CHANGE DATASET FILE NAME HERE, pipeline_output/increment_to_assignment.jsonl
     parser.add_argument("--input", default="test 1.jsonl", help="Path to input jsonl file")
     parser.add_argument("--output-dir", default="pipeline_output", help="Directory to store all outputs")
     

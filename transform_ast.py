@@ -10,11 +10,57 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 # Import transformations
 from transformations.cpp14.return_type_deduction import apply_transformation as apply_return_type_deduction
+
 # Import unary operator transformations
-from transformations.calculation.unary_operator import apply_increment_to_assignment_transformation
-from transformations.calculation.unary_operator import apply_assignment_to_increment_transformation
-from transformations.calculation.unary_operator import apply_decrement_to_assignment_transformation
-from transformations.calculation.unary_operator import apply_assignment_to_decrement_transformation
+from transformations.calculation.unary_operator import (
+    apply_increment_to_assignment_transformation,
+    apply_assignment_to_increment_transformation,
+    apply_decrement_to_assignment_transformation,
+    apply_assignment_to_decrement_transformation
+)
+
+# Import compound assignment transformations
+from transformations.calculation.compound_assignment import (
+    apply_plus_equal_to_expanded_transformation,
+    apply_expanded_to_plus_equal_transformation,
+    apply_minus_equal_to_expanded_transformation,
+    apply_expanded_to_minus_equal_transformation,
+    apply_multiply_equal_to_expanded_transformation,
+    apply_expanded_to_multiply_equal_transformation,
+    apply_divide_equal_to_expanded_transformation,
+    apply_expanded_to_divide_equal_transformation,
+    apply_modulo_equal_to_expanded_transformation,
+    apply_expanded_to_modulo_equal_transformation,
+    apply_left_shift_equal_to_expanded_transformation,
+    apply_expanded_to_left_shift_equal_transformation,
+    apply_right_shift_equal_to_expanded_transformation,
+    apply_expanded_to_right_shift_equal_transformation,
+    apply_bitand_equal_to_expanded_transformation,
+    apply_expanded_to_bitand_equal_transformation,
+    apply_bitor_equal_to_expanded_transformation,
+    apply_expanded_to_bitor_equal_transformation,
+    apply_bitxor_equal_to_expanded_transformation,
+    apply_expanded_to_bitxor_equal_transformation
+)
+
+def apply_single_transformation(transformation_func, input_dir, output_base_dir, transformation_name):
+    """
+    Apply single transformation function and output results to specified directory
+    
+    Args:
+        transformation_func: The transformation function to apply
+        input_dir: Directory containing input AST files
+        output_base_dir: Base directory where transformation folders will be created
+        transformation_name: Name of the transformation (used for directory name and logging)
+    """
+    transformation_dir = os.path.join(output_base_dir, transformation_name)
+    os.makedirs(transformation_dir, exist_ok=True)
+    
+    print(f"Applying {transformation_name} transformation...")
+    transformation_func(input_dir, transformation_dir)
+    print(f"{transformation_name} transformation complete. Results in {transformation_dir}\n")
+    
+    return transformation_dir
 
 def apply_transformations(input_dir, output_base_dir):
     """
@@ -25,58 +71,52 @@ def apply_transformations(input_dir, output_base_dir):
         input_dir: Directory containing input AST files
         output_base_dir: Base directory where transformation folders will be created
     """
-    os.makedirs(output_base_dir, exist_ok=True) 
+    os.makedirs(output_base_dir, exist_ok=True)
     
-    # -----------------------------------------------
-    # Apply C++14 return type deduction transformation
-    # Comment out following block to disable transformation
-    # -----------------------------------------------
-    # return_type_deduction_dir = os.path.join(output_base_dir, "return_type_deduction")
-    # os.makedirs(return_type_deduction_dir, exist_ok=True)
-    # print(f"Applying return type deduction transformation...")
-    # apply_return_type_deduction(input_dir, return_type_deduction_dir)
-    # print(f"Return type deduction transformation complete. Results in {return_type_deduction_dir}\n")
+    # Define all transformations as (function, name) tuples
+    # Comment out functions you don't want to run
+    transformations = [
+        # C++14 return type deduction transformation
+        # (apply_return_type_deduction, "return_type_deduction"),
+        
+        # Unary operator transformations
+        # (apply_increment_to_assignment_transformation, "increment_to_assignment"),
+        # (apply_assignment_to_increment_transformation, "assignment_to_increment"),
+        # (apply_decrement_to_assignment_transformation, "decrement_to_assignment"),
+        # (apply_assignment_to_decrement_transformation, "assignment_to_decrement"),
+        
+        # Compound assignment transformations
+        (apply_plus_equal_to_expanded_transformation, "plus_equal_to_expanded"),
+        (apply_expanded_to_plus_equal_transformation, "expanded_to_plus_equal"),
+        (apply_minus_equal_to_expanded_transformation, "minus_equal_to_expanded"),
+        (apply_expanded_to_minus_equal_transformation, "expanded_to_minus_equal"),
+        (apply_multiply_equal_to_expanded_transformation, "multiply_equal_to_expanded"),
+        (apply_expanded_to_multiply_equal_transformation, "expanded_to_multiply_equal"),
+        (apply_divide_equal_to_expanded_transformation, "divide_equal_to_expanded"),
+        (apply_expanded_to_divide_equal_transformation, "expanded_to_divide_equal"),
+        (apply_modulo_equal_to_expanded_transformation, "modulo_equal_to_expanded"),
+        (apply_expanded_to_modulo_equal_transformation, "expanded_to_modulo_equal"),
+        (apply_left_shift_equal_to_expanded_transformation, "left_shift_equal_to_expanded"),
+        (apply_expanded_to_left_shift_equal_transformation, "expanded_to_left_shift_equal"),
+        (apply_right_shift_equal_to_expanded_transformation, "right_shift_equal_to_expanded"),
+        (apply_expanded_to_right_shift_equal_transformation, "expanded_to_right_shift_equal"),
+        (apply_bitand_equal_to_expanded_transformation, "bitand_equal_to_expanded"),
+        (apply_expanded_to_bitand_equal_transformation, "expanded_to_bitand_equal"),
+        (apply_bitor_equal_to_expanded_transformation, "bitor_equal_to_expanded"),
+        (apply_expanded_to_bitor_equal_transformation, "expanded_to_bitor_equal"),
+        (apply_bitxor_equal_to_expanded_transformation, "bitxor_equal_to_expanded"),
+        (apply_expanded_to_bitxor_equal_transformation, "expanded_to_bitxor_equal"),
+    ]
     
-    # -----------------------------------------------
-    # Apply increment to assignment transformation (i++ -> i = i + 1)
-    # Comment out following block to disable transformation
-    # -----------------------------------------------
-    increment_to_assignment_dir = os.path.join(output_base_dir, "increment_to_assignment")
-    os.makedirs(increment_to_assignment_dir, exist_ok=True)
-    print(f"Applying increment to assignment transformation...")
-    apply_increment_to_assignment_transformation(input_dir, increment_to_assignment_dir)
-    print(f"Increment to assignment transformation complete. Results in {increment_to_assignment_dir}\n")
-    
-    # # -----------------------------------------------
-    # # Apply assignment to increment transformation (i = i + 1 -> i++)
-    # # Comment the following block to disable transformation
-    # # -----------------------------------------------
-    # assignment_to_increment_dir = os.path.join(output_base_dir, "assignment_to_increment")
-    # os.makedirs(assignment_to_increment_dir, exist_ok=True)
-    # print(f"Applying assignment to increment transformation...")
-    # apply_assignment_to_increment_transformation(input_dir, assignment_to_increment_dir)
-    # print(f"Assignment to increment transformation complete. Results in {assignment_to_increment_dir}\n")
-    
-    # # -----------------------------------------------
-    # # Apply decrement to assignment transformation (i-- -> i = i - 1)
-    # # Comment out following block to disable transformation
-    # # -----------------------------------------------
-    # decrement_to_assignment_dir = os.path.join(output_base_dir, "decrement_to_assignment")
-    # os.makedirs(decrement_to_assignment_dir, exist_ok=True)
-    # print(f"Applying decrement to assignment transformation...")
-    # apply_decrement_to_assignment_transformation(input_dir, decrement_to_assignment_dir)
-    # print(f"Decrement to assignment transformation complete. Results in {decrement_to_assignment_dir}\n")
-    
-    # # # # -----------------------------------------------
-    # # # # Apply assignment to decrement transformation (i = i - 1 -> i--)
-    # # # # Comment out following block to disable transformation
-    # # # # -----------------------------------------------
-    # assignment_to_decrement_dir = os.path.join(output_base_dir, "assignment_to_decrement")
-    # os.makedirs(assignment_to_decrement_dir, exist_ok=True)
-    # print(f"Applying assignment to decrement transformation...")
-    # apply_assignment_to_decrement_transformation(input_dir, assignment_to_decrement_dir)
-    # print(f"Assignment to decrement transformation complete. Results in {assignment_to_decrement_dir}\n")
-    
+    # Apply each transformation
+    for transformation_func, transformation_name in transformations:
+        apply_single_transformation(
+            transformation_func, 
+            input_dir, 
+            output_base_dir, 
+            transformation_name
+        )
+
 def main():
     parser = argparse.ArgumentParser(description="Apply C++ modernization transformations to ASTs")
     parser.add_argument("--input", default="asts", help="Directory containing input AST files")

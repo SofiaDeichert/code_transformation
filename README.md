@@ -8,6 +8,7 @@
 
 ```bash
 pip install tree-sitter
+pip install tree-sitter-cpp
 git clone https://github.com/tree-sitter/tree-sitter-cpp.git
 ```
 

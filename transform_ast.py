@@ -19,6 +19,9 @@ from transformations.calculation.unary_operator import (
     apply_assignment_to_decrement_transformation
 )
 
+# Import loop transformations
+from transformations.loop.while_to_for import apply_while_to_for_transformation
+
 # Import compound assignment transformations
 from transformations.calculation.compound_assignment import (
     apply_plus_equal_to_expanded_transformation,
@@ -80,7 +83,7 @@ def apply_transformations(input_dir, output_base_dir):
         # (apply_return_type_deduction, "return_type_deduction"),
         
         # Unary operator transformations
-        (apply_increment_to_assignment_transformation, "increment_to_assignment"),
+        # (apply_increment_to_assignment_transformation, "increment_to_assignment"),
         # (apply_assignment_to_increment_transformation, "assignment_to_increment"),
         # (apply_decrement_to_assignment_transformation, "decrement_to_assignment"),
         # (apply_assignment_to_decrement_transformation, "assignment_to_decrement"),
@@ -106,6 +109,9 @@ def apply_transformations(input_dir, output_base_dir):
         # (apply_expanded_to_bitor_equal_transformation, "expanded_to_bitor_equal"),
         # (apply_bitxor_equal_to_expanded_transformation, "bitxor_equal_to_expanded"),
         # (apply_expanded_to_bitxor_equal_transformation, "expanded_to_bitxor_equal"),
+
+        # Loop transformations
+        (apply_while_to_for_transformation, "while_to_for"),
     ]
     
     # Apply each transformation

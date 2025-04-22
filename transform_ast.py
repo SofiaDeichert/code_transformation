@@ -21,6 +21,7 @@ from transformations.calculation.unary_operator import (
 
 # Import loop transformations
 from transformations.loop.while_to_for import apply_while_to_for_transformation
+from transformations.loop.for_to_while import apply_for_to_while_transformation
 
 # Import compound assignment transformations
 from transformations.calculation.compound_assignment import (
@@ -111,7 +112,8 @@ def apply_transformations(input_dir, output_base_dir):
         # (apply_expanded_to_bitxor_equal_transformation, "expanded_to_bitxor_equal"),
 
         # Loop transformations
-        (apply_while_to_for_transformation, "while_to_for"),
+        # (apply_while_to_for_transformation, "while_to_for"),
+        (apply_for_to_while_transformation, "for_to_while")
     ]
     
     # Apply each transformation

@@ -47,6 +47,9 @@ from transformations.calculation.compound_assignment import (
     apply_expanded_to_bitxor_equal_transformation
 )
 
+# Import CLONEGEN transformations
+from transformations.clonegen.ch_rename import apply_ch_rename_transformation
+
 def apply_single_transformation(transformation_func, input_dir, output_base_dir, transformation_name):
     """
     Apply single transformation function and output results to specified directory
@@ -113,7 +116,10 @@ def apply_transformations(input_dir, output_base_dir):
 
         # Loop transformations
         # (apply_while_to_for_transformation, "while_to_for"),
-        (apply_for_to_while_transformation, "for_to_while")
+        # (apply_for_to_while_transformation, "for_to_while")
+
+        # Clonegen transformations
+        (apply_ch_rename_transformation, "ch_rename")
     ]
     
     # Apply each transformation

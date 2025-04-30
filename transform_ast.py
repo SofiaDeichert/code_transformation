@@ -50,6 +50,7 @@ from transformations.calculation.compound_assignment import (
 # Import CLONEGEN transformations
 from transformations.clonegen.ch_rename import apply_ch_rename_transformation
 from transformations.clonegen.ch_relation import apply_relational_transformation
+from transformations.clonegen.ch_define import apply_ch_define_transformation   
 
 def apply_single_transformation(transformation_func, input_dir, output_base_dir, transformation_name):
     """
@@ -121,7 +122,8 @@ def apply_transformations(input_dir, output_base_dir):
 
         # Clonegen transformations
         # (apply_ch_rename_transformation, "ch_rename")
-        (apply_relational_transformation, "ch_relation")
+        # (apply_relational_transformation, "ch_relation")
+        (apply_ch_define_transformation, "ch_define")
     ]
     
     # Apply each transformation

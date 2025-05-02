@@ -52,6 +52,7 @@ from transformations.clonegen.ch_rename import apply_ch_rename_transformation
 from transformations.clonegen.ch_relation import apply_relational_transformation
 from transformations.clonegen.ch_define import apply_ch_define_transformation 
 from transformations.clonegen.ch_constant import apply_ch_constant_transformation  
+from transformations.clonegen.ch_if_elseIF import apply_ch_if_elseIF_transformation
 
 def apply_single_transformation(transformation_func, input_dir, output_base_dir, transformation_name):
     """
@@ -125,7 +126,8 @@ def apply_transformations(input_dir, output_base_dir):
         # (apply_ch_rename_transformation, "ch_rename")
         # (apply_relational_transformation, "ch_relation")
         # (apply_ch_define_transformation, "ch_define")
-        (apply_ch_constant_transformation, "ch_constant")
+        # (apply_ch_constant_transformation, "ch_constant")
+        (apply_ch_if_elseIF_transformation, "if_else_if")
     ]
     
     # Apply each transformation

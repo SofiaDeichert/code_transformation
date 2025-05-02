@@ -18,13 +18,6 @@ from reconstruct_source import process_all_asts
 from cpp_to_jsonl import process_cpp_directory
 
 def run_pipeline(input_jsonl, output_dir="pipeline_output"):
-    """
-    Run complete transformation pipeline:
-    
-    Args:
-        input_jsonl: Path to input jsonl file
-        output_dir: Directory to store all intermediate and final outputs
-    """
     start_time = time.time()
     
     # Create output directory structure
